@@ -58,6 +58,9 @@ $(function () {
         },
     });
 
+    // Fancy Box
+    Fancybox.bind('[data-fancybox]', {});
+
     // Functions
     function selectDropdownValue(el) {
         const value = el.data("value")
