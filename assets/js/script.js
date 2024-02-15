@@ -58,8 +58,28 @@ $(function () {
         },
     });
 
+    const swiperPostThumbs = new Swiper(".swiper--post-thumbs", {
+        spaceBetween: 16,
+        slidesPerView: "auto",
+        freeMode: true,
+        watchSlidesProgress: true,
+        navigation: {
+            nextEl: ".my-btn--next",
+            prevEl: ".my-btn--prev",
+        },
+    });
+
+    const swiperPostGallery = new Swiper(".swiper--post-gallery", {
+        spaceBetween: 0,
+        thumbs: {
+            swiper: swiperPostThumbs,
+        },
+    });
+
     // Fancy Box
     Fancybox.bind('[data-fancybox]', {});
+
+    Fancybox.bind("[data-fancybox='gallery']", {});
 
     // Functions
     function selectDropdownValue(el) {
