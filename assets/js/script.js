@@ -25,6 +25,27 @@ $(function () {
         clearDropdownValue($(this))
     });
 
+    // Modal
+    $('[data-toggle="modal"]').click(function () {
+        const targetEl = $(this).data('target');
+        $(targetEl).css('display', 'block');
+        $('body').addClass('overflow-hidden');
+
+        setTimeout(() => {
+            $(targetEl).addClass('my-modal--show')
+        }, 150);
+    });
+
+    $('[data-close="modal"]').click(function () {
+        const modal = $(this).closest('.my-modal')
+        $(modal).removeClass('my-modal--show');
+
+        setTimeout(() => {
+            $(modal).css('display', 'none');
+            $('body').removeClass('overflow-hidden');
+        }, 150);
+    });
+
     // Add to favorite
     $('.my-btn--fav').click(function (e) {
         e.preventDefault()
@@ -97,6 +118,20 @@ $(function () {
             swiper: swiperPostThumbs,
         },
     });
+
+    // Share
+    $('.my-share__header').click(function () {
+        $(this).closest('.my-share').toggleClass('my-share--show');
+    });
+
+    $(".my-share__item--copy").click(function () {
+        $(this).find("span").fadeIn(150).delay(300).fadeOut(150);
+        let $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(this).data('href')).select();
+        document.execCommand("copy");
+        $temp.remove();
+    })
 
     // Fancy Box
     Fancybox.bind('[data-fancybox]', {});
