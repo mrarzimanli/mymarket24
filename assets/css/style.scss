@@ -168,8 +168,8 @@ img {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 14px;
+  height: 14px;
 }
 
 ::-webkit-scrollbar-button {
@@ -179,8 +179,8 @@ img {
 
 ::-webkit-scrollbar-thumb {
   background: var(--gray-700);
-  border-radius: 5px;
-  border: 2px solid var(--white);
+  border-radius: 14px;
+  border: 4px solid var(--white);
 }
 
 ::-webkit-scrollbar-track {
@@ -377,6 +377,26 @@ img {
     }
   }
 
+  &--catalog {
+    .my-icon {
+      &--close {
+        display: none;
+      }
+    }
+
+    &#{$root}--active {
+      .my-icon {
+        &--categories {
+          display: none;
+        }
+
+        &--close {
+          display: block;
+        }
+      }
+    }
+  }
+
   &--small {
     height: 32px;
     padding: 6px 12px;
@@ -390,6 +410,53 @@ img {
       img {
         width: 20px;
         height: 20px;
+      }
+    }
+  }
+
+  &--text {
+    padding: 0;
+    height: auto;
+    gap: 6px;
+    border: none;
+    border-radius: 0;
+    background: none;
+    color: var(--gray-900);
+    font-weight: var(--fw-regular);
+
+    svg {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+
+      path {
+        stroke: var(--gray-900);
+        transition: all 250ms ease-in-out;
+      }
+    }
+
+    &:hover {
+      color: var(--green-500);
+      background: none;
+
+      svg path {
+        stroke: var(--green-500);
+      }
+    }
+
+    &#{$root}--primary {
+      color: var(--green-500);
+
+      svg path {
+        stroke: var(--green-500);
+      }
+
+      &:hover {
+        color: var(--green-400);
+
+        svg path {
+          stroke: var(--green-400);
+        }
       }
     }
   }
@@ -1351,6 +1418,22 @@ img {
   background: var(--white);
 }
 
+// Modifiers
+.overflow {
+  &-hidden {
+    overflow: hidden !important;
+  }
+
+  &-auto {
+    overflow: auto !important;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+// Libraries
 .swiper {
   $root: &;
   width: 100%;
@@ -1438,6 +1521,7 @@ img {
   }
 }
 
+// Layout
 .header {
   $root: &;
   position: relative;
@@ -1559,6 +1643,185 @@ img {
     #{$root}__search {
       flex-grow: 1;
       max-width: 348px;
+    }
+
+    #{$root}__catalog {
+      --headerHeight: 108px;
+      --spaceBottom: 68px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: flex;
+      height: calc(100vh - var(--headerHeight));
+      padding-bottom: var(--spaceBottom);
+      background: rgba(34, 34, 34, 0.6);
+      transition: all 250ms ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 9;
+
+      &--show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &__content {
+        display: flex;
+        flex-grow: 1;
+        background: var(--white);
+        overflow: auto;
+
+        .container {
+          display: flex;
+        }
+      }
+
+      .my-catalog {
+        $catalog: &;
+        position: relative;
+        display: flex;
+        flex-grow: 1;
+
+        .sidebar {
+          width: 286px;
+          padding: 20px 0;
+          gap: 16px;
+          border-right: 1px solid var(--gray-500);
+
+          &__header {
+            padding: 0 8px 0 0;
+          }
+
+          &__body {
+            padding: 0 8px 0 0;
+          }
+        }
+
+        &__list {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          &__item {
+            display: flex;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 250ms ease-in-out;
+
+            &--active {
+              background: var(--gray-400);
+
+              .my-catalog__sub {
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+
+            > a {
+              display: flex;
+              align-items: center;
+              flex-grow: 1;
+              padding: 6px 8px 6px 6px;
+              gap: 12px;
+              font-size: var(--fs-b6);
+              font-weight: var(--fw-medium);
+              line-height: var(--lh-b6);
+              color: var(--gray-900);
+
+              div {
+                display: flex;
+                align-items: center;
+                flex-grow: 1;
+                gap: 12px;
+              }
+
+              img {
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                border-radius: 8px;
+              }
+            }
+          }
+        }
+
+        &__sub {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          position: absolute;
+          left: 286px;
+          top: 0;
+          right: 0;
+          height: 100%;
+          padding: 20px 0 20px 20px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 250ms ease-in-out;
+          z-index: 1;
+
+          .section__header {
+            padding: 0;
+          }
+
+          .section__body {
+            height: calc(100% - 48px);
+            overflow: auto;
+          }
+
+          &__list {
+            column-count: 3;
+            column-gap: 24px;
+
+            &__item {
+              break-inside: avoid-column;
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 28px;
+
+              > a {
+                font-size: var(--fs-b6);
+                line-height: var(--lh-b6);
+                font-weight: var(--fw-semi-bold);
+                color: var(--gray-900);
+                margin-bottom: 8px;
+                transition: all 250ms ease-in-out;
+
+                &:hover {
+                  color: var(--green-500);
+                }
+              }
+
+              > button {
+                padding: 8px 0;
+                align-self: flex-start;
+              }
+
+              ul {
+                display: flex;
+                flex-direction: column;
+
+                li {
+                  display: flex;
+
+                  a {
+                    font-size: var(--fs-b4);
+                    line-height: var(--lh-b4);
+                    color: var(--gray-900);
+                    padding: 8px 0;
+                    transition: all 250ms ease-in-out;
+
+                    &:hover {
+                      color: var(--green-500);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -2085,9 +2348,15 @@ img {
     gap: 16px;
 
     &__title {
+      display: flex;
+      gap: 4px;
       font-size: var(--fs-h2);
       line-height: var(--lh-h2);
       font-weight: var(--fw-semi-bold);
+
+      &__label {
+        color: var(--green-500);
+      }
     }
 
     &--center {

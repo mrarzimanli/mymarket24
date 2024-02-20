@@ -48,6 +48,28 @@ $(function () {
     const activeAccordionItem = $('.my-accordion__item.show')
     activeAccordionItem && activeAccordionItem.find('.my-accordion__item__body').stop(true, false, true).slideDown(250);
 
+    // Catalog
+    $('.my-btn--catalog').click(function () {
+        const category = $('.my-catalog__list__item')
+        category.removeClass('my-catalog__list__item--active');
+        category.first().addClass('my-catalog__list__item--active');
+
+        $('.my-btn--catalog').toggleClass('my-btn--active');
+        $('body').toggleClass('overflow-hidden');
+        $('.header__catalog').toggleClass('header__catalog--show');
+    })
+
+    $('.my-btn--categories').click(function () {
+        $(this).closest('li').find('ul li.hidden').removeClass('hidden');
+        $(this).remove()
+    })
+
+    $('.my-catalog__list__item').hover(function () {
+        const category = $('.my-catalog__list__item')
+        category.removeClass('my-catalog__list__item--active');
+        $(this).addClass('my-catalog__list__item--active');
+    });
+
     // Swiper
     const swiperStores = new Swiper(".swiper--stores", {
         slidesPerView: 4,

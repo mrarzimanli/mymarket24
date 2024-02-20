@@ -72,13 +72,16 @@
                             <img src="./assets/images/logo.svg" alt="mymarket">
                         </a>
                         <div class="header__content__group__item grow">
-                            <button class="my-btn my-btn--secondary">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <button class="my-btn my-btn--secondary my-btn--catalog">
+                                <svg class="my-icon my-icon--categories" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="1.9" y="1.9" width="6.38182" height="6.38182" rx="1.55455" stroke="white" stroke-width="1.8" />
                                     <rect x="1.9" y="11.7184" width="6.38182" height="6.38182" rx="1.55455" stroke="white" stroke-width="1.8" />
                                     <rect x="11.7184" y="1.9" width="6.38182" height="6.38182" rx="1.55455" stroke="white" stroke-width="1.8" />
                                     <path d="M11.6362 12.8633H18.1817" stroke="white" stroke-width="1.8" stroke-linecap="round" />
                                     <path d="M11.6362 16.9541H18.1817" stroke="white" stroke-width="1.8" stroke-linecap="round" />
+                                </svg>
+                                <svg class="my-icon my-icon--close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.22356 16.0912C1.83303 16.4818 1.83303 17.1149 2.22356 17.5054C2.61408 17.896 3.24725 17.896 3.63777 17.5054L9.72897 11.4142L15.8202 17.5055C16.2107 17.896 16.8439 17.896 17.2344 17.5055C17.6249 17.1149 17.6249 16.4818 17.2344 16.0913L11.1432 10L17.2344 3.9088C17.6249 3.51827 17.6249 2.88511 17.2344 2.49458C16.8439 2.10406 16.2107 2.10406 15.8202 2.49458L9.72897 8.58581L3.63777 2.49461C3.24725 2.10408 2.61408 2.10408 2.22356 2.49461C1.83303 2.88513 1.83303 3.5183 2.22356 3.90882L8.31476 10L2.22356 16.0912Z" fill="white" />
                                 </svg>
                                 <span>Kateqoriyalar</span>
                             </button>
@@ -190,6 +193,291 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="header__catalog">
+                                <div class="header__catalog__content">
+                                    <div class="container">
+                                        <div class="my-catalog">
+                                            <div class="sidebar">
+                                                <div class="sidebar__header">
+                                                    <span class="sidebar__header__title">Kateqoriyalar</span>
+                                                    <button class="my-btn my-btn--small my-btn--catalog">Bağla</button>
+                                                </div>
+                                                <div class="sidebar__body">
+                                                    <ul class="my-catalog__list">
+                                                        <li class="my-catalog__list__item my-catalog__list__item--active">
+                                                            <a href="#">
+                                                                <div>
+                                                                    <img src="assets/images/categories/elektronika.png" alt="elektronika">
+                                                                    <span>Elektronika</span>
+                                                                </div>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M5 2.00002L10.2929 7.29291C10.6834 7.68343 10.6834 8.3166 10.2929 8.70712L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                                                </svg>
+                                                            </a>
+                                                            <div class="my-catalog__sub">
+                                                                <div class="section__header">
+                                                                    <div class="section__header__title">Elektronika <span class="section__header__title__label">(2500)</span>
+                                                                    </div>
+                                                                    <a href="category.html" class="my-btn my-btn--small">Bütün məhsulları gör</a>
+                                                                </div>
+                                                                <div class="section__body">
+                                                                    <ul class="my-catalog__sub__list">
+                                                                        <li class="my-catalog__sub__list__item">
+                                                                            <a href="category.html"> Telefonlar </a>
+                                                                            <ul>
+                                                                                <li><a href="category.html">Alcatel</a></li>
+                                                                                <li><a href="category.html">Apple Iphone</a></li>
+                                                                                <li><a href="category.html">Asus</a></li>
+                                                                                <li><a href="category.html">Blackberry</a></li>
+                                                                                <li><a href="category.html">Doogee</a></li>
+                                                                                <li class="hidden"><a href="category.html">Blackberry</a></li>
+                                                                                <li class="hidden"><a href="category.html">Doogee</a></li>
+                                                                                <li class="hidden"><a href="category.html">Blackberry</a></li>
+                                                                                <li class="hidden"><a href="category.html">Doogee</a></li>
+                                                                                <li class="hidden"><a href="category.html">Blackberry</a></li>
+                                                                                <li class="hidden"><a href="category.html">Doogee</a></li>
+                                                                            </ul>
+                                                                            <button class="my-btn my-btn--text my-btn--primary my-btn--categories">
+                                                                                <span>Daha çox</span>
+                                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M2 5L7.29289 10.2929C7.68342 10.6834 8.31658 10.6834 8.70711 10.2929L14 5" stroke="#358C6C" stroke-width="1.5" stroke-linecap="round" />
+                                                                                </svg>
+                                                                            </button>
+                                                                        </li>
+                                                                        <li class="my-catalog__sub__list__item">
+                                                                            <a href="category.html"> Telefonlar </a>
+                                                                            <ul>
+                                                                                <li><a href="category.html">Alcatel</a></li>
+                                                                                <li><a href="category.html">Apple Iphone</a></li>
+                                                                                <li><a href="category.html">Asus</a></li>
+                                                                                <li><a href="category.html">Blackberry</a></li>
+                                                                                <li><a href="category.html">Doogee</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="my-catalog__sub__list__item">
+                                                                            <a href="category.html"> Telefonlar </a>
+                                                                            <ul>
+                                                                                <li><a href="category.html">Alcatel</a></li>
+                                                                                <li><a href="category.html">Apple Iphone</a></li>
+                                                                                <li><a href="category.html">Asus</a></li>
+                                                                                <li><a href="category.html">Blackberry</a></li>
+                                                                                <li><a href="category.html">Doogee</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="my-catalog__sub__list__item">
+                                                                            <a href="category.html"> Telefonlar </a>
+                                                                            <ul>
+                                                                                <li><a href="category.html">Alcatel</a></li>
+                                                                                <li><a href="category.html">Apple Iphone</a></li>
+                                                                                <li><a href="category.html">Asus</a></li>
+                                                                                <li><a href="category.html">Blackberry</a></li>
+                                                                                <li><a href="category.html">Doogee</a></li>
+                                                                                <li class="hidden"><a href="category.html">Blackberry</a></li>
+                                                                                <li class="hidden"><a href="category.html">Doogee</a></li>
+                                                                            </ul>
+                                                                            <button class="my-btn my-btn--text my-btn--primary my-btn--categories">
+                                                                                <span>Daha çox</span>
+                                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M2 5L7.29289 10.2929C7.68342 10.6834 8.31658 10.6834 8.70711 10.2929L14 5" stroke="#358C6C" stroke-width="1.5" stroke-linecap="round" />
+                                                                                </svg>
+                                                                            </button>
+                                                                        </li>
+                                                                        <li class="my-catalog__sub__list__item">
+                                                                            <a href="category.html"> Telefonlar </a>
+                                                                            <ul>
+                                                                                <li><a href="category.html">Alcatel</a></li>
+                                                                                <li><a href="category.html">Apple Iphone</a></li>
+                                                                                <li><a href="category.html">Asus</a></li>
+                                                                                <li><a href="category.html">Blackberry</a></li>
+                                                                                <li><a href="category.html">Doogee</a></li>
+                                                                                <li class="hidden"><a href="category.html">Alcatel</a></li>
+                                                                                <li class="hidden"><a href="category.html">Apple Iphone</a></li>
+                                                                                <li class="hidden"><a href="category.html">Asus</a></li>
+                                                                                <li class="hidden"><a href="category.html">Blackberry</a></li>
+                                                                                <li class="hidden"><a href="category.html">Doogee</a></li>
+                                                                            </ul>
+                                                                            <button class="my-btn my-btn--text my-btn--primary my-btn--categories">
+                                                                                <span>Daha çox</span>
+                                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M2 5L7.29289 10.2929C7.68342 10.6834 8.31658 10.6834 8.70711 10.2929L14 5" stroke="#358C6C" stroke-width="1.5" stroke-linecap="round" />
+                                                                                </svg>
+                                                                            </button>
+                                                                        </li>
+                                                                        <li class="my-catalog__sub__list__item">
+                                                                            <a href="category.html"> Telefonlar </a>
+                                                                            <ul>
+                                                                                <li><a href="category.html">Alcatel</a></li>
+                                                                                <li><a href="category.html">Apple Iphone</a></li>
+                                                                                <li><a href="category.html">Asus</a></li>
+                                                                                <li><a href="category.html">Blackberry</a></li>
+                                                                                <li><a href="category.html">Doogee</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="my-catalog__sub__list__item">
+                                                                            <a href="category.html"> Telefonlar </a>
+                                                                            <ul>
+                                                                                <li><a href="category.html">Alcatel</a></li>
+                                                                                <li><a href="category.html">Apple Iphone</a></li>
+                                                                                <li><a href="category.html">Asus</a></li>
+                                                                                <li><a href="category.html">Blackberry</a></li>
+                                                                                <li><a href="category.html">Doogee</a></li>
+                                                                                <li class="hidden"><a href="category.html">Alcatel</a></li>
+                                                                                <li class="hidden"><a href="category.html">Apple Iphone</a></li>
+                                                                                <li class="hidden"><a href="category.html">Asus</a></li>
+                                                                            </ul>
+                                                                            <button class="my-btn my-btn--text my-btn--primary my-btn--categories">
+                                                                                <span>Daha çox</span>
+                                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M2 5L7.29289 10.2929C7.68342 10.6834 8.31658 10.6834 8.70711 10.2929L14 5" stroke="#358C6C" stroke-width="1.5" stroke-linecap="round" />
+                                                                                </svg>
+                                                                            </button>
+                                                                        </li>
+                                                                        <li class="my-catalog__sub__list__item">
+                                                                            <a href="category.html"> Telefonlar </a>
+                                                                            <ul>
+                                                                                <li><a href="category.html">Alcatel</a></li>
+                                                                                <li><a href="category.html">Apple Iphone</a></li>
+                                                                                <li><a href="category.html">Asus</a></li>
+                                                                                <li><a href="category.html">Blackberry</a></li>
+                                                                                <li><a href="category.html">Doogee</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="my-catalog__sub__list__item">
+                                                                            <a href="category.html"> Telefonlar </a>
+                                                                            <ul>
+                                                                                <li><a href="category.html">Alcatel</a></li>
+                                                                                <li><a href="category.html">Apple Iphone</a></li>
+                                                                                <li><a href="category.html">Asus</a></li>
+                                                                                <li><a href="category.html">Blackberry</a></li>
+                                                                                <li><a href="category.html">Doogee</a></li>
+                                                                                <li class="hidden"><a href="category.html">Alcatel</a></li>
+                                                                                <li class="hidden"><a href="category.html">Apple Iphone</a></li>
+                                                                                <li class="hidden"><a href="category.html">Asus</a></li>
+                                                                                <li class="hidden"><a href="category.html">Blackberry</a></li>
+                                                                                <li class="hidden"><a href="category.html">Doogee</a></li>
+                                                                                <li class="hidden"><a href="category.html">Alcatel</a></li>
+                                                                                <li class="hidden"><a href="category.html">Apple Iphone</a></li>
+                                                                                <li class="hidden"><a href="category.html">Asus</a></li>
+                                                                                <li class="hidden"><a href="category.html">Blackberry</a></li>
+                                                                                <li class="hidden"><a href="category.html">Doogee</a></li>
+                                                                            </ul>
+                                                                            <button class="my-btn my-btn--text my-btn--primary my-btn--categories">
+                                                                                <span>Daha çox</span>
+                                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M2 5L7.29289 10.2929C7.68342 10.6834 8.31658 10.6834 8.70711 10.2929L14 5" stroke="#358C6C" stroke-width="1.5" stroke-linecap="round" />
+                                                                                </svg>
+                                                                            </button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="my-catalog__list__item">
+                                                            <a href="#">
+                                                                <div>
+                                                                    <img src="assets/images/categories/endirimli-mehsullar.png" alt="endirimli-mehsullar">
+                                                                    <span>Endirimli məhsullar</span>
+                                                                </div>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M5 2.00002L10.2929 7.29291C10.6834 7.68343 10.6834 8.3166 10.2929 8.70712L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="my-catalog__list__item">
+                                                            <a href="#">
+                                                                <div>
+                                                                    <img src="assets/images/categories/endirimli-mehsullar.png" alt="endirimli-mehsullar">
+                                                                    <span>Endirimli məhsullar</span>
+                                                                </div>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M5 2.00002L10.2929 7.29291C10.6834 7.68343 10.6834 8.3166 10.2929 8.70712L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="my-catalog__list__item">
+                                                            <a href="#">
+                                                                <div>
+                                                                    <img src="assets/images/categories/endirimli-mehsullar.png" alt="endirimli-mehsullar">
+                                                                    <span>Endirimli məhsullar</span>
+                                                                </div>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M5 2.00002L10.2929 7.29291C10.6834 7.68343 10.6834 8.3166 10.2929 8.70712L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="my-catalog__list__item">
+                                                            <a href="#">
+                                                                <div>
+                                                                    <img src="assets/images/categories/endirimli-mehsullar.png" alt="endirimli-mehsullar">
+                                                                    <span>Endirimli məhsullar</span>
+                                                                </div>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M5 2.00002L10.2929 7.29291C10.6834 7.68343 10.6834 8.3166 10.2929 8.70712L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="my-catalog__list__item">
+                                                            <a href="#">
+                                                                <div>
+                                                                    <img src="assets/images/categories/endirimli-mehsullar.png" alt="endirimli-mehsullar">
+                                                                    <span>Endirimli məhsullar</span>
+                                                                </div>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M5 2.00002L10.2929 7.29291C10.6834 7.68343 10.6834 8.3166 10.2929 8.70712L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="my-catalog__list__item">
+                                                            <a href="#">
+                                                                <div>
+                                                                    <img src="assets/images/categories/endirimli-mehsullar.png" alt="endirimli-mehsullar">
+                                                                    <span>Endirimli məhsullar</span>
+                                                                </div>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M5 2.00002L10.2929 7.29291C10.6834 7.68343 10.6834 8.3166 10.2929 8.70712L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="my-catalog__list__item">
+                                                            <a href="#">
+                                                                <div>
+                                                                    <img src="assets/images/categories/endirimli-mehsullar.png" alt="endirimli-mehsullar">
+                                                                    <span>Endirimli məhsullar</span>
+                                                                </div>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M5 2.00002L10.2929 7.29291C10.6834 7.68343 10.6834 8.3166 10.2929 8.70712L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="my-catalog__list__item">
+                                                            <a href="#">
+                                                                <div>
+                                                                    <img src="assets/images/categories/endirimli-mehsullar.png" alt="endirimli-mehsullar">
+                                                                    <span>Endirimli məhsullar</span>
+                                                                </div>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M5 2.00002L10.2929 7.29291C10.6834 7.68343 10.6834 8.3166 10.2929 8.70712L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="my-catalog__list__item">
+                                                            <a href="#">
+                                                                <div>
+                                                                    <img src="assets/images/categories/endirimli-mehsullar.png" alt="endirimli-mehsullar">
+                                                                    <span>Endirimli məhsullar</span>
+                                                                </div>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M5 2.00002L10.2929 7.29291C10.6834 7.68343 10.6834 8.3166 10.2929 8.70712L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="header__content-group">
@@ -217,7 +505,7 @@
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <span>Kateqoriyalar</span>
+                                <span>Elan yerləşdir</span>
                             </button>
                         </div>
                     </div>
