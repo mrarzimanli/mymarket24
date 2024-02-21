@@ -1825,6 +1825,193 @@ img {
   border-top-left-radius: 2px;
 }
 
+.my-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.my-form__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  padding: 12px 0;
+}
+
+.my-form__item__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 12px;
+}
+
+.my-form__item__header span {
+  font-size: var(--fs-b4);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-b4);
+}
+
+.my-form__item__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+.my-form__item__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my-form__item--error .my-form__control {
+  border: 1px solid var(--red-400);
+  background: var(--red-300);
+}
+
+.my-form__item--error .my-form__control__message {
+  color: var(--red-400);
+}
+
+.my-form__label {
+  font-size: var(--fs-b4);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-b4);
+}
+
+.my-form__char-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my-form__control {
+  border: 1px solid var(--gray-500);
+  border-radius: 8px;
+  background: var(--gray-400);
+  padding: 10px 12px;
+  min-height: 42px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  caret-color: var(--green-500);
+  color: var(--gray-900);
+  font-size: var(--fs-b5);
+  line-height: var(--lh-b5);
+}
+
+.my-form__control__option {
+  padding: 8px 0;
+  font-size: var(--fs-b4);
+  line-height: var(--fs-b4);
+  color: var(--gray-900);
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.my-form__control__option:hover {
+  color: var(--green-500);
+}
+
+.my-form__control__message {
+  font-size: var(--fs-b3);
+  line-height: var(--lh-b3);
+  color: var(--gray-700);
+}
+
+.my-form__control::-webkit-input-placeholder {
+  color: var(--gray-700);
+}
+
+.my-form__control:-ms-input-placeholder {
+  color: var(--gray-700);
+}
+
+.my-form__control::-ms-input-placeholder {
+  color: var(--gray-700);
+}
+
+.my-form__control::placeholder {
+  color: var(--gray-700);
+}
+
+.my-form__control:focus, .my-form__control--show {
+  border: 1px solid var(--green-500);
+  -webkit-box-shadow: 0 0 0 4px rgba(53, 140, 108, 0.15);
+          box-shadow: 0 0 0 4px rgba(53, 140, 108, 0.15);
+}
+
+.my-form__control--show.my-form__control--select .my-form__control__body {
+  opacity: 1;
+  visibility: visible;
+}
+
+.my-form__control--textarea {
+  min-height: 75px;
+}
+
+.my-form__control--select {
+  padding: 0;
+  position: relative;
+}
+
+.my-form__control--select .my-form__control__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.my-form__control--select .my-form__control__body {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: var(--white);
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 6px;
+  -webkit-box-shadow: 0px 4px 12px 0px rgba(34, 34, 34, 0.1);
+          box-shadow: 0px 4px 12px 0px rgba(34, 34, 34, 0.1);
+  max-height: 192px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
 .overflow-hidden {
   overflow: hidden !important;
   padding-right: 14px;

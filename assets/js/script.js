@@ -133,6 +133,35 @@ $(function () {
         $temp.remove();
     })
 
+    // Form controls
+    $('.my-form__control').focus(function () {
+        const item = $(this).closest('.my-form__item')
+        $(item).removeClass('my-form__item--error');
+        $(item).find('.my-form__control__message').remove();
+    });
+
+    $('.my-form__control--textarea').on('keyup', function () {
+        const count = $(this).val().length;
+        const max = $(this).prop('maxLength');
+
+        if (count <= max) {
+            $(this).closest('.my-form__item').find('.my-form__char-count__current').text(count);
+        }
+    });
+
+    $('.my-form__control--select .my-form__control__header').click(function () {
+        $(this).closest('.my-form__control--select').toggleClass('my-form__control--show');
+    });
+
+    $('.my-form__control__option').click(function () {
+        const value = $(this).data("value");
+        const text = $(this).text();
+        const control = $(this).closest('.my-form__control')
+        $(control).toggleClass('my-form__control--show');
+        $(control).find('input[type="hidden"]').val(value);
+        $(control).find('.my-form__control__header span').text(text);
+    });
+
     // Fancy Box
     Fancybox.bind('[data-fancybox]', {});
 
