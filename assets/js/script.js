@@ -1,4 +1,4 @@
-$(function () {
+(function ($) {
     // Dropdown
     $(document).click(function (e) {
         e.stopPropagation()
@@ -27,22 +27,47 @@ $(function () {
 
     // Modal
     $('[data-toggle="modal"]').click(function () {
-        const targetEl = $(this).data('target');
-        $(targetEl).css('display', 'block');
-        $('body').addClass('overflow-hidden');
-
-        setTimeout(() => {
-            $(targetEl).addClass('my-modal--show')
-        }, 150);
+        const modal = $(this).data('target');
+        $(modal).modal('show');
     });
 
     $('[data-close="modal"]').click(function () {
         const modal = $(this).closest('.my-modal')
-        $(modal).removeClass('my-modal--show');
+        $(modal).modal('hide');
+    });
 
+    $.fn.modal = function (action) {
+        this.each(function () {
+            var $modal = $(this);
+
+            switch (action) {
+                case 'show':
+                    $modal.css('display', 'block');
+                    $('body').addClass('overflow-hidden');
+
+                    setTimeout(() => {
+                        $modal.addClass('my-modal--show')
+                    }, 150);
+                    break;
+                case 'hide':
+                    $modal.removeClass('my-modal--show');
+
+                    setTimeout(() => {
+                        $modal.css('display', 'none');
+                        $('body').removeClass('overflow-hidden');
+                    }, 150);
+                    break;
+                default:
+                    console.error('Unsupported action for modal:', action);
+            }
+        });
+        return this;
+    };
+
+    $('#btnSendReport').click(function (e) {
+        $('#modalReport').modal('hide');
         setTimeout(() => {
-            $(modal).css('display', 'none');
-            $('body').removeClass('overflow-hidden');
+            $('#modalAlert').modal('show');
         }, 150);
     });
 
@@ -134,7 +159,7 @@ $(function () {
     })
 
     // Form controls
-    $('.my-form__control').focus(function () {
+    $('.my-form__control').click(function () {
         const item = $(this).closest('.my-form__item')
         $(item).removeClass('my-form__item--error');
         $(item).find('.my-form__control__message').remove();
@@ -198,4 +223,4 @@ $(function () {
             el.closest('.filter').find('.filter-input').val('')
         }
     }
-})
+})(jQuery)

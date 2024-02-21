@@ -496,6 +496,12 @@ img {
     }
   }
 
+  &--sm {
+    #{$modal}__dialog {
+      max-width: 386px;
+    }
+  }
+
   &__dialog {
     display: flex;
     align-items: center;
@@ -543,12 +549,6 @@ img {
     justify-content: flex-end;
     gap: 8px;
     padding: 4px 24px;
-  }
-
-  &--sm {
-    #{$modal}__dialog {
-      max-width: 386px;
-    }
   }
 }
 
@@ -1967,7 +1967,7 @@ img {
 
     #{$root}__catalog {
       --headerHeight: 108px;
-      --spaceBottom: 68px;
+      --spaceBottom: 108px;
       position: absolute;
       top: 100%;
       left: 0;
@@ -1995,6 +1995,14 @@ img {
         .container {
           display: flex;
         }
+      }
+
+      > .my-btn--catalog {
+        position: absolute;
+        bottom: calc(var(--spaceBottom) - 16px);
+        left: 50%;
+        transform: translate(-50%, 100%);
+        z-index: 9;
       }
 
       .my-catalog {

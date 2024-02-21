@@ -20,10 +20,9 @@
             <div class="my-modal__content">
                 <div class="my-modal__header">
                     <span class="my-modal__header__title">Şikayət et</span>
-                    <p class="my-modal__header__description">Modal description</p>
                 </div>
                 <div class="my-modal__body">
-                    <form id="formReport" class="my-form">
+                    <div id="formReport" class="my-form">
                         <div class="my-form__item">
                             <div class="my-form__item__header">
                                 <label class="my-form__label" for="reportTitle">Səbəb</label>
@@ -48,9 +47,9 @@
                                     <input type="hidden" name="reportTitle" required>
                                 </div>
                             </div>
-                            <div class="my-form__item__footer">
-                                <span class="my-form__control__message my-form__control__message--error">Form control message</span>
-                            </div>
+                            <!-- <div class="my-form__item__footer">
+                                    <span class="my-form__control__message">Form control message</span>
+                                </div> -->
                         </div>
                         <div class="my-form__item">
                             <div class="my-form__item__header">
@@ -63,34 +62,33 @@
                             <div class="my-form__item__body">
                                 <textarea id="reportMessage" class="my-form__control my-form__control--textarea" name="reportMessage" maxlength="100" placeholder="Şikayətin səbəbini təsvir edin" required></textarea>
                             </div>
-                            <div class="my-form__item__footer">
-                                <span class="my-form__control__message my-form__control__message--error">Form control message</span>
-                            </div>
+                            <!-- <div class="my-form__item__footer">
+                                    <span class="my-form__control__message">Form control message</span>
+                                </div> -->
                         </div>
-                        <div class="my-form__item my-form__item--error">
-                            <div class="my-form__item__header">
-                                <label class="my-form__label" for="reportMessage">Təsvir</label>
-                                <div class="my-form__char-count">
-                                    <span class="my-form__char-count__current">0</span>
-                                    <span class="my-form__char-count__max">/100</span>
-                                </div>
-                            </div>
-                            <div class="my-form__item__body">
-                                <textarea id="reportMessage" class="my-form__control my-form__control--textarea" name="reportMessage" maxlength="100" placeholder="Şikayətin səbəbini təsvir edin" required></textarea>
-                            </div>
-                            <div class="my-form__item__footer">
-                                <span class="my-form__control__message my-form__control__message--error">Form control message</span>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
                 <div class="my-modal__footer">
                     <button class="my-btn my-btn--small" data-close="modal">Bağla</button>
-                    <button class="my-btn my-btn--secondary my-btn--small">Göndər</button>
+                    <button class="my-btn my-btn--secondary my-btn--small" id="btnSendReport">Göndər</button>
                 </div>
             </div>
         </div>
     </div>
+    <div class="my-modal my-modal--fade my-modal--sm my-modal--alert" id="modalAlert">
+        <div class="my-modal__dialog">
+            <div class="my-modal__content">
+                <div class="my-modal__header">
+                    <span class="my-modal__header__title">Şikayətiniz baxışa göndərildi</span>
+                    <p class="my-modal__header__description"> Şikayətiniz moderatorlar tərəfindən baxıldıqdan sonra elanın saytın İstifadəçi şərtləri və Qaydalarını pozduğu halda saytdan silinəcəkdir. </p>
+                </div>
+                <div class="my-modal__footer">
+                    <button class="my-btn my-btn--small" data-close="modal">Bağla</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modals end -->
     <!-- Header -->
     <header class="header">
         <div class="header__top">

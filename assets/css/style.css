@@ -471,6 +471,10 @@ img {
           transform: none;
 }
 
+.my-modal--sm .my-modal__dialog {
+  max-width: 386px;
+}
+
 .my-modal__dialog {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -538,10 +542,6 @@ img {
           justify-content: flex-end;
   gap: 8px;
   padding: 4px 24px;
-}
-
-.my-modal--sm .my-modal__dialog {
-  max-width: 386px;
 }
 
 .my-search {
@@ -2299,7 +2299,7 @@ img {
 
 .header__main .header__catalog {
   --headerHeight: 108px;
-  --spaceBottom: 68px;
+  --spaceBottom: 108px;
   position: absolute;
   top: 100%;
   left: 0;
@@ -2337,6 +2337,15 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.header__main .header__catalog > .my-btn--catalog {
+  position: absolute;
+  bottom: calc(var(--spaceBottom) - 16px);
+  left: 50%;
+  -webkit-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+  z-index: 9;
 }
 
 .header__main .header__catalog .my-catalog {
