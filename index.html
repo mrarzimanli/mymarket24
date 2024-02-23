@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- Modals -->
-    <div class="my-modal my-modal--fade my-modal--multi-content my-modal--sm my-modal--login" id="modalLogin">
+    <div class="my-modal my-modal--fade my-modal--multi-content my-modal--closeable my-modal--sm my-modal--login" id="modalLogin">
         <div class="my-modal__dialog">
             <div class="my-modal__content my-modal__content--phone" id="modalContentPhone" data-step="1">
                 <div class="my-modal__header">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="my-modal__footer">
                     <div class="my-modal__footer__buttons">
-                        <button class="my-btn my-btn--primary" id="btnSendOTP" data-toggle="modalContent" data-target="#modalContentOTP">İrəli</button>
+                        <button class="my-btn my-btn--primary" id="btnSendOTP">İrəli</button>
                     </div>
                     <p>Giriş etməklə <a href="#" class="my-btn my-btn--text my-btn--primary">İstifadəçi şərtləri</a> və <a href="#" class="my-btn my-btn--text my-btn--primary">Qaydalar</a> ilə razılaşırsınız</p>
                 </div>
@@ -56,9 +56,8 @@
                                 <input type="text" id="otpCodeEntry" class="my-form__control" maxlength="6" name="otpCodeEntry" placeholder="123 - 456" />
                             </div>
                             <div class="my-form__item__footer">
-                                <button id="btnRepeatOTP" class="my-btn my-btn--text my-btn--primary" disabled>Yenidən göndər</button>
-                                <div class="my-countdown">
-                                    <span id="minutes">00</span>: <span id="seconds">00</span>
+                                <div class="my-form__repeat-otp">
+                                    <button id="btnRepeatOTP" class="my-btn my-btn--text my-btn--primary" disabled>Yenidən göndər</button>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +65,7 @@
                 </div>
                 <div class="my-modal__footer">
                     <div class="my-modal__footer__buttons">
-                        <button class="my-btn my-btn--back" data-toggle="modalContent" data-target="#modalContentOTP">Geri</button>
+                        <button class="my-btn my-btn--back">Geri</button>
                         <button class="my-btn my-btn--primary" id="btnVerifyOTP">Təsdiq et</button>
                     </div>
                     <p>Giriş etməklə <a href="#" class="my-btn my-btn--text my-btn--primary">İstifadəçi şərtləri</a> və <a href="#" class="my-btn my-btn--text my-btn--primary">Qaydalar</a> ilə razılaşırsınız</p>

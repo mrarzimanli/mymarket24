@@ -36,14 +36,17 @@
     });
 
     // Modal
+    $('.my-modal--closeable').click(function (e) {
+        const modalContent = $(this).find('.my-modal__content');
+
+        if (!modalContent.is(e.target) && modalContent.has(e.target).length === 0) {
+            $(this).modal('hide')
+        }
+    });
+
     $('[data-toggle="modal"]').click(function () {
         const modal = $(this).data('target');
         $(modal).modal('show');
-    });
-
-    $('[data-toggle="modalContent"]').click(function () {
-        const modalContent = $(this).data('target');
-        $(modalContent).modalContent('show');
     });
 
     $('[data-close="modal"]').click(function () {
@@ -104,17 +107,20 @@
         return this;
     };
 
-    $('#btnSendReport').click(function () {
-        $('#modalReport').modal('hide');
-        setTimeout(() => {
-            $('#modalAlert').modal('show');
-        }, 150);
-    });
+    // $('#btnSendReport').click(function () {
+    //     $('#modalReport').modal('hide');
+    //     setTimeout(() => {
+    //         $('#modalAlert').modal('show');
+    //     }, 150);
+    // });
 
-    $('#btnSendOTP').click(function () {
-        $('#modalContentPhone').modalContent('hide');
-        $('#modalContentOTP').modalContent('show');
-    });
+    // $('#btnSendOTP').click(function () {
+    //     $('#modalContentPhone').modalContent('hide');
+    //     $('#modalContentOTP').modalContent('show');
+    //     showCountdown();
+    //     // əgər geri qayıdıb yeni nomre yazıbsa, intervalı resetləmək üçün true göndər
+    //     // showCountdown(reset: true);
+    // });
 
     $('#modalContentOTP .my-btn--back').click(function () {
         $('#modalContentOTP').modalContent('hide');
@@ -131,25 +137,30 @@
         $('#formLogin').find('.my-form__control').val('');
     }
 
-    $('#btnSendOTP').click(function () {
-        let now = new Date()
-        let endDate = new Date(now.getTime() + 0.1 * 60000);
-        let modal = $(this).closest('#modalLogin')
-        let container = modal.find('.my-form__item__footer');
-        countdown(endDate, container)
-    });
+    const showCountdown = (reset) => {
 
-    const countdown = (endDate, container) => {
+        if ($('.my-countdown').length && !reset) {
+            return
+        }
+
+        let container = $('.my-form__repeat-otp')
+        const countdownEl = `<div class="my-countdown">
+                                <span id="minutes">00</span>: <span id="seconds">00</span>
+                            </div>`
+        container.append(countdownEl)
+
         const second = 1000,
             minute = second * 60,
             hour = minute * 60,
             day = hour * 24;
 
-        let countDown = new Date(endDate).getTime()
+        let curDate = new Date()
+        let endDate = new Date(curDate.getTime() + 0.5 * 60000)
+        let end = new Date(endDate).getTime()
 
-        let x = setInterval(function () {
+        let intervalID = setInterval(function () {
             let now = new Date().getTime(),
-                distance = countDown - now;
+                distance = end - now;
 
             if (distance > 1) {
                 container.find("#days").text(Math.floor(distance / day))
@@ -162,18 +173,18 @@
                 container.find("#hours").text("00")
                 container.find("#minutes").text("00")
                 container.find("#seconds").text("00")
-                container.find(".my-countdown").remove()
-                clearInterval(x)
+                container.find('my-countdown').remove()
+                clearInterval(intervalID)
             }
         }, 0);
     }
 
     // Add to favorite
-    $('.my-btn--fav').click(function (e) {
-        e.preventDefault()
-        e.stopPropagation();
-        $(this).toggleClass('is-fav')
-    });
+    // $('.my-btn--fav').click(function (e) {
+    //     e.preventDefault()
+    //     e.stopPropagation();
+    //     $(this).toggleClass('is-fav')
+    // });
 
     // Accordion
     $('.my-accordion__item__header').click(function () {

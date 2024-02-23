@@ -544,15 +544,6 @@ img {
         }
       }
     }
-
-    .my-countdown {
-      display: flex;
-      gap: 2px;
-      align-items: center;
-      font-size: var(--fs-b4);
-      line-height: var(--lh-b4);
-      font-weight: var(--fw-medium);
-    }
   }
 
   &__dialog {
@@ -1944,6 +1935,21 @@ img {
       }
     }
   }
+
+  &__repeat-otp {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.my-countdown {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  font-size: var(--fs-b4);
+  line-height: var(--lh-b4);
+  font-weight: var(--fw-medium);
 }
 
 // Modifiers
