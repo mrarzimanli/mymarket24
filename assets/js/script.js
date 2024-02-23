@@ -4,16 +4,26 @@
         e.stopPropagation()
 
         const dropdown = $('.my-dropdown')
+        const share = $('.my-share')
+        const formControl = $('.my-form__control')
 
         if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0) {
-            dropdown.removeClass('show')
+            dropdown.removeClass('my-dropdown--show')
+        }
+
+        if (!share.is(e.target) && share.has(e.target).length === 0) {
+            share.removeClass('my-share--show')
+        }
+
+        if (!formControl.is(e.target) && formControl.has(e.target).length === 0) {
+            formControl.removeClass('my-form__control--show')
         }
     })
 
     $(document).on('click', '.my-dropdown__header', function (e) {
         e.stopPropagation()
-        $('.my-dropdown').not($(this).closest('.my-dropdown')).removeClass('show')
-        $(this).closest('.my-dropdown').toggleClass('show')
+        $('.my-dropdown').not($(this).closest('.my-dropdown')).removeClass('my-dropdown--show')
+        $(this).closest('.my-dropdown').toggleClass('my-dropdown--show')
     });
 
     $(document).on('click', '.my-dropdown__body span', function () {
@@ -31,6 +41,11 @@
         $(modal).modal('show');
     });
 
+    $('[data-toggle="modalContent"]').click(function () {
+        const modalContent = $(this).data('target');
+        $(modalContent).modalContent('show');
+    });
+
     $('[data-close="modal"]').click(function () {
         const modal = $(this).closest('.my-modal')
         $(modal).modal('hide');
@@ -42,6 +57,9 @@
 
             switch (action) {
                 case 'show':
+                    if ($modal.hasClass('my-modal--multi-content')) {
+                        $modal.find('.my-modal__content[data-step="1"]').addClass('my-modal__content--show')
+                    }
                     $modal.css('display', 'block');
                     $('body').addClass('overflow-hidden');
 
@@ -55,7 +73,11 @@
                     setTimeout(() => {
                         $modal.css('display', 'none');
                         $('body').removeClass('overflow-hidden');
+                        if ($modal.hasClass('my-modal--multi-content')) {
+                            $modal.find('.my-modal__content').removeClass('my-modal__content--show');
+                        }
                     }, 150);
+
                     break;
                 default:
                     console.error('Unsupported action for modal:', action);
@@ -64,12 +86,87 @@
         return this;
     };
 
-    $('#btnSendReport').click(function (e) {
+    $.fn.modalContent = function (action) {
+        this.each(function () {
+            var $modalContent = $(this);
+
+            switch (action) {
+                case 'show':
+                    $modalContent.addClass('my-modal__content--show')
+                    break;
+                case 'hide':
+                    $modalContent.removeClass('my-modal__content--show');
+                    break;
+                default:
+                    console.error('Unsupported action for modalContent:', action);
+            }
+        });
+        return this;
+    };
+
+    $('#btnSendReport').click(function () {
         $('#modalReport').modal('hide');
         setTimeout(() => {
             $('#modalAlert').modal('show');
         }, 150);
     });
+
+    $('#btnSendOTP').click(function () {
+        $('#modalContentPhone').modalContent('hide');
+        $('#modalContentOTP').modalContent('show');
+    });
+
+    $('#modalContentOTP .my-btn--back').click(function () {
+        $('#modalContentOTP').modalContent('hide');
+        $('#modalContentPhone').modalContent('show');
+    });
+
+    $('#btnVerifyOTP').click(function () {
+        $('#modalLogin').modal('hide');
+        $('#modalAlert').modal('show');
+        clearLoginForm();
+    });
+
+    const clearLoginForm = () => {
+        $('#formLogin').find('.my-form__control').val('');
+    }
+
+    $('#btnSendOTP').click(function () {
+        let now = new Date()
+        let endDate = new Date(now.getTime() + 0.1 * 60000);
+        let modal = $(this).closest('#modalLogin')
+        let container = modal.find('.my-form__item__footer');
+        countdown(endDate, container)
+    });
+
+    const countdown = (endDate, container) => {
+        const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+        let countDown = new Date(endDate).getTime()
+
+        let x = setInterval(function () {
+            let now = new Date().getTime(),
+                distance = countDown - now;
+
+            if (distance > 1) {
+                container.find("#days").text(Math.floor(distance / day))
+                container.find("#hours").text(Math.floor((distance % day) / hour))
+                container.find("#minutes").text(("0" + (Math.floor((distance % hour) / minute))).slice(-2))
+                container.find("#seconds").text(("0" + (Math.floor((distance % minute) / second))).slice(-2))
+            } else {
+                container.find('#btnRepeatOTP').prop('disabled', false)
+                container.find("#days").text("00")
+                container.find("#hours").text("00")
+                container.find("#minutes").text("00")
+                container.find("#seconds").text("00")
+                container.find(".my-countdown").remove()
+                clearInterval(x)
+            }
+        }, 0);
+    }
 
     // Add to favorite
     $('.my-btn--fav').click(function (e) {
@@ -82,23 +179,23 @@
     $('.my-accordion__item__header').click(function () {
         const accordionItem = $(this).closest('.my-accordion__item');
 
-        if (!accordionItem.hasClass('show')) {
-            const activeAccordionItem = $('.my-accordion__item.show');
-            activeAccordionItem.removeClass('show').find('.my-accordion__item__body').stop(true, false, true).slideUp(250);
-            accordionItem.addClass('show').find('.my-accordion__item__body').stop(true, false, true).slideDown(250);
+        if (!accordionItem.hasClass('my-accordion__item--show')) {
+            const activeAccordionItem = $('.my-accordion__item--show');
+            activeAccordionItem.removeClass('my-accordion__item--show').find('.my-accordion__item__body').stop(true, false, true).slideUp(250);
+            accordionItem.addClass('my-accordion__item--show').find('.my-accordion__item__body').stop(true, false, true).slideDown(250);
         } else {
-            accordionItem.removeClass('show').find('.my-accordion__item__body').stop(true, false, true).slideUp(250);
+            accordionItem.removeClass('my-accordion__item--show').find('.my-accordion__item__body').stop(true, false, true).slideUp(250);
         }
     });
 
-    const activeAccordionItem = $('.my-accordion__item.show')
+    const activeAccordionItem = $('.my-accordion__item--show')
     activeAccordionItem && activeAccordionItem.find('.my-accordion__item__body').stop(true, false, true).slideDown(250);
 
     // Catalog
     $('.my-btn--catalog').click(function () {
         const category = $('.my-catalog__list__item')
         category.removeClass('my-catalog__list__item--active');
-        category.first().addClass('my-catalog__list__item--active');
+        category.first().toggleClass('my-catalog__list__item--active');
 
         $('.my-btn--catalog').toggleClass('my-btn--active');
         $('body').toggleClass('overflow-hidden');
@@ -206,7 +303,7 @@
 
         dropdown.find('.my-dropdown__header').data("value", value)
         dropdown.find('.my-dropdown__body span').removeClass("selected")
-        dropdown.removeClass('show')
+        dropdown.removeClass('my-dropdown--show')
         dropdown.addClass('active')
         el.addClass('selected')
     }

@@ -13,6 +13,82 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
+    <!-- Modals -->
+    <div class="my-modal my-modal--fade my-modal--multi-content my-modal--sm my-modal--login" id="modalLogin">
+        <div class="my-modal__dialog">
+            <div class="my-modal__content my-modal__content--phone" id="modalContentPhone" data-step="1">
+                <div class="my-modal__header">
+                    <span class="my-modal__header__title">Mobil nömrənizi daxil edin</span>
+                </div>
+                <div class="my-modal__body">
+                    <div id="formLogin" class="my-form">
+                        <div class="my-form__item">
+                            <div class="my-form__item__header">
+                                <label class="my-form__label" for="phoneNumber">Mobil nömrə</label>
+                            </div>
+                            <div class="my-form__item__body">
+                                <input type="text" id="phoneNumber" class="my-form__control" maxlength="10" name="phoneNumber" placeholder="(055) 123 45 67" />
+                            </div>
+                            <!-- <div class="my-form__item__footer">
+                                    <span class="my-form__control__message">Form control message</span>
+                                </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="my-modal__footer">
+                    <div class="my-modal__footer__buttons">
+                        <button class="my-btn my-btn--primary" id="btnSendOTP" data-toggle="modalContent" data-target="#modalContentOTP">İrəli</button>
+                    </div>
+                    <p>Giriş etməklə <a href="#" class="my-btn my-btn--text my-btn--primary">İstifadəçi şərtləri</a> və <a href="#" class="my-btn my-btn--text my-btn--primary">Qaydalar</a> ilə razılaşırsınız</p>
+                </div>
+            </div>
+            <div class="my-modal__content my-modal__content--otp" id="modalContentOTP" data-step="2">
+                <div class="my-modal__header">
+                    <span class="my-modal__header__title">OTP kodu daxil edin</span>
+                </div>
+                <div class="my-modal__body">
+                    <div id="formLogin" class="my-form">
+                        <div class="my-form__item">
+                            <div class="my-form__item__header">
+                                <label class="my-form__label" for="otpCodeEntry">OTP kod</label>
+                            </div>
+                            <div class="my-form__item__body">
+                                <input type="text" id="otpCodeEntry" class="my-form__control" maxlength="6" name="otpCodeEntry" placeholder="123 - 456" />
+                            </div>
+                            <div class="my-form__item__footer">
+                                <button id="btnRepeatOTP" class="my-btn my-btn--text my-btn--primary" disabled>Yenidən göndər</button>
+                                <div class="my-countdown">
+                                    <span id="minutes">00</span>: <span id="seconds">00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-modal__footer">
+                    <div class="my-modal__footer__buttons">
+                        <button class="my-btn my-btn--back" data-toggle="modalContent" data-target="#modalContentOTP">Geri</button>
+                        <button class="my-btn my-btn--primary" id="btnVerifyOTP">Təsdiq et</button>
+                    </div>
+                    <p>Giriş etməklə <a href="#" class="my-btn my-btn--text my-btn--primary">İstifadəçi şərtləri</a> və <a href="#" class="my-btn my-btn--text my-btn--primary">Qaydalar</a> ilə razılaşırsınız</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-modal my-modal--fade my-modal--sm my-modal--alert" id="modalAlert">
+        <div class="my-modal__dialog">
+            <div class="my-modal__content">
+                <div class="my-modal__header">
+                    <span class="my-modal__header__title">Xoş gəldiniz</span>
+                    <p class="my-modal__header__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero iste magnam adipisci provident quis sapiente et, eveniet eos fugit. Fuga assumenda libero nemo repudiandae numquam quo in laboriosam dolorum velit.</p>
+                </div>
+                <div class="my-modal__footer">
+                    <button class="my-btn my-btn--small" data-close="modal">Bağla</button>
+                    <a href="cabinet.html" class="my-btn my-btn--secondary my-btn--small">Elanlara bax</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modals end -->
     <!-- Header -->
     <header class="header">
         <div class="header__top">
@@ -492,7 +568,7 @@
                                     <path d="M9.32339 5.28546L10 5.90719L10.6766 5.28546L10.8829 5.09589C11.7287 4.35446 12.6441 4 13.6288 4C16.0391 4 18 5.96307 18 8.39326C18 9.64868 17.7737 10.5051 17.0724 11.471C16.3185 12.5096 15.0024 13.6934 12.6911 15.4989L10.5973 17.0583C10.2429 17.3223 9.75715 17.3223 9.40269 17.0583L7.30887 15.4989C4.99755 13.6934 3.68152 12.5096 2.92759 11.471C2.22631 10.5051 2 9.64868 2 8.39326C2 5.96307 3.96092 4 6.37124 4C7.35591 4 8.2713 4.35446 9.1171 5.0959L9.32339 5.28546Z" stroke="#222222" stroke-width="2" stroke-linecap="round" />
                                 </svg>
                             </a>
-                            <button class="my-btn my-btn--icon">
+                            <button class="my-btn my-btn--icon" data-toggle="modal" data-target="#modalLogin">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14 5C14 7.20914 12.2091 9 10 9C7.79086 9 6 7.20914 6 5C6 2.79086 7.79086 1 10 1C12.2091 1 14 2.79086 14 5Z" stroke="#222222" stroke-width="2" />
                                     <path d="M3 16.5502C3 14.0372 5.03719 12 7.55019 12H12.4498C14.9628 12 17 14.0372 17 16.5502C17 17.4454 16.3334 18.2005 15.4451 18.3116L15.5691 19.3039L15.4451 18.3116L15.2858 18.3315C11.7756 18.7703 8.22442 18.7703 4.71423 18.3315L4.55492 18.3116L4.43089 19.3039L4.55492 18.3116C3.66661 18.2005 3 17.4454 3 16.5502Z" stroke="#222222" stroke-width="2" />
@@ -1127,7 +1203,7 @@
                             </div>
                             <div class="section__body">
                                 <div class="my-accordion">
-                                    <div class="my-accordion__item show">
+                                    <div class="my-accordion__item my-accordion__item--show">
                                         <div class="my-accordion__item__header">
                                             <span>Mymarket.az da necə elan yerləşdirə bilərəm?</span>
                                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
