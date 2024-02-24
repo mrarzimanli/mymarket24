@@ -269,8 +269,11 @@
     // Form controls
     $('.my-form__control').click(function () {
         const item = $(this).closest('.my-form__item')
-        $(item).removeClass('my-form__item--error');
-        $(item).find('.my-form__control__message').remove();
+
+        if (item.hasClass('my-form__item--error')) {
+            $(item).removeClass('my-form__item--error');
+            $(item).find('.my-form__control__message').remove();
+        }
     });
 
     $('.my-form__control--textarea').on('keyup', function () {
@@ -288,11 +291,104 @@
 
     $('.my-form__control__option').click(function () {
         const value = $(this).data("value");
-        const text = $(this).text();
+        const html = $(this).html();
         const control = $(this).closest('.my-form__control')
+        $(control).find('.my-form__control__option').removeClass('my-form__control__option--selected');
+        $(this).addClass('my-form__control__option--selected');
         $(control).toggleClass('my-form__control--show');
         $(control).find('input[type="hidden"]').val(value);
-        $(control).find('.my-form__control__header span').text(text);
+        $(control).find('.my-form__control__header span').html(html);
+    });
+
+    $('.my-form__control__option--selected').each(function () {
+        const value = $(this).data("value");
+        const html = $(this).html();
+        const control = $(this).closest('.my-form__control')
+        $(control).find('input[type="hidden"]').val(value);
+        $(control).find('.my-form__control__header span').html(html);
+    })
+
+    // New Post Form
+    $('#postHasDiscount').change(function () {
+        const formItem = $(this).closest('.my-form__items-wrapper').find('.my-form__item--discount')
+
+        if ($(this).prop('checked')) {
+            formItem.addClass('my-form__item--show')
+        } else {
+            formItem.removeClass('my-form__item--show')
+        }
+
+    });
+
+    $('#postPicture').change(function () {
+        let files = $(this)[0].files;
+        let fileList = $(this).closest('.my-form__control').find('.file-list')
+
+        if (files.length) {
+            fileList.empty()
+            $.map(files, function (file, i) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const fileEl = `<div class="file">
+                                <div class="file__info">
+                                    <img class="file__thumb" src="${e.target.result}">
+                                    <span class="file__name">${file.name}</span>
+                                </div>
+                                <button class="file__btn-remove" data-index="${i}">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.91949 3.0755C3.6266 2.78261 3.15172 2.78261 2.85883 3.0755C2.56594 3.3684 2.56594 3.84327 2.85883 4.13617L6.72256 7.9999L2.85883 11.8636C2.56594 12.1565 2.56594 12.6314 2.85883 12.9243C3.15172 13.2172 3.6266 13.2172 3.91949 12.9243L7.78322 9.06056L11.6469 12.9243C11.9398 13.2172 12.4147 13.2172 12.7076 12.9243C13.0005 12.6314 13.0005 12.1565 12.7076 11.8636L8.84388 7.9999L12.7076 4.13619C13.0005 3.84329 13.0005 3.36842 12.7076 3.07553C12.4147 2.78263 11.9398 2.78263 11.6469 3.07553L7.78322 6.93924L3.91949 3.0755Z" fill="#7A7A7A" />
+                                    </svg>
+                                </button>
+                            </div>`
+                    return fileList.append(fileEl)
+                };
+
+                reader.readAsDataURL(file);
+            })
+        }
+    });
+
+    $('.file-list').on('click', '.file__btn-remove', function () {
+        const index = $(this).data('index');
+        const input = $('#postPicture')[0];
+        const dataTransfer = new DataTransfer();
+        const newFiles = Array.from(input.files).filter((_, i) => i !== index)
+        newFiles.forEach(file => {
+            dataTransfer.items.add(file);
+        });
+        input.files = dataTransfer.files;
+        $(this).closest('.file').remove();
+    });
+
+    $('[data-toggle="formContent"]').click(function () {
+        const formContent = $(this).data('target');
+        $('.my-form__content').removeClass('my-form__content--show');
+        $(formContent).addClass('my-form__content--show');
+    });
+
+    $('#profilePicture').change(function () {
+        let file = $(this)[0].files[0];
+        let profileThumb = $(this).closest('.my-profile').find('.my-profile__thumb')
+
+        if (file) {
+            profileThumb.empty()
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const picture = `<img src="${e.target.result}">`
+                return profileThumb.append(picture)
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    $('#removeProfilePicture').click(function () {
+        const profile = $(this).closest('.my-profile')
+        const input = profile.find('#profilePicture')
+        const thumb = profile.find('.my-profile__thumb')
+        const src = thumb.data('src')
+        $(thumb).find('img').attr('src', src)
+        $(input).val('');
+
     });
 
     // Fancy Box

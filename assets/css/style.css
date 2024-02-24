@@ -567,6 +567,29 @@ img {
   padding: 12px 24px 0;
 }
 
+.my-modal__header__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 4px;
+}
+
+.my-modal__header__icon svg,
+.my-modal__header__icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .my-modal__header__title {
   font-size: var(--fs-b8);
   font-weight: var(--fw-semi-bold);
@@ -2081,6 +2104,60 @@ img {
           flex-direction: column;
 }
 
+.my-form__content {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.my-form__content__header {
+  font-size: var(--fs-b7);
+  line-height: var(--lh-b7);
+  font-weight: var(--fw-semi-bold);
+}
+
+.my-form__content__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.my-form__content__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 20px 0;
+}
+
+.my-form__content--show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my-form__items-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .my-form__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2124,9 +2201,10 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 8px;
 }
 
@@ -2143,6 +2221,10 @@ img {
   font-size: var(--fs-b4);
   font-weight: var(--fw-medium);
   line-height: var(--lh-b4);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .my-form__char-count {
@@ -2174,7 +2256,14 @@ img {
 }
 
 .my-form__control__option {
-  padding: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding: 8px;
   font-size: var(--fs-b4);
   line-height: var(--fs-b4);
   color: var(--gray-900);
@@ -2183,8 +2272,21 @@ img {
   transition: all 250ms ease-in-out;
 }
 
+.my-form__control__option svg,
+.my-form__control__option img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .my-form__control__option:hover {
   color: var(--green-500);
+}
+
+.my-form__control__option--selected {
+  background: var(--green-300);
+  border-radius: 6px;
 }
 
 .my-form__control__message {
@@ -2233,12 +2335,35 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 12px;
   padding: 10px 12px;
   cursor: pointer;
+}
+
+.my-form__control--select .my-form__control__header > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+
+.my-form__control--select .my-form__control__header > span svg {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .my-form__control--select .my-form__control__body {
@@ -2255,7 +2380,7 @@ img {
   left: 0;
   right: 0;
   border-radius: 8px;
-  padding: 12px;
+  padding: 12px 8px;
   margin-top: 6px;
   -webkit-box-shadow: 0px 4px 12px 0px rgba(34, 34, 34, 0.1);
           box-shadow: 0px 4px 12px 0px rgba(34, 34, 34, 0.1);
@@ -2265,6 +2390,209 @@ img {
   visibility: hidden;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
+  z-index: 9;
+}
+
+.my-form__control--check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: none;
+  border-radius: 0;
+  min-height: auto;
+  padding: 8px 2px;
+}
+
+.my-form__control--check input {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid var(--gray-500);
+  background: var(--gray-400);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+.my-form__control--check input:checked {
+  border-color: var(--green-500);
+  background: var(--green-500);
+}
+
+.my-form__control--check input:checked:after {
+  display: block;
+}
+
+.my-form__control--check input:after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  top: 2px;
+  left: 2px;
+  background: url("../icons/16/check.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.my-form__control--check input + label {
+  padding-left: 10px;
+}
+
+.my-form__control--check label {
+  cursor: pointer;
+}
+
+.my-form__control--check label + input {
+  padding-right: 10px;
+}
+
+.my-form__control--number {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+.my-form__control--number::-webkit-outer-spin-button, .my-form__control--number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.my-form__control--file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: var(--white);
+  border: 1px dashed var(--gray-500);
+  border-radius: 8px;
+  padding: 12px 0;
+}
+
+.my-form__control--file input {
+  display: none;
+}
+
+.my-form__control--file .my-form__control__placeholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  font-size: var(--fs-b5);
+  line-height: var(--lh-b5);
+}
+
+.my-form__control--file .my-form__control__placeholder svg {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.my-form__control--file .my-form__control__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  padding: 4px 12px;
+}
+
+.my-form__control--file .my-form__control__body {
+  padding: 0 12px;
+}
+
+.my-form__control--file .file-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.my-form__control--file .file-list .file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 8px 0;
+}
+
+.my-form__control--file .file-list .file:not(:last-child) {
+  border-bottom: 1px solid var(--gray-500);
+}
+
+.my-form__control--file .file-list .file__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+
+.my-form__control--file .file-list .file__thumb {
+  width: 32px;
+  height: 32px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--gray-500);
+}
+
+.my-form__control--file .file-list .file__name {
+  font-size: var(--fs-b4);
+  line-height: var(--lh-b4);
+}
+
+.my-form__control--file .file-list .file__btn-remove {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  background: none;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+}
+
+.my-form__control--file .file-list .file__btn-remove svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .my-form__repeat-otp {
@@ -2275,6 +2603,102 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
+}
+
+.my-form--new-post {
+  max-width: 472px;
+}
+
+.my-form--new-post .my-form__item--discount {
+  display: none;
+}
+
+.my-form--new-post .my-form__item--time .my-form__item__body {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 16px;
+}
+
+.my-form--new-post .my-form__item--time .my-form__item__body .my-form__control {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.my-form--new-post .my-form__item--show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  padding: 4px 0 8px;
+}
+
+.my-profile__picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 6px;
+  font-size: var(--fs-b2);
+  line-height: var(--lh-b2);
+  font-weight: var(--fw-medium);
+}
+
+.my-profile__thumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-500);
+  overflow: hidden;
+}
+
+.my-profile__thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.my-profile__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+
+.my-profile input {
+  display: none;
 }
 
 .my-countdown {
@@ -2301,6 +2725,10 @@ img {
 
 .hidden {
   display: none !important;
+}
+
+.g-0 {
+  gap: 0;
 }
 
 .swiper {
@@ -2704,6 +3132,42 @@ img {
 
 .main--post .sidebar .my-store {
   margin-bottom: 20px;
+}
+
+.main--new-post .sidebar__header {
+  padding-bottom: 4px;
+}
+
+.main--new-post .sidebar__header__title {
+  font-size: var(--fs-b6);
+  line-height: var(--lh-b6);
+}
+
+.main--new-post .sidebar__body {
+  min-height: auto;
+}
+
+.main--new-post .sidebar__body ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  margin-left: 12px;
+  padding-left: 12px;
+}
+
+.main--new-post .sidebar__body ul li {
+  list-style: disc;
+  font-size: var(--fs-b4);
+  line-height: var(--lh-b4);
+}
+
+.main--new-post .sidebar__footer {
+  padding-bottom: 12px;
 }
 
 .main__content {
@@ -3283,6 +3747,10 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 12px;
+}
+
+.section--new-post {
+  gap: 16px;
 }
 
 .section__header {
