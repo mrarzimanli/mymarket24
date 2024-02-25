@@ -183,21 +183,21 @@
     //     }, 150);
     // });
 
-    $('#btnSendOTP').click(function () {
-        $('#modalContentPhone').modalContent('hide');
-        $('#modalContentOTP').modalContent('show');
-        $.showCountdown();
-        // əgər geri qayıdıb yeni nomre yazıbsa, intervalı resetləmək üçün true göndər
-        // showCountdown(reset: true);
-    });
+    // $('#btnSendOTP').click(function () {
+    //     $('#modalContentPhone').modalContent('hide');
+    //     $('#modalContentOTP').modalContent('show');
+    //     $.showCountdown();
+    //     // əgər geri qayıdıb yeni nomre yazıbsa, intervalı resetləmək üçün true göndər
+    //     // showCountdown(reset: true);
+    // });
 
-    $('#btnVerifyOTP').click(function () {
-        $('#modalLogin').modal('hide');
-        setTimeout(() => {
-            $('#modalAlert').modal('show');
-        }, 150);
-        clearLoginForm();
-    });
+    // $('#btnVerifyOTP').click(function () {
+    //     $('#modalLogin').modal('hide');
+    //     setTimeout(() => {
+    //         $('#modalAlert').modal('show');
+    //     }, 150);
+    //     $.clearLoginForm();
+    // });
 
     // Add to favorite
     // $('.my-btn--fav').click(function (e) {
@@ -211,7 +211,7 @@
         $('#modalContentPhone').modalContent('show');
     });
 
-    const clearLoginForm = () => {
+    $.clearLoginForm = () => {
         $('#formLogin').find('.my-form__control').val('');
     }
 
