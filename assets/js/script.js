@@ -137,16 +137,25 @@
         });
     };
 
+    let intervalID;
+
     $.showCountdown = function (reset) {
+
         if ($('.my-countdown').length && !reset) {
-            return
+            return;
         }
 
-        let container = $('.my-form__repeat-otp')
+        let container = $('.my-form__repeat-otp');
+
+        if (reset) {
+            container.find('.my-countdown').remove();
+            clearInterval(intervalID);
+        }
+
         const countdownEl = `<div class="my-countdown">
                                 <span id="minutes">00</span>: <span id="seconds">00</span>
-                            </div>`
-        container.append(countdownEl)
+                            </div>`;
+        container.append(countdownEl);
 
         const second = 1000,
             minute = second * 60,
@@ -155,31 +164,31 @@
 
         let end = Date.now() + 30 * second;
 
-        let intervalID = setInterval(function () {
+        intervalID = setInterval(function () { // Assign setInterval to intervalID
             let now = new Date().getTime(),
                 distance = end - now;
 
             if (distance > 1) {
-                container.find("#days").text(Math.floor(distance / day))
-                container.find("#hours").text(Math.floor((distance % day) / hour))
-                container.find("#minutes").text(("0" + (Math.floor((distance % hour) / minute))).slice(-2))
-                container.find("#seconds").text(("0" + (Math.floor((distance % minute) / second))).slice(-2))
+                container.find("#days").text(Math.floor(distance / day));
+                container.find("#hours").text(Math.floor((distance % day) / hour));
+                container.find("#minutes").text(("0" + (Math.floor((distance % hour) / minute))).slice(-2));
+                container.find("#seconds").text(("0" + (Math.floor((distance % minute) / second))).slice(-2));
             } else {
-                container.find('#btnRepeatOTP').prop('disabled', false)
-                container.find("#days").text("00")
-                container.find("#hours").text("00")
-                container.find("#minutes").text("00")
-                container.find("#seconds").text("00")
-                container.find('my-countdown').remove()
-                clearInterval(intervalID)
+                container.find('#btnRepeatOTP').prop('disabled', false);
+                container.find("#days").text("00");
+                container.find("#hours").text("00");
+                container.find("#minutes").text("00");
+                container.find("#seconds").text("00");
+                container.find('.my-countdown').remove();
+                clearInterval(intervalID);
             }
         }, 0);
-    }
+    };
 
     // $('#btnSendReport').click(function () {
     //     $('#modalReport').modal('hide');
     //     setTimeout(() => {
-    //         $('#modalAlert').modal('show');
+    //         $('#modalAlertReport').modal('show');
     //     }, 150);
     // });
 
@@ -194,12 +203,12 @@
     // $('#btnVerifyOTP').click(function () {
     //     $('#modalLogin').modal('hide');
     //     setTimeout(() => {
-    //         $('#modalAlert').modal('show');
+    //         $('#modalAlertLogin').modal('show');
     //     }, 150);
     //     $.clearLoginForm();
     // });
 
-    // Add to favorite
+    // // Add to favorite
     // $('.my-btn--fav').click(function (e) {
     //     e.preventDefault()
     //     e.stopPropagation();
@@ -420,6 +429,10 @@
 
         $thumb.find('img').attr('src', src);
         $input.val('');
+    });
+
+    $('#sharePost').click(function () {
+        $('#modalAlertSharePost').modal('show');
     });
 
     const switchAccountType = (type) => {
