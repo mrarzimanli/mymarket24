@@ -2289,6 +2289,23 @@ img {
   border-radius: 6px;
 }
 
+.my-form__control__option--label {
+  font-weight: var(--fw-medium);
+  pointer-events: none;
+  margin-left: -12px;
+}
+
+.my-form__control__option__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 12px;
+}
+
 .my-form__control__message {
   font-size: var(--fs-b3);
   line-height: var(--lh-b3);

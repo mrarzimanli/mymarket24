@@ -637,6 +637,19 @@
                                                             </div>
                                                             <div class="my-form__control__body">
                                                                 <div class="my-form__control__option" data-value="Option 1">Option 1</div>
+                                                                <div class="my-form__control__option__group">
+                                                                    <div class="my-form__control__option my-form__control__option--label">Option 2</div>
+                                                                    <div class="my-form__control__option" data-value="Child option 1">Child option 1</div>
+                                                                    <div class="my-form__control__option" data-value="Child option 2">Child option 2</div>
+                                                                    <div class="my-form__control__option__group">
+                                                                        <div class="my-form__control__option my-form__control__option--label">Child option 3</div>
+                                                                        <div class="my-form__control__option" data-value="Child child option 1">Child child option 1</div>
+                                                                        <div class="my-form__control__option" data-value="Child child option 2">Child child option 2</div>
+                                                                        <div class="my-form__control__option" data-value="Child child option 3">Child child option 3</div>
+                                                                    </div>
+                                                                    <div class="my-form__control__option" data-value="Child option 4">Child option 4</div>
+                                                                    <div class="my-form__control__option" data-value="Child option 5">Child option 5</div>
+                                                                </div>
                                                                 <div class="my-form__control__option" data-value="Option 2">Option 2</div>
                                                                 <div class="my-form__control__option my-form__control__option--selected" data-value="Option 4">Option 4</div>
                                                                 <div class="my-form__control__option" data-value="Option 5">Option 5</div>
@@ -647,8 +660,8 @@
                                                         </div>
                                                     </div>
                                                     <!-- <div class="my-form__item__footer">
-                                                <span class="my-form__control__message">Form control message</span>
-                                            </div> -->
+                                                        <span class="my-form__control__message">Form control message</span>
+                                                    </div> -->
                                                 </div>
                                                 <div class="my-form__item my-form__item--city">
                                                     <div class="my-form__item__header">
@@ -698,12 +711,23 @@
                                                             <label class="my-form__label" for="postDiscountedPrice">Endirimli qiymət - ₼</label>
                                                         </div>
                                                         <div class="my-form__item__body">
-                                                            <input type="number" id="postDiscountedPrice" class="my-form__control my-form__control--number" name="postDiscountedPrice" min="0" placeholder="Məbləği qeyd edin" required />
+                                                            <input type="number" id="postDiscountedPrice" class="my-form__control my-form__control--number" name="postDiscountedPrice" min="0" placeholder="Məbləği qeyd edin" />
                                                         </div>
                                                         <!-- <div class="my-form__item__footer">
                                                     <span class="my-form__control__message">Form control message</span>
                                                 </div> -->
                                                     </div>
+                                                </div>
+                                                <div class="my-form__item my-form__item--post-title">
+                                                    <div class="my-form__item__header">
+                                                        <label class="my-form__label" for="postTitle">Elan başlığı</label>
+                                                    </div>
+                                                    <div class="my-form__item__body">
+                                                        <input type="text" id="postTitle" class="my-form__control" name="postTitle" placeholder="Elan başlığını daxil edin" required />
+                                                    </div>
+                                                    <!-- <div class="my-form__item__footer">
+                                                    <span class="my-form__control__message">Form control message</span>
+                                                </div> -->
                                                 </div>
                                                 <div class="my-form__item my-form__item my-form__item--description">
                                                     <div class="my-form__item__header">
@@ -715,6 +739,17 @@
                                                     </div>
                                                     <div class="my-form__item__body">
                                                         <textarea id="postDescription" class="my-form__control my-form__control--textarea" name="postDescription" maxlength="200" placeholder="Elan barədə ətraflı qeyd edin" required></textarea>
+                                                    </div>
+                                                    <!-- <div class="my-form__item__footer">
+                                                    <span class="my-form__control__message">Form control message</span>
+                                                </div> -->
+                                                </div>
+                                                <div class="my-form__item my-form__item--phone">
+                                                    <div class="my-form__item__header">
+                                                        <label class="my-form__label" for="phoneNumber">Mobil nömrə</label>
+                                                    </div>
+                                                    <div class="my-form__item__body">
+                                                        <input type="text" id="phoneNumber" class="my-form__control" name="phoneNumber" placeholder="(055) 123 45 67" required />
                                                     </div>
                                                     <!-- <div class="my-form__item__footer">
                                                     <span class="my-form__control__message">Form control message</span>
@@ -797,7 +832,7 @@
                                             </div>
                                         </div>
                                         <div class="my-form__content__footer">
-                                            <button class="my-btn my-btn--primary" data-toggle="formContent" data-target="#formContentAccountSetup">Növbəti</button>
+                                            <button id="showContentAccountSetup" class="my-btn my-btn--primary">Növbəti</button>
                                         </div>
                                     </div>
                                     <div id="formContentAccountSetup" class="my-form__content">
@@ -882,7 +917,7 @@
                                                         <label class="my-form__label" for="phoneNumber">Mobil nömrə</label>
                                                     </div>
                                                     <div class="my-form__item__body">
-                                                        <input type="number" id="phoneNumber" class="my-form__control" name="phoneNumber" placeholder="(055) 123 45 67" required />
+                                                        <input type="text" id="phoneNumber" class="my-form__control" name="phoneNumber" placeholder="(055) 123 45 67" required />
                                                     </div>
                                                     <!-- <div class="my-form__item__footer">
                                                 <span class="my-form__control__message">Form control message</span>
@@ -951,7 +986,7 @@
                                             </div>
                                         </div>
                                         <div class="my-form__content__footer">
-                                            <button class="my-btn" data-toggle="formContent" data-target="#formContentNewPost">Geri</button>
+                                            <button id="showContentNewPost" class="my-btn">Geri</button>
                                             <button id="sharePost" class="my-btn my-btn--primary">Elanı yerləşdir</button>
                                         </div>
                                     </div>

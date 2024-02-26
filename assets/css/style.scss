@@ -1937,6 +1937,18 @@ img {
         background: var(--green-300);
         border-radius: 6px;
       }
+
+      &--label {
+        font-weight: var(--fw-medium);
+        pointer-events: none;
+        margin-left: -12px;
+      }
+
+      &__group {
+        display: flex;
+        flex-direction: column;
+        margin-left: 12px;
+      }
     }
 
     &__message {

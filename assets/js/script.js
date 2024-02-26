@@ -398,13 +398,13 @@
         $file.remove();
     });
 
-    $('[data-toggle="formContent"]').click(function () {
-        const formContent = $(this).data('target');
-        const $formContents = $('.my-form__content');
+    // $('[data-toggle="formContent"]').click(function () {
+    //     const formContent = $(this).data('target');
+    //     const $formContents = $('.my-form__content');
 
-        $formContents.removeClass('my-form__content--show');
-        $(formContent).addClass('my-form__content--show');
-    });
+    //     $formContents.removeClass('my-form__content--show');
+    //     $(formContent).addClass('my-form__content--show');
+    // });
 
     $('#profilePicture').change(function () {
         const file = this.files[0];
@@ -430,6 +430,20 @@
         $thumb.find('img').attr('src', src);
         $input.val('');
     });
+
+    $.showFormContent = function (contentId) {
+        $('.my-form__content').removeClass('my-form__content--show');
+        $(`#${contentId}`).addClass('my-form__content--show');
+    };
+
+    // $('#showContentAccountSetup').click(function () {
+    //     $.showFormContent('formContentAccountSetup');
+    // });
+
+    // $('#showContentNewPost').click(function () {
+    //     $.showFormContent('formContentNewPost');
+    // });
+
 
     $('#sharePost').click(function () {
         $('#modalAlertSharePost').modal('show');
