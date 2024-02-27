@@ -151,6 +151,7 @@
         let container = $('.my-form__repeat-otp');
 
         if (reset) {
+            container.find('#btnRepeatOTP').prop('disabled', true);
             container.find('.my-countdown').remove();
             clearInterval(intervalID);
         }
@@ -165,7 +166,7 @@
             hour = minute * 60,
             day = hour * 24;
 
-        let end = Date.now() + 30 * second;
+        let end = Date.now() + 60 * second;
 
         intervalID = setInterval(function () { // Assign setInterval to intervalID
             let now = new Date().getTime(),
@@ -446,13 +447,13 @@
     //     $.showFormContent('formContentAccountSetup');
     // });
 
-    // $('#showContentNewPost').click(function () {
-    //     $.showFormContent('formContentNewPost');
-    // });
-
-    $('#sharePost').click(function () {
-        $('#modalAlertSharePost').modal('show');
+    $('#showContentNewPost').click(function () {
+        $.showFormContent('formContentNewPost');
     });
+
+    // $('#sharePost').click(function () {
+    //     $('#modalAlertSharePost').modal('show');
+    // });
 
     const switchAccountType = (type) => {
         const $formItemsForBusiness = $('.my-form__item--for-business');

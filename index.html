@@ -87,6 +87,39 @@
             </div>
         </div>
     </div>
+    <div class="my-modal my-modal--fade my-modal--closeable my-modal--sm my-modal--otp" id="modalOTP">
+        <div class="my-modal__dialog">
+            <div class="my-modal__content my-modal__content--otp" id="modalContentOTP">
+                <div class="my-modal__header">
+                    <span class="my-modal__header__title">OTP kodu daxil edin</span>
+                </div>
+                <div class="my-modal__body">
+                    <div id="formLogin" class="my-form">
+                        <div class="my-form__item">
+                            <div class="my-form__item__header">
+                                <label class="my-form__label" for="otpCodeEntry">OTP kod</label>
+                            </div>
+                            <div class="my-form__item__body">
+                                <input type="text" id="otpCodeEntry" class="my-form__control" maxlength="6" name="otpCodeEntry" placeholder="123 - 456" />
+                            </div>
+                            <div class="my-form__item__footer">
+                                <div class="my-form__repeat-otp">
+                                    <button id="btnRepeatOTP" class="my-btn my-btn--text my-btn--primary" disabled>Yenidən göndər</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-modal__footer">
+                    <div class="my-modal__footer__buttons">
+                        <button class="my-btn my-btn--back">Geri</button>
+                        <button class="my-btn my-btn--primary" id="btnVerifyOTP">Təsdiq et</button>
+                    </div>
+                    <p>Giriş etməklə <a href="#" class="my-btn my-btn--text my-btn--primary">İstifadəçi şərtləri</a> və <a href="#" class="my-btn my-btn--text my-btn--primary">Qaydalar</a> ilə razılaşırsınız</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Modals end -->
     <!-- Header -->
     <header class="header">
