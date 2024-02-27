@@ -88,9 +88,11 @@
     $('[data-close="modal"]').click(function () {
         const $modal = $(this).closest('.my-modal');
         $modal.modal('hide');
+        // Redirect etmək üçün ikinci parametr kimi url gönder
+        // $modal.modal('hide', "http://127.0.0.1:5500/wishlist.html");
     });
 
-    $.fn.modal = function (action) {
+    $.fn.modal = function (action, url) {
         const showDelay = 150;
         return this.each(function () {
             const $modal = $(this);
@@ -113,6 +115,7 @@
                         if ($modal.hasClass('my-modal--multi-content')) {
                             $modal.find('.my-modal__content').modalContent('hide');
                         }
+                        !!url && window.location.replace(url)
                     }, showDelay);
                     break;
                 default:
@@ -308,7 +311,7 @@
     });
 
     // Form controls
-    $('.my-form__control').click(function () {
+    $(document).on('click', '.my-form__control', function () {
         const $item = $(this).closest('.my-form__item')
 
         if ($item.hasClass('my-form__item--error')) {
@@ -317,7 +320,7 @@
         }
     });
 
-    $('.my-form__control--textarea').on('keyup', function () {
+    $(document).on('keyup', '.my-form__control--textarea', function () {
         const $this = $(this);
         const count = $this.val().length;
         const max = $this.prop('maxLength');
@@ -327,11 +330,11 @@
         }
     });
 
-    $('.my-form__control--select .my-form__control__header').click(function () {
+    $(document).on('click', '.my-form__control__header', function () {
         $(this).closest('.my-form__control--select').toggleClass('my-form__control--show');
     });
 
-    $('.my-form__control__option').click(function () {
+    $(document).on('click', '.my-form__control__option', function () {
         const $this = $(this);
         const value = $this.data("value");
         const html = $this.html();
@@ -356,6 +359,9 @@
 
     $('#postPicture').change(function () {
         const files = $(this)[0].files;
+
+
+        console.log(files);
         const $formControl = $(this).closest('.my-form__control');
         const $fileList = $formControl.find('.file-list');
 
@@ -443,7 +449,6 @@
     // $('#showContentNewPost').click(function () {
     //     $.showFormContent('formContentNewPost');
     // });
-
 
     $('#sharePost').click(function () {
         $('#modalAlertSharePost').modal('show');
