@@ -140,6 +140,22 @@
         });
     };
 
+    $.fn.preloader = function (action) {
+        return this.each(function () {
+            const $container = $(this);
+            switch (action) {
+                case 'show':
+                    $container.addClass('my-preloader');
+                    break;
+                case 'hide':
+                    $container.removeClass('my-preloader');
+                    break;
+                default:
+                    console.error('Unsupported action for preloader:', action);
+            }
+        });
+    };
+
     let intervalID;
 
     $.showCountdown = function (reset) {
@@ -271,6 +287,15 @@
     const swiperStores = new Swiper(".swiper--stores", {
         slidesPerView: 4,
         spaceBetween: 16,
+        navigation: {
+            nextEl: ".my-btn--next",
+            prevEl: ".my-btn--prev",
+        },
+    });
+
+    const swiperTags = new Swiper(".swiper--tags", {
+        slidesPerView: "auto",
+        spaceBetween: 12,
         navigation: {
             nextEl: ".my-btn--next",
             prevEl: ".my-btn--prev",
