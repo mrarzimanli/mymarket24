@@ -2492,15 +2492,61 @@ img {
   display: none;
 }
 
-.my-form__control--check input + label {
+.my-form__control--check input + .my-form__label {
   padding-left: 10px;
-}
-
-.my-form__control--check label {
   cursor: pointer;
 }
 
-.my-form__control--check label + input {
+.my-form__control--check .my-form__control__label {
+  cursor: pointer;
+}
+
+.my-form__control--check .my-form__control__label + input {
+  padding-right: 10px;
+}
+
+.my-form__control--radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border: none;
+  border-radius: 0;
+  min-height: auto;
+  padding: 8px 2px;
+}
+
+.my-form__control--radio input {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--gray-500);
+  background: var(--gray-400);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+.my-form__control--radio input:checked {
+  border-color: var(--green-500);
+  border-width: 4px;
+  background: var(--white);
+}
+
+.my-form__control--radio input + .my-form__label {
+  padding-left: 10px;
+}
+
+.my-form__control--radio .my-form__label {
+  cursor: pointer;
+}
+
+.my-form__control--radio .my-form__label + input {
   padding-right: 10px;
 }
 
@@ -2654,6 +2700,12 @@ img {
   gap: 8px;
 }
 
+.my-form__message,
+.my-form__message * {
+  font-size: var(--fs-b3);
+  line-height: var(--lh-b3);
+}
+
 .my-form--new-post {
   max-width: 472px;
 }
@@ -2680,6 +2732,16 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.my-form--premium .my-form__item .my-form__control {
+  padding: 12px;
+  border: 1px solid var(--gray-500);
+  border-radius: 8px;
+}
+
+.my-form--premium .my-form__item label {
+  cursor: pointer;
 }
 
 .my-profile {

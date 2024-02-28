@@ -443,17 +443,18 @@
         $(`#${contentId}`).addClass('my-form__content--show');
     };
 
-    // $('#showContentAccountSetup').click(function () {
-    //     $.showFormContent('formContentAccountSetup');
-    // });
+    $('#showContentAccountSetup').click(function () {
+        $.showFormContent('formContentAccountSetup');
+    });
 
     $('#showContentNewPost').click(function () {
         $.showFormContent('formContentNewPost');
     });
 
-    // $('#sharePost').click(function () {
-    //     $('#modalAlertSharePost').modal('show');
-    // });
+    $('#sharePost').click(function () {
+        $('#modalOTP').modal('show');
+        $.showCountdown(true);
+    });
 
     const switchAccountType = (type) => {
         const $formItemsForBusiness = $('.my-form__item--for-business');

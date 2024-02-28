@@ -87,6 +87,63 @@
             </div>
         </div>
     </div>
+    <div class="my-modal my-modal--fade my-modal--sm my-modal--premium" id="modalPremium">
+        <div class="my-modal__dialog">
+            <div class="my-modal__content">
+                <div class="my-modal__header">
+                    <div class="my-modal__header__icon">
+                        <img src="assets/icons/24/premium-1.svg" alt="">
+                    </div>
+                    <span class="my-modal__header__title">Elanı Premium edin</span>
+                    <p class="my-modal__header__description">Elanınız ana səhifədəki və axtarış nəticələrindəki Premium bölməsində təsadüfi qaydada göstəriləcək.</p>
+                </div>
+                <div class="my-modal__body">
+                    <div class="my-form my-form--premium">
+                        <div class="my-form__item my-form__item--service-duration">
+                            <div class="my-form__item__header">
+                                <span class="my-form__label">Xidmətin müddətini seçin</span>
+                            </div>
+                            <div class="my-form__item__body">
+                                <label for="serviceDuration1" class="my-form__control my-form__control--radio">
+                                    <input type="radio" id="serviceDuration1" name="serviceDuration" />
+                                    <span class="my-form__label">1 gün - 5₼</span>
+                                </label>
+                                <label for="serviceDuration2" class="my-form__control my-form__control--radio">
+                                    <input type="radio" id="serviceDuration2" name="serviceDuration" />
+                                    <span class="my-form__label">5 gün - 12₼</sp>
+                                </label>
+                                <label for="serviceDuration3" class="my-form__control my-form__control--radio">
+                                    <input type="radio" id="serviceDuration3" name="serviceDuration" />
+                                    <span class="my-form__label">10 gün - 20₼</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="my-form__item my-form__item--pay-method">
+                            <div class="my-form__item__header">
+                                <span class="my-form__label">Ödəniş üsulunu seçin</span>
+                            </div>
+                            <div class="my-form__item__body">
+                                <label for="paymentMethod1" class="my-form__control my-form__control--radio">
+                                    <input type="radio" id="paymentMethod1" name="paymentMethod" />
+                                    <span class="my-form__label">Bank kartı</span>
+                                </label>
+                                <label for="paymentMethod2" class="my-form__control my-form__control--radio">
+                                    <input type="radio" id="paymentMethod2" name="paymentMethod" />
+                                    <span class="my-form__label">Portmanat</sp>
+                                </label>
+                            </div>
+                        </div>
+                        <input type="hidden" name="postNumber">
+                        <p class="my-form__message">Ödəniş etməklə <a href="#" class="my-btn my-btn--text my-btn--primary">İstifadəçi şərtləri</a> və <a href="#" class="my-btn my-btn--text my-btn--primary">Qaydalar</a> ilə razılaşırsınız</p>
+                    </div>
+                </div>
+                <div class="my-modal__footer">
+                    <button class="my-btn my-btn--small" data-close="modal">Bağla</button>
+                    <button class="my-btn my-btn--secondary my-btn--small">Ödəniş et</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Modals end -->
     <!-- Header -->
     <header class="header">
@@ -409,7 +466,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="my-banner my-banner--premium">
+                                <div class="my-banner my-banner--premium" data-toggle="modal" data-target="#modalPremium">
                                     <div class="my-banner__content">
                                         <img class="my-banner__content__image" src="./assets/icons/24/premium-1.svg" alt="premium">
                                         <div class="my-banner__content__text">
