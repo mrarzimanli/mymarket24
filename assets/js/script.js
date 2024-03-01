@@ -7,9 +7,11 @@
         const $dropdown = $('.my-dropdown');
         const $share = $('.my-share');
         const $formControl = $('.my-form__control');
+        const $postActions = $('.my-post__actions');
         const isDropdownClick = $dropdown.is($target) || $dropdown.has($target).length > 0;
         const isShareClick = $share.is($target) || $share.has($target).length > 0;
         const isFormControlClick = $formControl.is($target) || $formControl.has($target).length > 0;
+        const isPostActionsClick = $postActions.is($target) || $postActions.has($target).length > 0;
 
         if (!isDropdownClick) {
             $dropdown.removeClass('my-dropdown--show');
@@ -21,6 +23,10 @@
 
         if (!isFormControlClick) {
             $formControl.removeClass('my-form__control--show');
+        }
+
+        if (!isPostActionsClick) {
+            $postActions.removeClass('my-post__actions--show');
         }
     });
 
@@ -228,7 +234,6 @@
     //     $.clearLoginForm();
     // });
 
-    // // Add to favorite
     // $('.my-btn--fav').click(function (e) {
     //     e.preventDefault()
     //     e.stopPropagation();
@@ -430,14 +435,6 @@
         $file.remove();
     });
 
-    // $('[data-toggle="formContent"]').click(function () {
-    //     const formContent = $(this).data('target');
-    //     const $formContents = $('.my-form__content');
-
-    //     $formContents.removeClass('my-form__content--show');
-    //     $(formContent).addClass('my-form__content--show');
-    // });
-
     $('#profilePicture').change(function () {
         const file = this.files[0];
         const $profileThumb = $(this).closest('.my-profile').find('.my-profile__thumb');
@@ -468,18 +465,20 @@
         $(`#${contentId}`).addClass('my-form__content--show');
     };
 
-    $('#showContentAccountSetup').click(function () {
-        $.showFormContent('formContentAccountSetup');
-    });
-
     $('#showContentNewPost').click(function () {
         $.showFormContent('formContentNewPost');
     });
 
-    $('#sharePost').click(function () {
-        $('#modalOTP').modal('show');
-        $.showCountdown(true);
-    });
+    // $('#showContentAccountSetup').click(function () {
+    //     $.showFormContent('formContentAccountSetup');
+    // });
+
+    // $('#sharePost').click(function () {
+    //     $('#modalOTP').modal('show');
+    //     $.showCountdown(true);
+    //     // After OTP
+    //     $('#modalAlertSharePost').modal('show');
+    // });
 
     const switchAccountType = (type) => {
         const $formItemsForBusiness = $('.my-form__item--for-business');
@@ -491,13 +490,24 @@
         }
     };
 
+    const initialType = $('.my-form__item--account .my-form__control__option--selected').data('for');
+    switchAccountType(initialType);
+
     $('.my-form__item--account .my-form__control__option').click(function () {
         const type = $(this).data("for");
         switchAccountType(type);
     });
 
-    const initialType = $('.my-form__item--account .my-form__control__option--selected').data('for');
-    switchAccountType(initialType);
+    $('.my-post__actions__header').click(function (e) {
+        e.preventDefault()
+        e.stopPropagation();
+        $this = $(this);
+        $this.closest('.my-post__actions').toggleClass('my-post__actions--show');
+    });
+
+    $('#btnLogout').click(function () {
+        $('#modalAlertLogout').modal('show');
+    });
 
     // Fancy Box
     Fancybox.bind('[data-fancybox]', {});
