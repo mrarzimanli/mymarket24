@@ -2501,7 +2501,7 @@ img {
       }
     }
 
-    #{$form}__items__wrapper {
+    > #{$form}__items__wrapper {
       > #{$form}__item {
         &:last-child {
           border-bottom: none;

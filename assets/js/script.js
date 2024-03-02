@@ -375,7 +375,11 @@
     });
 
     $(document).on('click', '.my-form__control__header', function () {
-        $(this).closest('.my-form__control--select').toggleClass('my-form__control--show');
+        const $this = $(this);
+        const $currentControl = $this.closest('.my-form__control--select');
+        const $activeControls = $('.my-form__control--show').not($currentControl);
+        $activeControls.removeClass('my-form__control--show');
+        $currentControl.toggleClass('my-form__control--show');
     });
 
     $(document).on('click', '.my-form__control__option', function () {
@@ -522,8 +526,11 @@
     $('.my-post__actions__header').click(function (e) {
         e.preventDefault()
         e.stopPropagation();
-        $this = $(this);
-        $this.closest('.my-post__actions').toggleClass('my-post__actions--show');
+        const $this = $(this);
+        const $currentAction = $this.closest('.my-post__actions');
+        const $activeActions = $('.my-post__actions--show').not($currentAction);
+        $activeActions.removeClass('my-post__actions--show');
+        $currentAction.toggleClass('my-post__actions--show');
     });
 
     $('#btnLogout').click(function () {

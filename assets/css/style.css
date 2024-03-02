@@ -2978,7 +2978,7 @@ img {
   min-width: 124px;
 }
 
-.my-form--category .my-form__items__wrapper > .my-form__item:last-child {
+.my-form--category > .my-form__items__wrapper > .my-form__item:last-child {
   border-bottom: none;
 }
 
