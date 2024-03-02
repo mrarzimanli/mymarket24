@@ -364,7 +364,7 @@
         }
     });
 
-    $(document).on('keyup', '.my-form__control--textarea', function () {
+    $(document).on('input', '.my-form__control--textarea', function () {
         const $this = $(this);
         const count = $this.val().length;
         const max = $this.prop('maxLength');
@@ -535,6 +535,23 @@
 
     $('#btnLogout').click(function () {
         $('#modalAlertLogout').modal('show');
+    });
+
+    $('.my-payment__option').click(function () {
+        const $this = $(this);
+        const $options = $('.my-payment__option');
+        const value = $this.data('value');
+        $options.removeClass('my-payment__option--selected');
+        $this.addClass('my-payment__option--selected');
+        $this.closest('.my-form__item').find('#payAmount').val(value).trigger('change').end();
+    });
+
+    $('.my-form--balance #payAmount').on('input', function () {
+        const value = $(this).val();
+
+        $('.my-payment__option').removeClass('my-payment__option--selected').filter(function () {
+            return $(this).data('value') == value;
+        }).addClass('my-payment__option--selected');
     });
 
     // Fancy Box
