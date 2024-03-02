@@ -54,6 +54,7 @@
             $headerContent.text(text);
         }
 
+        $dropdown.find('input[type="hidden"]').val(value).trigger('change').end();
         $dropdown.find('.my-dropdown__header').data("value", value);
         $dropdown.find('.my-dropdown__body span').removeClass("selected");
         $dropdown.removeClass('my-dropdown--show').addClass('active');
@@ -159,6 +160,18 @@
                 default:
                     console.error('Unsupported action for preloader:', action);
             }
+        });
+    };
+
+    $.fn.removeEmptyInputs = function () {
+        return this.each(function () {
+            const $inputs = $(this).find('input');
+            $inputs.each(function () {
+                const $input = $(this);
+                if (!$input.val()) {
+                    $input.attr('name', null);
+                }
+            });
         });
     };
 
@@ -366,19 +379,27 @@
     });
 
     $(document).on('click', '.my-form__control__option', function () {
-        const $this = $(this);
-        const value = $this.data("value");
-        const html = $this.html();
-        const $control = $this.closest('.my-form__control');
+        const $option = $(this);
+        $.selectOptionValue($option);
+    });
+
+    $.selectOptionValue = (option) => {
+        const $option = option;
+        const value = $option.data("value");
+        const html = $option.html();
+        const $control = $option.closest('.my-form__control');
 
         $control.find('.my-form__control__option').removeClass('my-form__control__option--selected');
-        $this.addClass('my-form__control__option--selected');
+        $option.addClass('my-form__control__option--selected');
         $control.removeClass('my-form__control--show')
             .find('input[type="hidden"]').val(value).trigger('change').end()
             .find('.my-form__control__header span').html(html);
-    });
+    }
 
-    $('.my-form__control__option--selected').trigger('click');
+    $('.my-form__control__option--selected').each(function () {
+        const $option = $(this);
+        $.selectOptionValue($option)
+    });
 
     // New Post Form
     $('#postHasDiscount').change(function () {

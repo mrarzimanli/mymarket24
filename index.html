@@ -160,114 +160,116 @@
                                 </svg>
                                 <span>Kateqoriyalar</span>
                             </button>
-                            <form id="searchForm" class="header__search" action="">
-                                <div class="my-search">
-                                    <button type="submit" id="">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 9C3 5.68629 5.68629 3 9 3C12.3137 3 15 5.68629 15 9C15 12.3137 12.3137 15 9 15C5.68629 15 3 12.3137 3 9ZM9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17C10.8487 17 12.551 16.3729 13.9056 15.3199L17.2898 18.704C17.6803 19.0946 18.3135 19.0946 18.704 18.704C19.0946 18.3135 19.0946 17.6803 18.704 17.2898L15.3199 13.9056C16.3729 12.551 17 10.8487 17 9C17 4.58172 13.4183 1 9 1Z" fill="#222222" />
-                                        </svg>
-                                    </button>
-                                    <input id="searchInput" type="text" name="query" placeholder="Məhsul və ya xidmət axtar...">
-                                </div>
-                                <input id="searchCityInput" type="text" name="city" placeholder="Məhsul və ya xidmət axtar..." hidden>
-                            </form>
-                            <div class="my-dropdown my-dropdown--search">
-                                <div class="my-dropdown__header">
-                                    <div class="my-dropdown__header__prefix">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15.66 2.88519C13.36 0.655186 9.94 -0.0148137 6.94 1.19519C5.44 1.80519 4.2 2.80519 3.34 4.05519C2.48 5.30519 2 6.80519 2 8.38519C2 9.74519 2.44 11.2452 3.31 12.8652C3.98 14.1052 4.88 15.3852 6 16.6852C6.49 17.2552 7.02 17.8252 7.56 18.3652C8.21 19.0252 9.08 19.3952 10 19.3952C10.92 19.3952 11.79 19.0252 12.45 18.3652C12.99 17.8152 13.51 17.2552 14 16.6852C15.12 15.3852 16.02 14.1052 16.69 12.8652C17.56 11.2452 18 9.73519 18 8.38519V8.34519C18 6.31519 17.14 4.32519 15.66 2.88519ZM14.92 11.9152C14.33 13.0252 13.51 14.1952 12.48 15.3752C12.02 15.9152 11.53 16.4452 11.02 16.9552C10.75 17.2352 10.38 17.3952 10 17.3952C9.62 17.3952 9.25 17.2352 8.98 16.9552C8.47 16.4452 7.98 15.9152 7.52 15.3752C6.49 14.1952 5.67 13.0252 5.08 11.9152C4.36 10.5952 4 9.40519 4 8.38519C4 6.04519 5.45 3.95519 7.69 3.05519C9.95 2.13519 12.54 2.63519 14.26 4.31519C15.38 5.40519 16 6.84519 16 8.38519C16 9.40519 15.64 10.5952 14.92 11.9152Z" fill="#222222" />
-                                            <path d="M10 5.60522C8.35 5.60522 7 6.95522 7 8.60522C7 10.2552 8.35 11.6052 10 11.6052C11.65 11.6052 13 10.2552 13 8.60522C13 6.95522 11.65 5.60522 10 5.60522ZM10 9.60522C9.45 9.60522 9 9.15522 9 8.60522C9 8.05522 9.45 7.60522 10 7.60522C10.55 7.60522 11 8.05522 11 8.60522C11 9.15522 10.55 9.60522 10 9.60522Z" fill="#222222" />
-                                        </svg>
+                            <form id="searchForm" class="header__content__group__item grow" action="">
+                                <div class="header__search">
+                                    <div class="my-search">
+                                        <button type="submit" id="">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 9C3 5.68629 5.68629 3 9 3C12.3137 3 15 5.68629 15 9C15 12.3137 12.3137 15 9 15C5.68629 15 3 12.3137 3 9ZM9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17C10.8487 17 12.551 16.3729 13.9056 15.3199L17.2898 18.704C17.6803 19.0946 18.3135 19.0946 18.704 18.704C19.0946 18.3135 19.0946 17.6803 18.704 17.2898L15.3199 13.9056C16.3729 12.551 17 10.8487 17 9C17 4.58172 13.4183 1 9 1Z" fill="#222222" />
+                                            </svg>
+                                        </button>
+                                        <input id="searchInput" type="text" name="query" placeholder="Məhsul və ya xidmət axtar...">
                                     </div>
-                                    <div class="my-dropdown__header__content"> Şəhər seç </div>
-                                    <div class="my-dropdown__header__suffix">
-                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M2 5L7.29289 10.2929C7.68342 10.6834 8.31658 10.6834 8.70711 10.2929L14 5" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
+                                    <input id="searchCityInput" type="text" name="city" placeholder="Məhsul və ya xidmət axtar..." hidden>
                                 </div>
-                                <div class="my-dropdown__body">
-                                    <div class="container">
-                                        <div class="my-dropdown__body__content">
-                                            <div class="my-dropdown__body__content__title">Şəhər seçimi</div>
-                                            <div class="my-dropdown__body__content__wrapper">
-                                                <span data-value="Ağcabədi">Ağcabədi</span>
-                                                <span data-value="Ağdam">Ağdam</span>
-                                                <span data-value="Ağdaş">Ağdaş</span>
-                                                <span data-value="Ağdərə">Ağdərə</span>
-                                                <span data-value="Ağstafa">Ağstafa</span>
-                                                <span data-value="Ağsu">Ağsu</span>
-                                                <span data-value="Astara">Astara</span>
-                                                <span data-value="Bakı">Bakı</span>
-                                                <span data-value="Balakən">Balakən</span>
-                                                <span data-value="Beyləqan">Beyləqan</span>
-                                                <span data-value="Biləsuvar">Biləsuvar</span>
-                                                <span data-value="Bərdə">Bərdə</span>
-                                                <span data-value="Cəbrayıl">Cəbrayıl</span>
-                                                <span data-value="Cəlilabad">Cəlilabad</span>
-                                                <span data-value="Daşkəsən">Daşkəsən</span>
-                                                <span data-value="Dəliməmmədli">Dəliməmmədli</span>
-                                                <span data-value="Fizuli">Fizuli</span>
-                                                <span data-value="Goranboy">Goranboy</span>
-                                                <span data-value="Göyçay">Göyçay</span>
-                                                <span data-value="Göygöl">Göygöl</span>
-                                                <span data-value="Göytəpə">Göytəpə</span>
-                                                <span data-value="Gədəbəy">Gədəbəy</span>
-                                                <span data-value="Gəncə">Gəncə</span>
-                                                <span data-value="Hacıqabul">Hacıqabul</span>
-                                                <span data-value="Horadiz">Horadiz</span>
-                                                <span data-value="İmişli">İmişli</span>
-                                                <span data-value="İsmayıllı">İsmayıllı</span>
-                                                <span data-value="Kürdəmir">Kürdəmir</span>
-                                                <span data-value="Kəlbəcər">Kəlbəcər</span>
-                                                <span data-value="Laçın">Laçın</span>
-                                                <span data-value="Lerik">Lerik</span>
-                                                <span data-value="Liman">Liman</span>
-                                                <span data-value="Lənkəran">Lənkəran</span>
-                                                <span data-value="Masallı">Masallı</span>
-                                                <span data-value="Mingəçevir">Mingəçevir</span>
-                                                <span data-value="Naftalan">Naftalan</span>
-                                                <span data-value="Naxçıvan MR">Naxçıvan MR</span>
-                                                <span data-value="Neftçala">Neftçala</span>
-                                                <span data-value="Oğuz">Oğuz</span>
-                                                <span data-value="Qax">Qax</span>
-                                                <span data-value="Qazax">Qazax</span>
-                                                <span data-value="Qobustan">Qobustan</span>
-                                                <span data-value="Quba">Quba</span>
-                                                <span data-value="Qubadlı">Qubadlı</span>
-                                                <span data-value="Qusar">Qusar</span>
-                                                <span data-value="Qəbələ">Qəbələ</span>
-                                                <span data-value="Saatlı">Saatlı</span>
-                                                <span data-value="Sabirabad">Sabirabad</span>
-                                                <span data-value="Şabran">Şabran</span>
-                                                <span data-value="Salyan">Salyan</span>
-                                                <span data-value="Şamaxı">Şamaxı</span>
-                                                <span data-value="Samux">Samux</span>
-                                                <span data-value="Şirvan">Şirvan</span>
-                                                <span data-value="Siyazən">Siyazən</span>
-                                                <span data-value="Sumqayıt">Sumqayıt</span>
-                                                <span data-value="Şuşa">Şuşa</span>
-                                                <span data-value="Şəki">Şəki</span>
-                                                <span data-value="Şəmkir">Şəmkir</span>
-                                                <span data-value="Tovuz">Tovuz</span>
-                                                <span data-value="Tərtər">Tərtər</span>
-                                                <span data-value="Ucar">Ucar</span>
-                                                <span data-value="Xaçmaz">Xaçmaz</span>
-                                                <span data-value="Xaçmaz / Nabran">Xaçmaz / Nabran</span>
-                                                <span data-value="Xaçmaz / Xudat">Xaçmaz / Xudat</span>
-                                                <span data-value="Xırdalan">Xırdalan</span>
-                                                <span data-value="Xızı">Xızı</span>
-                                                <span data-value="Xocəvənd">Xocəvənd</span>
-                                                <span data-value="Yardımlı">Yardımlı</span>
-                                                <span data-value="Yevlax">Yevlax</span>
-                                                <span data-value="Zaqatala">Zaqatala</span>
-                                                <span data-value="Zəngilan">Zəngilan</span>
-                                                <span data-value="Zərdab">Zərdab</span>
+                                <div class="my-dropdown my-dropdown--search">
+                                    <div class="my-dropdown__header">
+                                        <div class="my-dropdown__header__prefix">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.66 2.88519C13.36 0.655186 9.94 -0.0148137 6.94 1.19519C5.44 1.80519 4.2 2.80519 3.34 4.05519C2.48 5.30519 2 6.80519 2 8.38519C2 9.74519 2.44 11.2452 3.31 12.8652C3.98 14.1052 4.88 15.3852 6 16.6852C6.49 17.2552 7.02 17.8252 7.56 18.3652C8.21 19.0252 9.08 19.3952 10 19.3952C10.92 19.3952 11.79 19.0252 12.45 18.3652C12.99 17.8152 13.51 17.2552 14 16.6852C15.12 15.3852 16.02 14.1052 16.69 12.8652C17.56 11.2452 18 9.73519 18 8.38519V8.34519C18 6.31519 17.14 4.32519 15.66 2.88519ZM14.92 11.9152C14.33 13.0252 13.51 14.1952 12.48 15.3752C12.02 15.9152 11.53 16.4452 11.02 16.9552C10.75 17.2352 10.38 17.3952 10 17.3952C9.62 17.3952 9.25 17.2352 8.98 16.9552C8.47 16.4452 7.98 15.9152 7.52 15.3752C6.49 14.1952 5.67 13.0252 5.08 11.9152C4.36 10.5952 4 9.40519 4 8.38519C4 6.04519 5.45 3.95519 7.69 3.05519C9.95 2.13519 12.54 2.63519 14.26 4.31519C15.38 5.40519 16 6.84519 16 8.38519C16 9.40519 15.64 10.5952 14.92 11.9152Z" fill="#222222" />
+                                                <path d="M10 5.60522C8.35 5.60522 7 6.95522 7 8.60522C7 10.2552 8.35 11.6052 10 11.6052C11.65 11.6052 13 10.2552 13 8.60522C13 6.95522 11.65 5.60522 10 5.60522ZM10 9.60522C9.45 9.60522 9 9.15522 9 8.60522C9 8.05522 9.45 7.60522 10 7.60522C10.55 7.60522 11 8.05522 11 8.60522C11 9.15522 10.55 9.60522 10 9.60522Z" fill="#222222" />
+                                            </svg>
+                                        </div>
+                                        <div class="my-dropdown__header__content"> Şəhər seç </div>
+                                        <div class="my-dropdown__header__suffix">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2 5L7.29289 10.2929C7.68342 10.6834 8.31658 10.6834 8.70711 10.2929L14 5" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="my-dropdown__body">
+                                        <div class="container">
+                                            <div class="my-dropdown__body__content">
+                                                <div class="my-dropdown__body__content__title">Şəhər seçimi</div>
+                                                <div class="my-dropdown__body__content__wrapper">
+                                                    <span data-value="Ağcabədi">Ağcabədi</span>
+                                                    <span data-value="Ağdam">Ağdam</span>
+                                                    <span data-value="Ağdaş">Ağdaş</span>
+                                                    <span data-value="Ağdərə">Ağdərə</span>
+                                                    <span data-value="Ağstafa">Ağstafa</span>
+                                                    <span data-value="Ağsu">Ağsu</span>
+                                                    <span data-value="Astara">Astara</span>
+                                                    <span data-value="Bakı">Bakı</span>
+                                                    <span data-value="Balakən">Balakən</span>
+                                                    <span data-value="Beyləqan">Beyləqan</span>
+                                                    <span data-value="Biləsuvar">Biləsuvar</span>
+                                                    <span data-value="Bərdə">Bərdə</span>
+                                                    <span data-value="Cəbrayıl">Cəbrayıl</span>
+                                                    <span data-value="Cəlilabad">Cəlilabad</span>
+                                                    <span data-value="Daşkəsən">Daşkəsən</span>
+                                                    <span data-value="Dəliməmmədli">Dəliməmmədli</span>
+                                                    <span data-value="Fizuli">Fizuli</span>
+                                                    <span data-value="Goranboy">Goranboy</span>
+                                                    <span data-value="Göyçay">Göyçay</span>
+                                                    <span data-value="Göygöl">Göygöl</span>
+                                                    <span data-value="Göytəpə">Göytəpə</span>
+                                                    <span data-value="Gədəbəy">Gədəbəy</span>
+                                                    <span data-value="Gəncə">Gəncə</span>
+                                                    <span data-value="Hacıqabul">Hacıqabul</span>
+                                                    <span data-value="Horadiz">Horadiz</span>
+                                                    <span data-value="İmişli">İmişli</span>
+                                                    <span data-value="İsmayıllı">İsmayıllı</span>
+                                                    <span data-value="Kürdəmir">Kürdəmir</span>
+                                                    <span data-value="Kəlbəcər">Kəlbəcər</span>
+                                                    <span data-value="Laçın">Laçın</span>
+                                                    <span data-value="Lerik">Lerik</span>
+                                                    <span data-value="Liman">Liman</span>
+                                                    <span data-value="Lənkəran">Lənkəran</span>
+                                                    <span data-value="Masallı">Masallı</span>
+                                                    <span data-value="Mingəçevir">Mingəçevir</span>
+                                                    <span data-value="Naftalan">Naftalan</span>
+                                                    <span data-value="Naxçıvan MR">Naxçıvan MR</span>
+                                                    <span data-value="Neftçala">Neftçala</span>
+                                                    <span data-value="Oğuz">Oğuz</span>
+                                                    <span data-value="Qax">Qax</span>
+                                                    <span data-value="Qazax">Qazax</span>
+                                                    <span data-value="Qobustan">Qobustan</span>
+                                                    <span data-value="Quba">Quba</span>
+                                                    <span data-value="Qubadlı">Qubadlı</span>
+                                                    <span data-value="Qusar">Qusar</span>
+                                                    <span data-value="Qəbələ">Qəbələ</span>
+                                                    <span data-value="Saatlı">Saatlı</span>
+                                                    <span data-value="Sabirabad">Sabirabad</span>
+                                                    <span data-value="Şabran">Şabran</span>
+                                                    <span data-value="Salyan">Salyan</span>
+                                                    <span data-value="Şamaxı">Şamaxı</span>
+                                                    <span data-value="Samux">Samux</span>
+                                                    <span data-value="Şirvan">Şirvan</span>
+                                                    <span data-value="Siyazən">Siyazən</span>
+                                                    <span data-value="Sumqayıt">Sumqayıt</span>
+                                                    <span data-value="Şuşa">Şuşa</span>
+                                                    <span data-value="Şəki">Şəki</span>
+                                                    <span data-value="Şəmkir">Şəmkir</span>
+                                                    <span data-value="Tovuz">Tovuz</span>
+                                                    <span data-value="Tərtər">Tərtər</span>
+                                                    <span data-value="Ucar">Ucar</span>
+                                                    <span data-value="Xaçmaz">Xaçmaz</span>
+                                                    <span data-value="Xaçmaz / Nabran">Xaçmaz / Nabran</span>
+                                                    <span data-value="Xaçmaz / Xudat">Xaçmaz / Xudat</span>
+                                                    <span data-value="Xırdalan">Xırdalan</span>
+                                                    <span data-value="Xızı">Xızı</span>
+                                                    <span data-value="Xocəvənd">Xocəvənd</span>
+                                                    <span data-value="Yardımlı">Yardımlı</span>
+                                                    <span data-value="Yevlax">Yevlax</span>
+                                                    <span data-value="Zaqatala">Zaqatala</span>
+                                                    <span data-value="Zəngilan">Zəngilan</span>
+                                                    <span data-value="Zərdab">Zərdab</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                             <div class="header__catalog">
                                 <div class="header__catalog__content">
                                     <div class="container">
