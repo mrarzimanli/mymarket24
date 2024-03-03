@@ -903,7 +903,7 @@ img {
   flex-grow: 1;
 
   .sidebar {
-    width: 286px;
+    max-width: 286px;
     padding: 20px 0;
     gap: 16px;
     border-right: 1px solid var(--gray-500);
@@ -3260,6 +3260,8 @@ img {
 
   &--cabinet {
     .sidebar {
+      flex-grow: 1;
+
       &__header {
         padding: 0 16px;
       }
@@ -3797,7 +3799,6 @@ img {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  flex-grow: 1;
 
   &--white {
     background: var(--white);
