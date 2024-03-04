@@ -408,15 +408,21 @@
 
     $('.my-form__control--select .my-form__control--search').on('input', function () {
         const $this = $(this);
-        const $options = $(this).closest('.my-form__control__body').find('.my-form__control__option').not('.my-form__control__option--label');
+        const $options = $this.closest('.my-form__control__body').find('.my-form__control__option');
         const searchKey = $this.val().toLowerCase();
 
         $options.each(function () {
             const $option = $(this);
             const text = $option.text().toLowerCase();
-            $option.toggle(text.includes(searchKey));
+            const $groups = $option.parents('.my-form__control__option__group');
+            if (text.includes(searchKey)) {
+                $option.show();
+                $groups.find('.my-form__control__option--label').show();
+            } else {
+                $option.hide();
+            }
         });
-    })
+    });
 
     // New Post Form
     $('#postHasDiscount').change(function () {
