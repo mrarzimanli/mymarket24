@@ -517,10 +517,9 @@
         $.showFormContent('formContentNewPost');
     });
 
-    $('#showContentAccountSetup').click(function () {
-        // $.showFormContent('formContentAccountSetup');
-        console.log($('#postPicture')[0].files);
-    });
+    // $('#showContentAccountSetup').click(function () {
+    //     $.showFormContent('formContentAccountSetup');
+    // });
 
     // $('#sharePost').click(function () {
     //     $('#modalOTP').modal('show');
