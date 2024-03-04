@@ -148,14 +148,15 @@
     };
 
     $.fn.preloader = function (action) {
+        const $body = $('body');
         return this.each(function () {
             const $container = $(this);
             switch (action) {
                 case 'show':
-                    $container.addClass('my-preloader');
+                    $container.addClass($container.is($body) ? 'my-preloader my-preloader--fixed' : 'my-preloader');
                     break;
                 case 'hide':
-                    $container.removeClass('my-preloader');
+                    $container.removeClass($container.is($body) ? 'my-preloader--fixed' : 'my-preloader');
                     break;
                 default:
                     console.error('Unsupported action for preloader:', action);
@@ -404,6 +405,18 @@
         const $option = $(this);
         $.selectOptionValue($option)
     });
+
+    $('.my-form__control--select .my-form__control--search').on('input', function () {
+        const $this = $(this);
+        const $options = $(this).closest('.my-form__control__body').find('.my-form__control__option').not('.my-form__control__option--label');
+        const searchKey = $this.val().toLowerCase();
+
+        $options.each(function () {
+            const $option = $(this);
+            const text = $option.text().toLowerCase();
+            $option.toggle(text.includes(searchKey));
+        });
+    })
 
     // New Post Form
     $('#postHasDiscount').change(function () {
