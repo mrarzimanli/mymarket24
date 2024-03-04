@@ -156,7 +156,7 @@
                     $container.addClass($container.is($body) ? 'my-preloader my-preloader--fixed' : 'my-preloader');
                     break;
                 case 'hide':
-                    $container.removeClass($container.is($body) ? 'my-preloader--fixed' : 'my-preloader');
+                    $container.removeClass($container.is($body) ? 'my-preloader my-preloader--fixed' : 'my-preloader');
                     break;
                 default:
                     console.error('Unsupported action for preloader:', action);
