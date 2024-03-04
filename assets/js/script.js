@@ -432,35 +432,20 @@
         $formItemDiscount.toggleClass('my-form__item--show', this.checked);
     });
 
+    const dataTransfer = new DataTransfer();
+
     $('#postPicture').change(function () {
-        const files = $(this)[0].files;
-
-
-        console.log(files);
-        const $formControl = $(this).closest('.my-form__control');
-        const $fileList = $formControl.find('.file-list');
+        const $this = $(this);
+        const input = $this[0];
+        const files = input.files;
+        const $fileList = $this.closest('.my-form__control').find('.file-list');
 
         if (files.length) {
-            $fileList.empty();
-
             [...files].forEach((file, i) => {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const fileEl = `<div class="file">
-                                        <div class="file__info">
-                                            <img class="file__thumb" src="${e.target.result}">
-                                            <span class="file__name">${file.name}</span>
-                                        </div>
-                                        <button class="file__btn-remove" data-index="${i}">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.91949 3.0755C3.6266 2.78261 3.15172 2.78261 2.85883 3.0755C2.56594 3.3684 2.56594 3.84327 2.85883 4.13617L6.72256 7.9999L2.85883 11.8636C2.56594 12.1565 2.56594 12.6314 2.85883 12.9243C3.15172 13.2172 3.6266 13.2172 3.91949 12.9243L7.78322 9.06056L11.6469 12.9243C11.9398 13.2172 12.4147 13.2172 12.7076 12.9243C13.0005 12.6314 13.0005 12.1565 12.7076 11.8636L8.84388 7.9999L12.7076 4.13619C13.0005 3.84329 13.0005 3.36842 12.7076 3.07553C12.4147 2.78263 11.9398 2.78263 11.6469 3.07553L7.78322 6.93924L3.91949 3.0755Z" fill="#7A7A7A" />
-                                            </svg>
-                                        </button>
-                                    </div>`;
-                    $fileList.append(fileEl);
-                };
-                reader.readAsDataURL(file);
+                dataTransfer.items.add(file);
+                displayFile(file, $fileList, i)
             });
+            input.files = dataTransfer.files;
         }
     });
 
@@ -468,16 +453,35 @@
         const index = $(this).data('index');
         const $file = $(this).closest('.file');
         const input = $('#postPicture')[0];
-        const newFiles = Array.from(input.files).filter((_, i) => i !== index);
+        const files = [...input.files].filter((_, i) => i !== index);
         const dataTransfer = new DataTransfer();
 
-        newFiles.forEach(file => {
+        files.forEach(file => {
             dataTransfer.items.add(file);
         });
 
         input.files = dataTransfer.files;
         $file.remove();
     });
+
+    function displayFile(file, $fileList, index) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const fileEl = `<div class="file">
+                                <div class="file__info">
+                                    <img class="file__thumb" src="${e.target.result}">
+                                    <span class="file__name">${file.name}</span>
+                                </div>
+                                <button class="file__btn-remove" data-index="${index}">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.91949 3.0755C3.6266 2.78261 3.15172 2.78261 2.85883 3.0755C2.56594 3.3684 2.56594 3.84327 2.85883 4.13617L6.72256 7.9999L2.85883 11.8636C2.56594 12.1565 2.56594 12.6314 2.85883 12.9243C3.15172 13.2172 3.6266 13.2172 3.91949 12.9243L7.78322 9.06056L11.6469 12.9243C11.9398 13.2172 12.4147 13.2172 12.7076 12.9243C13.0005 12.6314 13.0005 12.1565 12.7076 11.8636L8.84388 7.9999L12.7076 4.13619C13.0005 3.84329 13.0005 3.36842 12.7076 3.07553C12.4147 2.78263 11.9398 2.78263 11.6469 3.07553L7.78322 6.93924L3.91949 3.0755Z" fill="#7A7A7A" />
+                                    </svg>
+                                </button>
+                            </div>`;
+            $fileList.append(fileEl);
+        };
+        reader.readAsDataURL(file);
+    }
 
     $('#profilePicture').change(function () {
         const file = this.files[0];
@@ -513,9 +517,10 @@
         $.showFormContent('formContentNewPost');
     });
 
-    // $('#showContentAccountSetup').click(function () {
-    //     $.showFormContent('formContentAccountSetup');
-    // });
+    $('#showContentAccountSetup').click(function () {
+        // $.showFormContent('formContentAccountSetup');
+        console.log($('#postPicture')[0].files);
+    });
 
     // $('#sharePost').click(function () {
     //     $('#modalOTP').modal('show');
