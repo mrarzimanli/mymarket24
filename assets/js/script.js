@@ -280,21 +280,28 @@
     activeAccordionItem.find('.my-accordion__item__body').stop(true, false, true).slideDown(250);
 
     // Catalog
+    const $catalog = $('.header__catalog');
     const $catalogListItems = $('.my-catalog__list__item');
     const $btnCatalog = $('.my-btn--catalog');
 
     $btnCatalog.click(function () {
+        const isCatalogShown = $catalog.hasClass('header__catalog--show');
+
         $catalogListItems.removeClass('my-catalog__list__item--active');
-        $catalogListItems.first().addClass('my-catalog__list__item--active');
+
+        if (!isCatalogShown) {
+            $catalogListItems.first().addClass('my-catalog__list__item--active');
+        }
 
         $btnCatalog.toggleClass('my-btn--active');
         $('body').toggleClass('overflow-hidden');
-        $('.header__catalog').toggleClass('header__catalog--show');
+        $catalog.toggleClass('header__catalog--show');
     });
 
     $('.my-btn--categories').click(function () {
-        $(this).closest('li').find('ul li.hidden').removeClass('hidden');
-        $(this).remove();
+        const $this = $(this)
+        $this.closest('li').find('ul li.hidden').removeClass('hidden');
+        $this.remove();
     });
 
     $catalogListItems.hover(function () {

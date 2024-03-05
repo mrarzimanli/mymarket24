@@ -2473,13 +2473,13 @@ img {
           flex-grow: 1;
 }
 
-.my-form__item--pay-method .my-form__control {
+.my-form__item--pay-method .my-form__control, .my-form__item--service-duration .my-form__control {
   padding: 12px;
   border: 1px solid var(--gray-500);
   border-radius: 8px;
 }
 
-.my-form__item--pay-method label {
+.my-form__item--pay-method label, .my-form__item--service-duration label {
   cursor: pointer;
 }
 

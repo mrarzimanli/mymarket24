@@ -2085,7 +2085,8 @@ img {
       }
     }
 
-    &--pay-method {
+    &--pay-method,
+    &--service-duration {
       #{$form}__control {
         padding: 12px;
         border: 1px solid var(--gray-500);
