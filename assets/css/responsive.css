@@ -1,11 +1,205 @@
-@media (min-width: 1400px) {
+.container {
+  --gutter: 24px;
+  width: 100%;
+  padding-right: calc(var(--gutter) * 0.5);
+  padding-left: calc(var(--gutter) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1272px) {
   .container {
     max-width: 1224px;
+  }
+}
+
+@media (max-width: 1272px) {
+  .container {
+    max-width: 1164px;
+  }
+  .main__aside {
+    width: 220px;
+  }
+  .main--post .main__layout {
+    width: 728px;
+  }
+  .main--post .main__aside {
+    width: 382px;
+  }
+  .section--store-details .section__body {
+    gap: 24px;
+  }
+  .my-store {
+    width: 208.8px;
+  }
+  .my-store__picture {
+    height: 208.8px;
+  }
+  .my-store--sm {
+    width: 205px;
+  }
+  .my-store--sm .my-store__picture {
+    height: 205px;
+  }
+  .my-store--detailed {
+    gap: 20px;
+  }
+  .my-store--detailed .my-store__info {
+    padding-right: 0px;
+  }
+  .my-store--detailed .my-store__info .my-store__contact {
+    gap: 12px;
+  }
+  .my-store--inline {
+    width: auto;
+  }
+  .my-post {
+    width: 208.8px;
+  }
+  .my-post__picture {
+    height: 208.8px;
+  }
+  .my-post--sm {
+    width: 205px;
+  }
+  .my-post--sm .my-post__picture {
+    height: 205px;
+  }
+  .my-stat {
+    width: 353.3px;
+  }
+}
+
+@media (max-width: 1212px) {
+  .container {
+    max-width: 924px;
+  }
+  .my-post {
+    width: 205px;
+  }
+  .my-post__picture {
+    height: 205px;
+  }
+  .my-store {
+    width: 205px;
+  }
+  .my-store__picture {
+    height: 205px;
+  }
+  .my-store__divider {
     width: 100%;
-    padding-right: 12px;
-    padding-left: 12px;
-    margin-right: auto;
-    margin-left: auto;
+    height: 1px;
+  }
+  .my-store__business-info {
+    max-width: none;
+  }
+  .my-store--detailed {
+    width: 100%;
+  }
+  .my-stat {
+    width: 286.6px;
+  }
+  .my-form__content__footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .my-form--new-post {
+    max-width: none;
+  }
+  .my-form--profile {
+    max-width: none;
+  }
+  .main__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main__aside {
+    width: 100%;
+  }
+  .main--home .main__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .main--home .main__aside {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: none;
+  }
+  .main--new-post .main__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .main--post .main__layout {
+    width: 100%;
+  }
+  .main--post .main__aside {
+    width: 100%;
+    padding-left: 0;
+    gap: 0;
+  }
+  .main--post .main__aside__header {
+    padding-top: 0;
+  }
+  .main--post .main__aside__header .my-btn {
+    margin-top: -68px;
+  }
+  .section--store-details .section__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__main .my-btn--catalog, .header__main .my-btn--add-post {
+    padding: 10px;
+    min-width: 42px;
+  }
+  .header__main .my-btn--catalog span, .header__main .my-btn--add-post span {
+    display: none;
+  }
+  .header__top .header__content {
+    gap: 20px;
+  }
+  .header__top .header__contact-list {
+    gap: 12px;
+  }
+  .header__top .header__menu-list {
+    gap: 12px;
+  }
+  .footer__contact-list {
+    gap: 12px;
+  }
+  .footer__contact .footer__menu-list {
+    gap: 12px;
+  }
+  .sidebar__body {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 972px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 540px;
   }
 }
 /*# sourceMappingURL=responsive.css.map */

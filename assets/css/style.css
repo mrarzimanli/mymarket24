@@ -938,13 +938,9 @@ img {
 
 .my-category__list__item__label {
   color: var(--gray-700);
-  margin-left: 4px;
 }
 
 .my-category__list__item a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 8px 0;
   font-size: var(--fs-b4);
   line-height: var(--lh-b4);
@@ -2986,7 +2982,10 @@ img {
 }
 
 .my-form--category .my-form__item--price-range .my-form__control {
-  min-width: 124px;
+  min-width: 84px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .my-form--category > .my-form__items__wrapper > .my-form__item:last-child {
@@ -3711,7 +3710,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 64px;
+  gap: 20px;
   padding: 15px 0;
 }
 
@@ -3746,6 +3745,10 @@ img {
 
 .header__main .header__logo {
   display: block;
+}
+
+.header__main .header__logo--mobile {
+  display: none;
 }
 
 .header__main .header__logo img {
@@ -3973,7 +3976,7 @@ img {
 
 .main__layout--fluid {
   max-width: none;
-  width: 100%;
+  width: 100% !important;
 }
 
 .main__aside {

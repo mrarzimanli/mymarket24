@@ -868,11 +868,9 @@ img {
 
       &__label {
         color: var(--gray-700);
-        margin-left: 4px;
       }
 
       a {
-        display: flex;
         padding: 8px 0;
         font-size: var(--fs-b4);
         line-height: var(--lh-b4);
@@ -2503,7 +2501,8 @@ img {
         }
 
         #{$form}__control {
-          min-width: 124px;
+          min-width: 84px;
+          flex-grow: 1;
         }
       }
     }
@@ -3085,7 +3084,7 @@ img {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 64px;
+      gap: 20px;
       padding: 15px 0;
 
       &__group {
@@ -3108,6 +3107,10 @@ img {
 
     #{$root}__logo {
       display: block;
+
+      &--mobile {
+        display: none;
+      }
 
       img {
         height: 32px;
@@ -3308,7 +3311,7 @@ img {
 
     &--fluid {
       max-width: none;
-      width: 100%;
+      width: 100% !important;
     }
   }
 
