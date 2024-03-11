@@ -1,4 +1,7 @@
 (function ($) {
+    // isMobile
+    const isMobile = !window.matchMedia('only screen and (min-width: 972px)').matches
+
     // Document click
     $(document).click(function (e) {
         e.stopPropagation();
@@ -8,10 +11,12 @@
         const $share = $('.my-share');
         const $formControl = $('.my-form__control');
         const $postActions = $('.my-post__actions');
+        const $mobileMenu = $('.header__mobile');
         const isDropdownClick = $dropdown.is($target) || $dropdown.has($target).length > 0;
         const isShareClick = $share.is($target) || $share.has($target).length > 0;
         const isFormControlClick = $formControl.is($target) || $formControl.has($target).length > 0;
         const isPostActionsClick = $postActions.is($target) || $postActions.has($target).length > 0;
+        const isMobileMenuClick = $mobileMenu.is($target) || $mobileMenu.has($target).length > 0 || $target.closest('.my-btn--mobile-menu').length > 0;
 
         if (!isDropdownClick) {
             $dropdown.removeClass('my-dropdown--show');
@@ -28,13 +33,24 @@
         if (!isPostActionsClick) {
             $postActions.removeClass('my-post__actions--show');
         }
+
+        if (!isMobileMenuClick) {
+            $mobileMenu.removeClass('header__mobile--show');
+            $('.my-btn--mobile-menu').removeClass('my-btn--active');
+        }
     });
 
     // Dropdown
-    $(document).on('click', '.my-dropdown__header, .my-dropdown__header__prefix', function (e) {
-        e.stopPropagation();
+    $(document).on('click', '.my-dropdown__header', function () {
         const $dropdown = $(this).closest('.my-dropdown');
         $('.my-dropdown').not($dropdown).removeClass('my-dropdown--show');
+
+        if ($dropdown.hasClass('my-dropdown--show')) {
+            $('body').removeClass('overflow-hidden');
+        } else {
+            $('body').addClass('overflow-hidden');
+        }
+
         $dropdown.toggleClass('my-dropdown--show');
     });
 
@@ -58,6 +74,7 @@
         $dropdown.find('.my-dropdown__header').data("value", value);
         $dropdown.find('.my-dropdown__body span').removeClass("selected");
         $dropdown.removeClass('my-dropdown--show').addClass('active');
+        $('body').removeClass('overflow-hidden');
         el.addClass('selected');
     }
 
@@ -78,6 +95,20 @@
             el.closest('.filter').find('.filter-input').val('');
         }
     }
+
+    // Mobile menu
+    $('.my-btn--mobile-menu').click(function () {
+        $(this).toggleClass('my-btn--active');
+        const $header = $('.header__mobile')
+
+        if ($header.hasClass('header__mobile--show')) {
+            $('body').removeClass('overflow-hidden')
+        } else {
+            $('body').addClass('overflow-hidden')
+        }
+
+        $header.toggleClass('header__mobile--show')
+    });
 
     // Modal
     $('.my-modal--closeable').click(function (e) {
@@ -283,20 +314,52 @@
     const $catalog = $('.header__catalog');
     const $catalogListItems = $('.my-catalog__list__item');
     const $btnCatalog = $('.my-btn--catalog');
+    const $subCatalogTitle = $catalog.find('.section__header__title');
 
-    $btnCatalog.click(function () {
-        const isCatalogShown = $catalog.hasClass('header__catalog--show');
+    if (isMobile) {
+        $btnCatalog.click(function () {
+            $('.my-bar__list__item__link').removeClass('active');
 
-        $catalogListItems.removeClass('my-catalog__list__item--active');
+            if ($catalog.hasClass('header__catalog--show')) {
+                $('body').removeClass('overflow-hidden');
+            } else {
+                $('body').addClass('overflow-hidden');
+            }
 
-        if (!isCatalogShown) {
-            $catalogListItems.first().addClass('my-catalog__list__item--active');
-        }
+            $(this).toggleClass('active');
+            $catalog.toggleClass('header__catalog--show');
+        });
 
-        $btnCatalog.toggleClass('my-btn--active');
-        $('body').toggleClass('overflow-hidden');
-        $catalog.toggleClass('header__catalog--show');
-    });
+        $catalogListItems.click(function () {
+            const $this = $(this);
+            $catalogListItems.removeClass('my-catalog__list__item--active');
+            $this.addClass('my-catalog__list__item--active');
+        });
+
+        $subCatalogTitle.click(function (e) {
+            e.stopPropagation();
+            $(this).closest('.my-catalog__list__item').removeClass('my-catalog__list__item--active');
+        })
+    } else {
+        $btnCatalog.click(function () {
+            const isCatalogShown = $catalog.hasClass('header__catalog--show');
+
+            $catalogListItems.removeClass('my-catalog__list__item--active');
+
+            if (!isCatalogShown) {
+                $catalogListItems.first().addClass('my-catalog__list__item--active');
+            }
+
+            $btnCatalog.toggleClass('my-btn--active');
+            $('body').toggleClass('overflow-hidden');
+            $catalog.toggleClass('header__catalog--show');
+        });
+
+        $catalogListItems.hover(function () {
+            $catalogListItems.removeClass('my-catalog__list__item--active');
+            $(this).addClass('my-catalog__list__item--active');
+        });
+    }
 
     $('.my-btn--categories').click(function () {
         const $this = $(this)
@@ -304,15 +367,17 @@
         $this.remove();
     });
 
-    $catalogListItems.hover(function () {
-        $catalogListItems.removeClass('my-catalog__list__item--active');
-        $(this).addClass('my-catalog__list__item--active');
-    });
-
     // Swiper
     const swiperStores = new Swiper(".swiper--stores", {
-        slidesPerView: 4,
-        spaceBetween: 16,
+        slidesPerView: "auto",
+        breakpoints: {
+            792: {
+                spaceBetween: 16,
+            },
+            0: {
+                spaceBetween: 12,
+            }
+        },
         navigation: {
             nextEl: ".my-btn--next",
             prevEl: ".my-btn--prev",

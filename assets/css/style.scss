@@ -413,6 +413,34 @@ img {
     }
   }
 
+  &--mobile-menu {
+    border: none;
+    padding: 0 !important;
+    justify-content: flex-end;
+
+    &:hover {
+      background: var(--white);
+    }
+
+    .my-icon {
+      &--close {
+        display: none;
+      }
+    }
+
+    &#{$root}--active {
+      .my-icon {
+        &--categories {
+          display: none;
+        }
+
+        &--close {
+          display: block;
+        }
+      }
+    }
+  }
+
   &--small {
     height: 32px;
     padding: 6px 12px;
@@ -794,7 +822,7 @@ img {
     overflow: auto;
     visibility: hidden;
     transition: all 250ms ease-in-out;
-    z-index: 99;
+    z-index: 97;
 
     span {
       transition: all 250ms ease-in-out;
@@ -809,7 +837,7 @@ img {
 
   &--show {
     #{$root}__header {
-      &__suffix {
+      &__suffix svg {
         transform: rotate(180deg);
       }
     }
@@ -825,6 +853,7 @@ img {
   position: relative;
   width: 136px;
   height: 136px;
+  flex-shrink: 0;
   font-size: var(--fs-b4);
   line-height: var(--lh-b4);
   font-weight: var(--fw-medium);
@@ -1286,6 +1315,7 @@ img {
   flex-direction: column;
   gap: 8px;
   width: 220.8px;
+  flex-shrink: 0;
 
   &--sm {
     width: 205px;
@@ -2878,11 +2908,68 @@ img {
   }
 }
 
+.my-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-top: 1px solid var(--gray-500);
+  z-index: 100;
+
+  &__list {
+    display: flex;
+    padding: 0 8px;
+    gap: 8px;
+    justify-content: center;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      flex-shrink: 0;
+
+      &__link {
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2px;
+        color: var(--gray-700);
+        font-size: var(--fs-b4);
+        line-height: var(--lh-b4);
+        padding: 8px 0;
+        white-space: nowrap;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          object-fit: contain;
+        }
+
+        &.active {
+          color: var(--gray-900);
+
+          svg {
+            path,
+            rect {
+              stroke: var(--gray-900);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // Modifiers
 .overflow {
   &-hidden {
     overflow: hidden !important;
-    padding-right: 14px;
+    // padding-right: 14px;
   }
 
   &-auto {
@@ -2970,6 +3057,7 @@ img {
     position: relative;
     display: flex;
     outline: none;
+    width: fit-content;
 
     &__backdrop {
       position: absolute;
@@ -3419,6 +3507,7 @@ img {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: 20px;
       padding: 24px 0;
     }
@@ -3618,7 +3707,7 @@ img {
   }
 
   &--faq {
-    gap: 0;
+    gap: 0 !important;
   }
 
   &--about {
