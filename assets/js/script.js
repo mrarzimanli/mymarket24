@@ -126,8 +126,6 @@
     $('[data-close="modal"]').click(function () {
         const $modal = $(this).closest('.my-modal');
         $modal.modal('hide');
-        // Redirect etmək üçün ikinci parametr kimi url gönder
-        // $modal.modal('hide', "http://127.0.0.1:5500/wishlist.html");
     });
 
     $.fn.modal = function (action, url) {
@@ -394,10 +392,17 @@
     });
 
     const swiperPostThumbs = new Swiper(".swiper--post-thumbs", {
-        spaceBetween: 16,
         slidesPerView: "auto",
         freeMode: true,
         watchSlidesProgress: true,
+        breakpoints: {
+            792: {
+                spaceBetween: 16,
+            },
+            0: {
+                spaceBetween: 8,
+            }
+        },
         navigation: {
             nextEl: ".my-btn--next",
             prevEl: ".my-btn--prev",

@@ -1976,7 +1976,7 @@ img {
   margin-bottom: 8px;
 }
 
-.my-stat__description {
+.my-stat__desc {
   font-size: var(--fs-b7);
   font-weight: var(--fw-semi-bold);
   line-height: var(--lh-b7);
@@ -2141,6 +2141,8 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 12px;
   border-radius: 30px;
   gap: 20px;

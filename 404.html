@@ -16,7 +16,7 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="header__top">
+        <div class="header__top d-mobile-none">
             <div class="container">
                 <div class="header__content">
                     <ul class="header__contact-list">
@@ -63,13 +63,11 @@
                 <div class="header__content">
                     <div class="header__content__group">
                         <a href="index.html" class="header__logo">
-                            <img src="./assets/images/logo.svg" alt="mymarket">
-                        </a>
-                        <a href="index.html" class="header__logo header__logo--mobile">
-                            <img src="./assets/images/logo-mark.svg" alt="mymarket">
+                            <img class="d-mobile-none" src="./assets/images/logo.svg" alt="mymarket">
+                            <img class="d-mobile-block" src="./assets/images/logo-mark.svg" alt="mymarket">
                         </a>
                         <div class="header__content__group__item grow">
-                            <button class="my-btn my-btn--secondary my-btn--catalog">
+                            <button class="my-btn my-btn--secondary my-btn--catalog d-mobile-none">
                                 <svg class="my-icon my-icon--categories" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="1.9" y="1.9" width="6.38182" height="6.38182" rx="1.55455" stroke="white" stroke-width="1.8" />
                                     <rect x="1.9" y="11.7184" width="6.38182" height="6.38182" rx="1.55455" stroke="white" stroke-width="1.8" />
@@ -215,7 +213,10 @@
                                                             </a>
                                                             <div class="my-catalog__sub">
                                                                 <div class="section__header">
-                                                                    <div class="section__header__title">Elektronika <span class="section__header__title__label">(2500)</span>
+                                                                    <div class="section__header__title">
+                                                                        <svg class="d-mobile-block" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M11 2.00003L5.70711 7.29292C5.31658 7.68345 5.31658 8.31661 5.70711 8.70714L11 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                                                        </svg> Elektronika <span class="section__header__title__label">(2500)</span>
                                                                     </div>
                                                                     <a href="category.html" class="my-btn my-btn--small">Bütün məhsulları gör</a>
                                                                 </div>
@@ -476,7 +477,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="my-btn my-btn--icon my-btn--catalog">
+                                <button class="my-btn my-btn--icon my-btn--catalog d-mobile-none">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M2.2235 16.0912C1.83297 16.4818 1.83297 17.1149 2.2235 17.5054C2.61402 17.896 3.24719 17.896 3.63771 17.5054L9.72891 11.4142L15.8201 17.5055C16.2107 17.896 16.8438 17.896 17.2344 17.5055C17.6249 17.1149 17.6249 16.4818 17.2344 16.0913L11.1431 10L17.2344 3.9088C17.6249 3.51827 17.6249 2.88511 17.2344 2.49458C16.8438 2.10406 16.2107 2.10406 15.8201 2.49458L9.72891 8.58581L3.63771 2.49461C3.24719 2.10408 2.61402 2.10408 2.2235 2.49461C1.83297 2.88513 1.83297 3.5183 2.2235 3.90882L8.3147 10L2.2235 16.0912Z" fill="#222222" />
                                     </svg>
@@ -485,7 +486,7 @@
                         </div>
                     </div>
                     <div class="header__content-group">
-                        <div class="header__content__group__item">
+                        <div class="header__content__group__item d-mobile-none">
                             <a href="wishlist.html" class="my-btn my-btn--icon">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.32339 5.28546L10 5.90719L10.6766 5.28546L10.8829 5.09589C11.7287 4.35446 12.6441 4 13.6288 4C16.0391 4 18 5.96307 18 8.39326C18 9.64868 17.7737 10.5051 17.0724 11.471C16.3185 12.5096 15.0024 13.6934 12.6911 15.4989L10.5973 17.0583C10.2429 17.3223 9.75715 17.3223 9.40269 17.0583L7.30887 15.4989C4.99755 13.6934 3.68152 12.5096 2.92759 11.471C2.22631 10.5051 2 9.64868 2 8.39326C2 5.96307 3.96092 4 6.37124 4C7.35591 4 8.2713 4.35446 9.1171 5.0959L9.32339 5.28546Z" stroke="#222222" stroke-width="2" stroke-linecap="round" />
@@ -512,12 +513,182 @@
                                 <span>Elan yerləşdir</span>
                             </button>
                         </div>
+                        <div class="header__content__group__item d-mobile-flex">
+                            <button class="my-btn my-btn--icon my-btn--small my-btn--mobile-menu">
+                                <svg class="my-icon my-icon--categories" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 4H18" stroke="#222222" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M2 10H18" stroke="#222222" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M2 16H18" stroke="#222222" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                                <svg class="my-icon my-icon--close" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.22356 16.0917C1.83303 16.4822 1.83303 17.1154 2.22356 17.5059C2.61408 17.8964 3.24725 17.8964 3.63777 17.5059L9.72897 11.4147L15.8202 17.5059C16.2107 17.8964 16.8439 17.8964 17.2344 17.5059C17.6249 17.1154 17.6249 16.4822 17.2344 16.0917L11.1432 10.0005L17.2344 3.90926C17.6249 3.51873 17.6249 2.88557 17.2344 2.49504C16.8439 2.10452 16.2107 2.10452 15.8202 2.49504L9.72897 8.58627L3.63777 2.49507C3.24725 2.10454 2.61408 2.10454 2.22356 2.49507C1.83303 2.88559 1.83303 3.51876 2.22356 3.90928L8.31476 10.0005L2.22356 16.0917Z" fill="#222222" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile d-mobile-block">
+            <div class="header__content">
+                <div class="container">
+                    <ul class="header__menu-list">
+                        <li>
+                            <a href="stores.html" class="active">
+                                <span>Əsas səhifə</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 2L10.2929 7.29289C10.6834 7.68342 10.6834 8.31658 10.2929 8.70711L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="stores.html">
+                                <span>Mağazalar</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 2L10.2929 7.29289C10.6834 7.68342 10.6834 8.31658 10.2929 8.70711L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="faqs.html">
+                                <span>Tez-tez verilən suallar</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 2L10.2929 7.29289C10.6834 7.68342 10.6834 8.31658 10.2929 8.70711L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html">
+                                <span>Haqqımızda</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 2L10.2929 7.29289C10.6834 7.68342 10.6834 8.31658 10.2929 8.70711L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Qaydalar</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 2L10.2929 7.29289C10.6834 7.68342 10.6834 8.31658 10.2929 8.70711L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>İstifadəçi şərtləri</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 2L10.2929 7.29289C10.6834 7.68342 10.6834 8.31658 10.2929 8.70711L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Məxfilik siyasəti</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 2L10.2929 7.29289C10.6834 7.68342 10.6834 8.31658 10.2929 8.70711L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="my-btn" data-toggle="modal" data-target="#modalLogin">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 5C14 7.20914 12.2091 9 10 9C7.79086 9 6 7.20914 6 5C6 2.79086 7.79086 1 10 1C12.2091 1 14 2.79086 14 5Z" stroke="#222222" stroke-width="2" />
+                            <path d="M3 16.5502C3 14.0372 5.03719 12 7.55019 12H12.4498C14.9628 12 17 14.0372 17 16.5502C17 17.4454 16.3334 18.2005 15.4451 18.3116L15.5691 19.3039L15.4451 18.3116L15.2858 18.3315C11.7756 18.7703 8.22442 18.7703 4.71423 18.3315L4.55492 18.3116L4.43089 19.3039L4.55492 18.3116C3.66661 18.2005 3 17.4454 3 16.5502Z" stroke="#222222" stroke-width="2" />
+                        </svg>
+                        <span>Giriş et</span>
+                    </button>
+                    <ul class="header__contact-list">
+                        <li>
+                            <a href="to: (012) 123 45 67">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1010_6067)">
+                                        <path d="M14.8649 13.5721L14.8466 13.5904L14.8296 13.61L14.2443 14.2838C13.1442 15.3185 11.6165 15.4937 9.84713 14.9483C8.05854 14.397 6.14466 13.1338 4.52129 11.5147C2.89806 9.89576 1.627 7.98244 1.06468 6.19152C0.50828 4.41943 0.671466 2.88907 1.68652 1.78737L2.42458 1.14557L2.43983 1.13232L2.45434 1.11826C2.70118 0.879088 3.03232 0.746803 3.376 0.750059C3.70776 0.753201 4.02542 0.882392 4.26497 1.11064L4.29111 1.14397C4.32597 1.18866 4.37524 1.25217 4.43448 1.32873C4.55279 1.48161 4.70886 1.68392 4.86459 1.88599L5.29142 2.44028L5.43163 2.62252L5.47086 2.67352L5.48119 2.68694L5.48383 2.69038L5.4845 2.69125L5.48466 2.69146L5.4847 2.69152L6.07925 2.23433L5.48472 2.69153L5.50884 2.7229L5.53613 2.75156C5.77026 2.9974 5.90066 3.32399 5.90027 3.66347C5.89987 4.00295 5.7687 4.32923 5.53401 4.57452L5.51085 4.59873L5.48994 4.62489L4.71534 5.59448L4.43967 5.93955L4.60772 6.34799C5.07325 7.47942 5.75777 8.5077 6.62195 9.37375C7.48613 10.2398 8.51294 10.9265 9.64336 11.3945L10.0515 11.5635L10.3972 11.2884L11.3748 10.5105L11.4018 10.489L11.4267 10.4652C11.6719 10.2302 11.9982 10.0988 12.3378 10.0983C12.6774 10.0977 13.0041 10.228 13.2501 10.4622L13.2785 10.4893L13.3097 10.5132L13.7672 9.91893L13.3097 10.5132L13.3098 10.5133L13.31 10.5134L13.3108 10.5141L13.3143 10.5168L13.3277 10.5271L13.3787 10.5664L13.561 10.7067L14.1154 11.1341C14.3175 11.29 14.5199 11.4462 14.673 11.5647C14.7496 11.6241 14.8132 11.6734 14.8581 11.7084L14.8907 11.734C15.1214 11.9785 15.2504 12.3023 15.2505 12.6394C15.2506 12.9891 15.1119 13.3245 14.8649 13.5721Z" stroke="#358C6C" stroke-width="1.5" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1010_6067">
+                                            <rect width="16" height="16" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span>(012) 123 45 67</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto: mymarket@mail.com">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 3H13.5C14.0523 3 14.5 3.44772 14.5 4V12C14.5 12.5523 14.0523 13 13.5 13H2.5C1.94772 13 1.5 12.5523 1.5 12V4C1.5 3.44772 1.94772 3 2.5 3ZM0 4C0 2.61929 1.11929 1.5 2.5 1.5H13.5C14.8807 1.5 16 2.61929 16 4V12C16 13.3807 14.8807 14.5 13.5 14.5H2.5C1.11929 14.5 0 13.3807 0 12V4ZM4.0525 4.87596C3.70785 4.6462 3.2422 4.73933 3.01244 5.08397C2.78267 5.42862 2.8758 5.89427 3.22045 6.12404L6.77725 8.49524C7.51776 8.98891 8.48247 8.98891 9.22297 8.49524L12.7798 6.12404C13.1244 5.89427 13.2175 5.42862 12.9878 5.08397C12.758 4.73933 12.2924 4.6462 11.9477 4.87596L8.39092 7.24716C8.15427 7.40493 7.84596 7.40493 7.6093 7.24716L4.0525 4.87596Z" fill="#358C6C" />
+                                </svg>
+                                <span>mymarket@mail.com</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </header>
     <!-- Header end -->
+    <!-- Mobile Nav -->
+    <section class="my-bar d-mobile-block">
+        <div class="container">
+            <ul class="my-bar__list">
+                <li class="my-bar__list__item">
+                    <a class="my-bar__list__item__link active" href="index.html">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.0595 2.23209C12.4304 1.92264 12.9696 1.92264 13.3406 2.23209L21.3406 8.90526C21.5683 9.09525 21.7 9.37656 21.7 9.67317V21C21.7 21.5523 21.2523 22 20.7 22H4.70001C4.14773 22 3.70001 21.5523 3.70001 21V9.67317C3.70001 9.37656 3.83169 9.09525 4.05946 8.90526L12.0595 2.23209Z" stroke="#7A7A7A" stroke-width="2" />
+                            <path d="M9.70001 17C9.70001 15.3431 11.0432 14 12.7 14C14.3569 14 15.7 15.3431 15.7 17V22H9.70001V17Z" stroke="#7A7A7A" stroke-width="2" />
+                        </svg>
+                        <span>Əsas</span>
+                    </a>
+                </li>
+                <li class="my-bar__list__item">
+                    <button class="my-bar__list__item__link my-btn--catalog">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3.1001" y="3" width="7.09091" height="7.09091" rx="1.72727" stroke="#7A7A7A" stroke-width="2" />
+                            <rect x="3.1001" y="13.9092" width="7.09091" height="7.09091" rx="1.72727" stroke="#7A7A7A" stroke-width="2" />
+                            <rect x="14.0093" y="3" width="7.09091" height="7.09091" rx="1.72727" stroke="#7A7A7A" stroke-width="2" />
+                            <path d="M13.9185 15.1816H21.1912" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
+                            <path d="M13.9185 19.7271H21.1912" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <span>Kateqoriyalar</span>
+                    </button>
+                </li>
+                <li class="my-bar__list__item">
+                    <a class="my-bar__list__item__link" href="new-post.html">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1527_2501)">
+                                <circle cx="12.5" cy="12" r="12" fill="#358C6C" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 7C13.5 6.44772 13.0523 6 12.5 6C11.9477 6 11.5 6.44772 11.5 7V11H7.5C6.94772 11 6.5 11.4477 6.5 12C6.5 12.5523 6.94772 13 7.5 13H11.5V17C11.5 17.5523 11.9477 18 12.5 18C13.0523 18 13.5 17.5523 13.5 17V13H17.5C18.0523 13 18.5 12.5523 18.5 12C18.5 11.4477 18.0523 11 17.5 11H13.5V7Z" fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1527_2501">
+                                    <rect width="24" height="24" fill="white" transform="translate(0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span>Yeni elan </span>
+                    </a>
+                </li>
+                <li class="my-bar__list__item">
+                    <a class="my-bar__list__item__link" href="wishlist.html">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.2099 4.69044L12.9004 5.34968L13.5909 4.69044L13.8451 4.44778C14.9178 3.47003 16.0837 3 17.3355 3C20.3695 3 22.9004 5.5782 22.9004 8.84858C22.9004 10.4961 22.61 11.6475 21.7138 12.9301C20.7687 14.2827 19.1335 15.8059 16.3097 18.0976L13.6347 20.1674C13.2023 20.502 12.5984 20.502 12.166 20.1674L9.49111 18.0976C6.66726 15.8059 5.03211 14.2827 4.08698 12.9301C3.19078 11.6475 2.90039 10.4961 2.90039 8.84858C2.90039 5.5782 5.43131 3 8.46524 3C9.7171 3 10.883 3.47003 11.9557 4.44779L12.2099 4.69044Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <span>Seçilmişlər</span>
+                    </a>
+                </li>
+                <li class="my-bar__list__item">
+                    <a class="my-bar__list__item__link" href="cabinet-posts.html">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.8002 6.49992C16.8002 8.98516 14.7855 10.9998 12.3003 10.9998C9.81499 10.9998 7.80029 8.98516 7.80029 6.49992C7.80029 4.01469 9.81499 2 12.3003 2C14.7855 2 16.8002 4.01469 16.8002 6.49992Z" stroke="#7A7A7A" stroke-width="2" />
+                            <path d="M4.50049 19.2052C4.50049 16.3857 6.78613 14.1001 9.60562 14.1001H14.9953C17.8148 14.1001 20.1004 16.3857 20.1004 19.2052C20.1004 20.2404 19.3296 21.1135 18.3024 21.2419L18.1272 21.2638C14.2577 21.7475 10.3432 21.7475 6.47375 21.2638L6.29846 21.2419C5.2713 21.1135 4.50049 20.2404 4.50049 19.2052Z" stroke="#7A7A7A" stroke-width="2" />
+                        </svg>
+                        <span>Kabinetim</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Mobile Nav end-->
     <!-- Main -->
     <main class="main main--error">
         <div class="container">

@@ -144,7 +144,7 @@
     }
 
     &--detailed {
-      width: 100%;
+      width: 100% !important;
     }
   }
 
@@ -410,6 +410,43 @@
     }
   }
 
+  .my-stat {
+    padding: 16px;
+    width: 100%;
+
+    &__icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 24px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__value {
+      font-size: var(--fs-b8);
+      line-height: var(--lh-b8);
+    }
+
+    &__desc {
+      font-size: var(--fs-b6);
+      line-height: var(--lh-b6);
+    }
+  }
+
+  .my-video {
+    height: auto;
+
+    &__overlay {
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
   .main {
     $root: &;
 
@@ -419,6 +456,22 @@
 
     &__aside {
       width: 100%;
+    }
+
+    &--about {
+      #{$root}__sections {
+        gap: 40px;
+      }
+
+      .section__header {
+        justify-content: flex-start;
+
+        &__title {
+          text-align: left;
+          font-size: var(--fs-h2);
+          line-height: var(--lh-b2);
+        }
+      }
     }
   }
 
@@ -457,6 +510,32 @@
 
         &::-webkit-scrollbar {
           display: none;
+        }
+      }
+    }
+
+    &--about {
+      #{$root}__body {
+        flex-direction: column;
+
+        > div {
+          width: 100%;
+        }
+      }
+
+      .about {
+        &-content {
+          gap: 12px;
+
+          &__title {
+            font-size: var(--fs-h2);
+            line-height: var(--lh-h2);
+          }
+
+          &__description {
+            font-size: var(--fs-b4);
+            line-height: var(--lh-b4);
+          }
         }
       }
     }
@@ -602,6 +681,12 @@
   .footer {
     padding-bottom: 60px;
   }
+
+  .sidebar {
+    &--white {
+      border-radius: 0;
+    }
+  }
 }
 
 @media (max-width: 792px) {
@@ -704,6 +789,33 @@
       line-height: var(--lh-b2);
     }
 
+    &__details {
+      &__list {
+        $list: &;
+        flex-direction: column;
+        gap: 16px;
+
+        &__item {
+          width: 100% !important;
+        }
+
+        &--grid {
+          gap: 0;
+
+          #{$list}__item {
+            &:nth-child(4n + 1),
+            &:nth-child(4n + 2) {
+              background: none;
+            }
+
+            &:nth-child(2n + 1) {
+              background: var(--white);
+            }
+          }
+        }
+      }
+    }
+
     &--sm {
       width: 166px;
 
@@ -735,12 +847,67 @@
       line-height: var(--lh-b2);
     }
 
+    &--detailed {
+      gap: 8px;
+
+      #{$root}__picture {
+        width: 56px;
+        height: 56px;
+      }
+    }
+
     &--sm {
       width: 166px;
 
       #{$root}__picture {
         height: 166px;
       }
+    }
+  }
+
+  .my-tabs {
+    overflow: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__item {
+      flex-shrink: 0;
+    }
+  }
+
+  .my-banner {
+    flex-wrap: wrap;
+    gap: 4px;
+
+    &--premium {
+      padding: 8px 12px 8px 16px;
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0;
+
+      &__image {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        object-fit: contain;
+      }
+
+      &__text {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+    }
+
+    &__title {
+      min-width: auto;
     }
   }
 
@@ -752,6 +919,10 @@
 
     &__sections {
       gap: 16px;
+    }
+
+    &__breadcrumbs {
+      padding: 8px 16px;
     }
   }
 
@@ -779,6 +950,12 @@
     }
 
     &--posts {
+      #{$root}__body {
+        gap: 20px 12px;
+      }
+    }
+
+    &--stores {
       #{$root}__body {
         gap: 20px 12px;
       }
@@ -888,11 +1065,35 @@
       }
     }
   }
+
+  .swiper {
+    $root: &;
+
+    &--post-gallery {
+      height: 324px;
+    }
+  }
 }
 
 @media (max-width: 572px) {
   .my-post {
     $root: &;
     width: calc(50% - 6px);
+  }
+
+  .my-store {
+    $root: &;
+    width: calc(50% - 6px);
+  }
+
+  .swiper {
+    .my-store {
+      $root: &;
+      width: 166px;
+
+      &__picture {
+        height: 166px;
+      }
+    }
   }
 }
