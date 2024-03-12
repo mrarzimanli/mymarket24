@@ -328,7 +328,9 @@
             $catalog.toggleClass('header__catalog--show');
         });
 
-        $catalogListItems.click(function () {
+        $catalogListItems.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
             const $this = $(this);
             $catalogListItems.removeClass('my-catalog__list__item--active');
             $this.addClass('my-catalog__list__item--active');

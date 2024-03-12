@@ -3496,7 +3496,7 @@ img {
   right: 0;
   background: var(--white);
   border-top: 1px solid var(--gray-500);
-  z-index: 100;
+  z-index: 96;
 }
 
 .my-bar__list {

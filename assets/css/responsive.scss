@@ -342,7 +342,7 @@
         }
 
         &--active {
-          background: var(--gray-400);
+          background: none;
 
           .my-catalog__sub {
             visibility: visible;
@@ -598,7 +598,6 @@
       position: fixed;
       inset: 0;
       height: 100vh;
-      padding-bottom: 64px;
       z-index: 99;
       background: var(--gray-300);
     }
