@@ -1096,6 +1096,11 @@ img {
     #{$root}__info {
       padding-right: 32px;
 
+      &--mobile {
+        width: 100%;
+        display: none;
+      }
+
       #{$root}__name {
         font-size: var(--fs-h2);
         line-height: var(--lh-h2);
@@ -3830,6 +3835,17 @@ img {
       font-size: var(--fs-b3);
       line-height: var(--lh-b3);
       color: var(--gray-700);
+    }
+  }
+
+  &--category-tags {
+    gap: 12px;
+
+    #{$root}__body {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: center;
     }
   }
 
