@@ -447,6 +447,53 @@
     }
   }
 
+  .my-store {
+    $root: &;
+
+    &--detailed {
+      gap: 8px;
+      flex-wrap: wrap;
+
+      #{$root}__picture {
+        width: 56px;
+        height: 56px;
+      }
+
+      #{$root}__info {
+        justify-content: center;
+
+        &--mobile {
+          width: 100%;
+        }
+
+        #{$root}__desc {
+          margin-bottom: 0;
+        }
+
+        #{$root}__name {
+          font-size: var(--fs-h3);
+          line-height: var(--lh-h3);
+        }
+
+        #{$root}__rating {
+          font-size: var(--fs-b4);
+          line-height: var(--lh-b4);
+        }
+
+        #{$root}__post-count {
+          font-size: var(--fs-b4);
+          line-height: var(--lh-b4);
+        }
+
+        #{$root}__contact {
+          flex-wrap: wrap;
+          margin-top: 20px;
+          gap: 8px;
+        }
+      }
+    }
+  }
+
   .main {
     $root: &;
 
@@ -470,6 +517,24 @@
           text-align: left;
           font-size: var(--fs-h2);
           line-height: var(--lh-b2);
+        }
+      }
+    }
+
+    &--category {
+      #{$root}__aside {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+        height: 100vh;
+        background: rgba(34, 34, 34, 0.6);
+        z-index: 999;
+
+        .sidebar {
+          overflow: auto;
         }
       }
     }
@@ -683,8 +748,16 @@
   }
 
   .sidebar {
-    &--white {
-      border-radius: 0;
+    // bla bla
+  }
+
+  .swiper {
+    $root: &;
+
+    &--tags {
+      .my-btn--nav {
+        display: none;
+      }
     }
   }
 }
@@ -845,15 +918,6 @@
     &__address {
       font-size: var(--fs-b2);
       line-height: var(--lh-b2);
-    }
-
-    &--detailed {
-      gap: 8px;
-
-      #{$root}__picture {
-        width: 56px;
-        height: 56px;
-      }
     }
 
     &--sm {
@@ -1063,6 +1127,12 @@
       #{$root}__content {
         padding: 0;
       }
+    }
+  }
+
+  .sidebar {
+    &--white {
+      border-radius: 0;
     }
   }
 

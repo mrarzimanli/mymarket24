@@ -1221,6 +1221,11 @@ img {
   padding-right: 32px;
 }
 
+.my-store--detailed .my-store__info--mobile {
+  width: 100%;
+  display: none;
+}
+
 .my-store--detailed .my-store__info .my-store__name {
   font-size: var(--fs-h2);
   line-height: var(--lh-h2);
@@ -4648,6 +4653,24 @@ img {
   font-size: var(--fs-b3);
   line-height: var(--lh-b3);
   color: var(--gray-700);
+}
+
+.section--category-tags {
+  gap: 12px;
+}
+
+.section--category-tags .section__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section--cabinet {
