@@ -328,8 +328,12 @@
             $catalog.toggleClass('header__catalog--show');
         });
 
+        $catalogListItems.find('> a').each(function () {
+            $(this).removeAttr('href');
+        })
+
         $catalogListItems.click(function (e) {
-            e.preventDefault();
+            // e.preventDefault();
             e.stopPropagation();
             const $this = $(this);
             $catalogListItems.removeClass('my-catalog__list__item--active');
