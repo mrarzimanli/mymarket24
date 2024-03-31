@@ -528,13 +528,22 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding: 20px;
+        // padding: 20px;
         height: 100vh;
         background: rgba(34, 34, 34, 0.6);
         z-index: 999;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 150ms ease-in-out;
+
+        &--show {
+          visibility: visible;
+          opacity: 1;
+        }
 
         .sidebar {
           overflow: auto;
+          border-radius: 0;
         }
       }
     }

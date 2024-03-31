@@ -672,6 +672,11 @@
         }).addClass('my-payment__option--selected');
     });
 
+    $('.my-btn--toggle-sidebar').click(function (e) {
+        $('.main__aside').toggleClass('main__aside--show');
+        $('body').toggleClass('overflow-hidden');
+    });
+
     // Fancy Box
     Fancybox.bind('[data-fancybox]', {});
 
