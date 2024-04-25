@@ -3821,6 +3821,30 @@ img {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      max-height: 120px;
+      overflow: hidden;
+      transition: all 250ms ease-out;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &.collapsed {
+        max-height: 1000px;
+        overflow: auto;
+        transition: all 250ms ease-in;
+      }
+    }
+
+    #{$root}__footer {
+      padding: 0;
+      justify-content: center;
+
+      .my-btn {
+        flex-grow: 0;
+      }
     }
   }
 

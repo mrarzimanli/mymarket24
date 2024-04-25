@@ -677,6 +677,18 @@
         $('body').toggleClass('overflow-hidden');
     });
 
+    $('.my-btn--toggle-tags').click(function (e) {
+        $this = $(this)
+        $body = $this.closest('.section--tags').find('.section__body')
+        $body.toggleClass('collapsed');
+
+        if ($body.hasClass('collapsed')) {
+            $this.text('Show less tags');
+        } else {
+            $this.text('Show more tags');
+        }
+    });
+
     // Fancy Box
     Fancybox.bind('[data-fancybox]', {});
 

@@ -4639,6 +4639,36 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 12px;
+  max-height: 120px;
+  overflow: hidden;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.section--tags .section__body::-webkit-scrollbar {
+  display: none;
+}
+
+.section--tags .section__body.collapsed {
+  max-height: 1000px;
+  overflow: auto;
+  -webkit-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+}
+
+.section--tags .section__footer {
+  padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section--tags .section__footer .my-btn {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 
 .section--new-post {
