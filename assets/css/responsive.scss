@@ -671,7 +671,7 @@
     #{$root}__catalog {
       position: fixed;
       inset: 0;
-      height: 100vh;
+      height: auto;
       padding-bottom: 0;
       z-index: 99;
       background: var(--gray-300);
@@ -955,10 +955,6 @@
     flex-wrap: wrap;
     gap: 4px;
 
-    &--premium {
-      padding: 8px 12px 8px 16px;
-    }
-
     &__content {
       display: flex;
       align-items: center;
@@ -1163,6 +1159,41 @@
   .my-store {
     $root: &;
     width: calc(50% - 6px);
+  }
+
+  .my-banner {
+    justify-content: center;
+
+    &--premium {
+      padding: 12px 16px;
+      border-radius: 12px;
+    }
+
+    &__content {
+      gap: 8px;
+      flex-grow: 1;
+
+      &__image {
+        width: 32px;
+        height: 32px;
+      }
+
+      &__text {
+        font-size: var(--fs-b1);
+        line-height: var(--lh-b1);
+        flex-grow: 1;
+        justify-content: space-between;
+        gap: 8px;
+      }
+    }
+
+    &__buttons {
+      flex-grow: 1;
+
+      .my-btn {
+        flex-grow: 1;
+      }
+    }
   }
 
   .swiper {

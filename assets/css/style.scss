@@ -1331,15 +1331,29 @@ img {
   }
 
   &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     height: 220.8px;
     border-radius: 12px;
     overflow: hidden;
+    background: var(--gray-300);
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    > svg {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+
+      path {
+        stroke: var(--gray-500);
+      }
     }
   }
 
@@ -1862,7 +1876,7 @@ img {
   cursor: pointer;
 
   &--premium {
-    padding: 8px 12px 8px 16px;
+    padding: 8px 16px;
   }
 
   &__content {
@@ -2931,22 +2945,23 @@ img {
 
     &__item {
       display: flex;
-      align-items: center;
       justify-content: center;
       flex: 1;
       flex-shrink: 0;
 
       &__link {
+        position: relative;
         background: none;
         border: none;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-end;
         text-align: center;
         gap: 2px;
         color: var(--gray-700);
-        font-size: var(--fs-b4);
-        line-height: var(--lh-b4);
+        font-size: var(--fs-b3);
+        line-height: var(--lh-b3);
         padding: 8px 0;
         white-space: nowrap;
 
@@ -2965,6 +2980,15 @@ img {
               stroke: var(--gray-900);
             }
           }
+        }
+      }
+
+      &:nth-child(3) {
+        svg {
+          position: absolute;
+          bottom: 50%;
+          width: 48px;
+          height: 48px;
         }
       }
     }

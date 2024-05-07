@@ -1506,10 +1506,20 @@ img {
 }
 
 .my-post__picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   height: 220.8px;
   border-radius: 12px;
   overflow: hidden;
+  background: var(--gray-300);
 }
 
 .my-post__picture img {
@@ -1517,6 +1527,17 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.my-post__picture > svg {
+  width: 72px;
+  height: 72px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.my-post__picture > svg path {
+  stroke: var(--gray-500);
 }
 
 .my-post__overlay {
@@ -2161,7 +2182,7 @@ img {
 }
 
 .my-banner--premium {
-  padding: 8px 12px 8px 16px;
+  padding: 8px 16px;
 }
 
 .my-banner__content {
@@ -3519,9 +3540,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -3533,6 +3551,7 @@ img {
 }
 
 .my-bar__list__item__link {
+  position: relative;
   background: none;
   border: none;
   display: -webkit-box;
@@ -3545,11 +3564,14 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   text-align: center;
   gap: 2px;
   color: var(--gray-700);
-  font-size: var(--fs-b4);
-  line-height: var(--lh-b4);
+  font-size: var(--fs-b3);
+  line-height: var(--lh-b3);
   padding: 8px 0;
   white-space: nowrap;
 }
@@ -3568,6 +3590,13 @@ img {
 .my-bar__list__item__link.active svg path,
 .my-bar__list__item__link.active svg rect {
   stroke: var(--gray-900);
+}
+
+.my-bar__list__item:nth-child(3) svg {
+  position: absolute;
+  bottom: 50%;
+  width: 48px;
+  height: 48px;
 }
 
 .overflow-hidden {

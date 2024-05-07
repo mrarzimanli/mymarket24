@@ -532,7 +532,7 @@
   .header .header__catalog {
     position: fixed;
     inset: 0;
-    height: 100vh;
+    height: auto;
     padding-bottom: 0;
     z-index: 99;
     background: var(--gray-300);
@@ -788,9 +788,6 @@
         flex-wrap: wrap;
     gap: 4px;
   }
-  .my-banner--premium {
-    padding: 8px 12px 8px 16px;
-  }
   .my-banner__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -963,6 +960,46 @@
   }
   .my-store {
     width: calc(50% - 6px);
+  }
+  .my-banner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .my-banner--premium {
+    padding: 12px 16px;
+    border-radius: 12px;
+  }
+  .my-banner__content {
+    gap: 8px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .my-banner__content__image {
+    width: 32px;
+    height: 32px;
+  }
+  .my-banner__content__text {
+    font-size: var(--fs-b1);
+    line-height: var(--lh-b1);
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 8px;
+  }
+  .my-banner__buttons {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .my-banner__buttons .my-btn {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .swiper .my-store {
     width: 166px;
