@@ -689,6 +689,22 @@
         }
     });
 
+    $('.my-stars').on('mouseenter mouseleave click', '.star', function (event) {
+        const $this = $(this);
+        const $stars = $this.closest('.my-stars');
+        const value = $this.data('value');
+
+        if (event.type === 'mouseenter') {
+            $this.addClass('filled').prevAll().addClass('filled');
+        } else if (event.type === 'mouseleave') {
+            $stars.find('.star').removeClass('filled');
+        } else if (event.type === 'click') {
+            $stars.find('.star').removeClass('active');
+            $this.addClass('active').prevAll().addClass('active');
+            $stars.find('input[type="hidden"]').val(value);
+        }
+    });
+
     // Fancy Box
     Fancybox.bind('[data-fancybox]', {});
 

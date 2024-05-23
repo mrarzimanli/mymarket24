@@ -14,6 +14,102 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
+    <!-- Modals -->
+    <div class="my-modal my-modal--fade my-modal--md my-modal--review" id="modalReview">
+        <div class="my-modal__dialog">
+            <div class="my-modal__content">
+                <div class="my-modal__header">
+                    <span class="my-modal__header__title">Yeni rəy</span>
+                    <p class="my-modal__header__description">Zəhmət olmasa Yeni rəy əlavə edin</p>
+                </div>
+                <div class="my-modal__body">
+                    <div id="formReview" class="my-form">
+                        <div class="my-form__item">
+                            <div class="my-form__item__header">
+                                <label class="my-form__label" for="reviewStars">Mağazanın ümumi qiymətləndirilməsi</label>
+                            </div>
+                            <div class="my-form__item__body">
+                                <div class="my-stars">
+                                    <span class="star" data-value="1">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
+                                        </svg>
+                                    </span>
+                                    <span class="star" data-value="2">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
+                                        </svg>
+                                    </span>
+                                    <span class="star" data-value="3">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
+                                        </svg>
+                                    </span>
+                                    <span class="star" data-value="4">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
+                                        </svg>
+                                    </span>
+                                    <span class="star" data-value="5">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
+                                        </svg>
+                                    </span>
+                                    <input type="hidden" id="reviewStars" name="reviewStars" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-form__item">
+                            <div class="my-form__item__header">
+                                <label class="my-form__label" for="reviewMessage">Rəy</label>
+                                <div class="my-form__char-count">
+                                    <span class="my-form__char-count__current">0</span>
+                                    <span class="my-form__char-count__max">/200</span>
+                                </div>
+                            </div>
+                            <div class="my-form__item__body">
+                                <textarea id="reviewMessage" class="my-form__control my-form__control--textarea" name="reviewMessage" maxlength="200" placeholder="Şikayətin səbəbini təsvir edin" required></textarea>
+                            </div>
+                            <!-- <div class="my-form__item__footer">
+                                    <span class="my-form__control__message">Form control message</span>
+                                </div> -->
+                        </div>
+                        <div class="my-form__item my-form__item my-form__item--file">
+                            <div class="my-form__item__header">
+                                <span class="my-form__label">Şəkil</span>
+                            </div>
+                            <div class="my-form__item__body">
+                                <div class="my-form__control my-form__control--file">
+                                    <label class="my-form__control__header" for="postPicture">
+                                        <span class="my-btn my-btn--secondary my-btn--small">Şəkil yüklə</span>
+                                        <div class="my-form__control__placeholder">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2.6003 19.7008C2.14232 18.8444 2 18.0021 2 16.2385V15.2572C1.99986 15.2501 1.99978 15.243 1.99978 15.2359C1.99978 14.6774 2.45253 14.2247 3.01102 14.2247C3.56951 14.2247 4.02225 14.6774 4.02225 15.2359L4.02247 16.2385C4.02247 17.9089 4.16622 18.3403 4.38374 18.747C4.58555 19.1243 4.87566 19.4144 5.25302 19.6163C5.65974 19.8338 6.09113 19.9775 7.76154 19.9775L16.2385 19.9775C17.9089 19.9775 18.3403 19.8338 18.747 19.6163C19.1243 19.4144 19.4144 19.1243 19.6163 18.747C19.8338 18.3403 19.9775 17.9089 19.9775 16.2385V15.2572C19.9774 15.2501 19.9773 15.243 19.9773 15.2359C19.9773 14.6774 20.4301 14.2247 20.9885 14.2247C21.547 14.2247 21.9998 14.6774 21.9998 15.2359L22 16.2385C22 18.0021 21.8577 18.8444 21.3997 19.7008C21.0094 20.4306 20.4306 21.0094 19.7008 21.3997C18.8444 21.8577 18.0021 22 16.2385 22H7.76154C5.99789 22 5.15557 21.8577 4.29922 21.3997C3.56941 21.0094 2.99061 20.4306 2.6003 19.7008Z" fill="#222222" />
+                                                <path d="M8.22055 11.1501L10.9885 13.9181L10.9885 3.01124C10.9885 2.45275 11.4413 2 11.9998 2C12.5583 2 13.011 2.45275 13.011 3.01124L13.011 13.9183L15.7792 11.1501C16.1741 10.7552 16.8144 10.7552 17.2093 11.1501C17.6042 11.545 17.6042 12.1853 17.2093 12.5802L12.7149 17.0746C12.32 17.4695 11.6797 17.4695 11.2848 17.0746L6.79044 12.5802C6.39553 12.1853 6.39553 11.545 6.79044 11.1501C7.18536 10.7552 7.82563 10.7552 8.22055 11.1501Z" fill="#222222" />
+                                            </svg>
+                                            <span>Şəkil əlavə edin</span>
+                                        </div>
+                                    </label>
+                                    <div class="my-form__control__body">
+                                        <div class="file-list">
+                                        </div>
+                                        <input type="file" id="postPicture" name="postPicture" accept="image/png, image/jpeg, image/jpg, image/webp" multiple required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-form__item__footer">
+                                <span class="my-form__control__message">Maksimum 5 şəkil əlavə edin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-modal__footer">
+                    <button class="my-btn my-btn--small" data-close="modal">Bağla</button>
+                    <button class="my-btn my-btn--secondary my-btn--small" id="btnSendReview">Əlavə et</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Header -->
     <header class="header">
         <div class="header__top d-mobile-none">
@@ -814,10 +910,10 @@
                         <div class="my-tab-list">
                             <ul>
                                 <li>
-                                    <a class="active" href="store.html">Elanlar</a>
+                                    <a href="store.html">Elanlar</a>
                                 </li>
                                 <li>
-                                    <a href="reviews.html">Müştəri rəyləri </a>
+                                    <a class="active" href="reviews.html">Müştəri rəyləri </a>
                                 </li>
                             </ul>
                         </div>
@@ -827,365 +923,78 @@
         </div>
         <div class="container">
             <div class="main__content">
-                <aside class="main__aside">
-                    <div class="sidebar sidebar--filters sidebar--white">
-                        <div class="sidebar__header">
-                            <span class="sidebar__header__title"> Filtrləmə </span>
-                            <a href="posts.html" class="my-btn my-btn--small">Təmizlə</a>
-                        </div>
-                        <div class="sidebar__body"> Meyvəyə dəymə 🍎 </div>
-                        <div class="sidebar__footer">
-                            <button class="my-btn my-btn--secondary my-btn--small">Tətbiq et</button>
-                        </div>
-                    </div>
-                </aside>
-                <div class="main__layout">
+                <div class="main__layout main__layout--fluid">
                     <div class="main__sections">
                         <section class="section section--posts section--white">
                             <div class="section__header">
-                                <span class="section__header__title"> Premium Elanlar </span>
-                                <a href="posts.html" class="my-btn my-btn--small">Hamısını gör</a>
+                                <span class="section__header__title"> Satıcı haqqında rəylər və reytinq </span>
+                                <button class="my-btn my-btn--small" data-toggle="modal" data-target="#modalReview">Yeni rəy əlavə et</button>
                             </div>
                             <div class="section__body">
-                                <a href="post.html" class="my-post my-post--sm">
-                                    <div class="my-post__picture">
-                                        <img src="./assets/images/posts/iphone.jpg" alt="Apple iPhone 15 Pro Natural Titanium 128GB/8GB">
-                                        <div class="my-post__overlay">
-                                            <div>
-                                                <button class="my-btn my-btn--icon my-btn--small my-btn--fav">
-                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.32339 6.11553L10 6.73726L10.6766 6.11553L10.8829 5.92597C11.7287 5.18454 12.6441 4.83008 13.6288 4.83008C16.0391 4.83008 18 6.79315 18 9.22334C18 10.4788 17.7737 11.3352 17.0724 12.3011C16.3185 13.3396 15.0024 14.5235 12.6911 16.329L10.5973 17.8884C10.2429 18.1524 9.75715 18.1524 9.40269 17.8884L7.30887 16.329C4.99755 14.5235 3.68152 13.3396 2.92759 12.3011C2.22631 11.3352 2 10.4788 2 9.22334C2 6.79315 3.96092 4.83008 6.37124 4.83008C7.35591 4.83008 8.2713 5.18454 9.1171 5.92598L9.32339 6.11553Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                            <div>
-                                                <span class="my-post__discount"> -15% </span>
-                                                <div class="my-post__premium">
-                                                    <img src="./assets/icons/24/premium-1.svg" alt="premium">
-                                                    <span>Premium</span>
-                                                </div>
-                                            </div>
+                                <div class="my-review">
+                                    <div class="my-review__picture">
+                                        <img src="./assets/images/avatar.svg" alt="user">
+                                    </div>
+                                    <div class="my-review__details">
+                                        <span class="my-review__author">Emil Məmmədov</span>
+                                        <div class="my-review__stars">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.56577 2.33042C7.70245 1.88986 8.29756 1.88986 8.43424 2.33042L9.64014 6.21746H13.5425C13.9848 6.21746 14.1687 6.81023 13.8109 7.08251L10.6538 9.48484L11.8597 13.3719C11.9964 13.8124 11.5149 14.1788 11.1571 13.9065L8 11.5042L4.84289 13.9065C4.48506 14.1788 4.00361 13.8124 4.14029 13.3719L5.34619 9.48484L2.18908 7.08251C1.83126 6.81023 2.01516 6.21746 2.45746 6.21746H6.35986L7.56577 2.33042Z" fill="#FFC90A" />
+                                            </svg>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.56577 2.33042C7.70245 1.88986 8.29756 1.88986 8.43424 2.33042L9.64014 6.21746H13.5425C13.9848 6.21746 14.1687 6.81023 13.8109 7.08251L10.6538 9.48484L11.8597 13.3719C11.9964 13.8124 11.5149 14.1788 11.1571 13.9065L8 11.5042L4.84289 13.9065C4.48506 14.1788 4.00361 13.8124 4.14029 13.3719L5.34619 9.48484L2.18908 7.08251C1.83126 6.81023 2.01516 6.21746 2.45746 6.21746H6.35986L7.56577 2.33042Z" fill="#FFC90A" />
+                                            </svg>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.56577 2.33042C7.70245 1.88986 8.29756 1.88986 8.43424 2.33042L9.64014 6.21746H13.5425C13.9848 6.21746 14.1687 6.81023 13.8109 7.08251L10.6538 9.48484L11.8597 13.3719C11.9964 13.8124 11.5149 14.1788 11.1571 13.9065L8 11.5042L4.84289 13.9065C4.48506 14.1788 4.00361 13.8124 4.14029 13.3719L5.34619 9.48484L2.18908 7.08251C1.83126 6.81023 2.01516 6.21746 2.45746 6.21746H6.35986L7.56577 2.33042Z" fill="#FFC90A" />
+                                            </svg>
+                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
+                                            </svg>
+                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
+                                            </svg>
+                                        </div>
+                                        <p class="my-review__message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                                        <div class="my-review__files">
+                                            <img src="https://via.placeholder.com/100" alt="">
+                                            <img src="https://via.placeholder.com/100" alt="">
+                                            <img src="https://via.placeholder.com/100" alt="">
                                         </div>
                                     </div>
-                                    <div class="my-post__info">
-                                        <div class="my-post__price">
-                                            <span class="my-post__price-value">345,850₼</span>
-                                            <span class="my-post__price-value my-post__price-value--old">365,850₼</span>
-                                        </div>
-                                        <span class="my-post__name">Apple iPhone 15 Pro Natural Titanium 128GB/8GB</span>
-                                        <span class="my-post__date">Bakı, bugün 12:30</span>
+                                    <div class="my-review__date">17 Sentyabr 2023</div>
+                                </div>
+                                <div class="my-review">
+                                    <div class="my-review__picture">
+                                        <img src="./assets/images/avatar.svg" alt="user">
                                     </div>
-                                </a>
-                                <a href="post.html" class="my-post my-post--sm">
-                                    <div class="my-post__picture">
-                                        <img src="./assets/images/posts/iphone.jpg" alt="Apple iPhone 15 Pro Natural Titanium 128GB/8GB">
-                                        <div class="my-post__overlay">
-                                            <div>
-                                                <button class="my-btn my-btn--icon my-btn--small my-btn--fav">
-                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.32339 6.11553L10 6.73726L10.6766 6.11553L10.8829 5.92597C11.7287 5.18454 12.6441 4.83008 13.6288 4.83008C16.0391 4.83008 18 6.79315 18 9.22334C18 10.4788 17.7737 11.3352 17.0724 12.3011C16.3185 13.3396 15.0024 14.5235 12.6911 16.329L10.5973 17.8884C10.2429 18.1524 9.75715 18.1524 9.40269 17.8884L7.30887 16.329C4.99755 14.5235 3.68152 13.3396 2.92759 12.3011C2.22631 11.3352 2 10.4788 2 9.22334C2 6.79315 3.96092 4.83008 6.37124 4.83008C7.35591 4.83008 8.2713 5.18454 9.1171 5.92598L9.32339 6.11553Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                            <div>
-                                                <span class="my-post__discount"> -15% </span>
-                                                <div class="my-post__premium">
-                                                    <img src="./assets/icons/24/premium-1.svg" alt="premium">
-                                                    <span>Premium</span>
-                                                </div>
-                                            </div>
+                                    <div class="my-review__details">
+                                        <span class="my-review__author">Emil Məmmədov</span>
+                                        <div class="my-review__stars">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.56577 2.33042C7.70245 1.88986 8.29756 1.88986 8.43424 2.33042L9.64014 6.21746H13.5425C13.9848 6.21746 14.1687 6.81023 13.8109 7.08251L10.6538 9.48484L11.8597 13.3719C11.9964 13.8124 11.5149 14.1788 11.1571 13.9065L8 11.5042L4.84289 13.9065C4.48506 14.1788 4.00361 13.8124 4.14029 13.3719L5.34619 9.48484L2.18908 7.08251C1.83126 6.81023 2.01516 6.21746 2.45746 6.21746H6.35986L7.56577 2.33042Z" fill="#FFC90A" />
+                                            </svg>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.56577 2.33042C7.70245 1.88986 8.29756 1.88986 8.43424 2.33042L9.64014 6.21746H13.5425C13.9848 6.21746 14.1687 6.81023 13.8109 7.08251L10.6538 9.48484L11.8597 13.3719C11.9964 13.8124 11.5149 14.1788 11.1571 13.9065L8 11.5042L4.84289 13.9065C4.48506 14.1788 4.00361 13.8124 4.14029 13.3719L5.34619 9.48484L2.18908 7.08251C1.83126 6.81023 2.01516 6.21746 2.45746 6.21746H6.35986L7.56577 2.33042Z" fill="#FFC90A" />
+                                            </svg>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.56577 2.33042C7.70245 1.88986 8.29756 1.88986 8.43424 2.33042L9.64014 6.21746H13.5425C13.9848 6.21746 14.1687 6.81023 13.8109 7.08251L10.6538 9.48484L11.8597 13.3719C11.9964 13.8124 11.5149 14.1788 11.1571 13.9065L8 11.5042L4.84289 13.9065C4.48506 14.1788 4.00361 13.8124 4.14029 13.3719L5.34619 9.48484L2.18908 7.08251C1.83126 6.81023 2.01516 6.21746 2.45746 6.21746H6.35986L7.56577 2.33042Z" fill="#FFC90A" />
+                                            </svg>
+                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
+                                            </svg>
+                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
+                                            </svg>
                                         </div>
-                                    </div>
-                                    <div class="my-post__info">
-                                        <div class="my-post__price">
-                                            <span class="my-post__price-value">345,850₼</span>
-                                            <span class="my-post__price-value my-post__price-value--old">365,850₼</span>
-                                        </div>
-                                        <span class="my-post__name">Apple iPhone 15 Pro Natural Titanium 128GB/8GB</span>
-                                        <span class="my-post__date">Bakı, bugün 12:30</span>
-                                    </div>
-                                </a>
-                                <a href="post.html" class="my-post my-post--sm">
-                                    <div class="my-post__picture">
-                                        <img src="./assets/images/posts/iphone.jpg" alt="Apple iPhone 15 Pro Natural Titanium 128GB/8GB">
-                                        <div class="my-post__overlay">
-                                            <div>
-                                                <button class="my-btn my-btn--icon my-btn--small my-btn--fav">
-                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.32339 6.11553L10 6.73726L10.6766 6.11553L10.8829 5.92597C11.7287 5.18454 12.6441 4.83008 13.6288 4.83008C16.0391 4.83008 18 6.79315 18 9.22334C18 10.4788 17.7737 11.3352 17.0724 12.3011C16.3185 13.3396 15.0024 14.5235 12.6911 16.329L10.5973 17.8884C10.2429 18.1524 9.75715 18.1524 9.40269 17.8884L7.30887 16.329C4.99755 14.5235 3.68152 13.3396 2.92759 12.3011C2.22631 11.3352 2 10.4788 2 9.22334C2 6.79315 3.96092 4.83008 6.37124 4.83008C7.35591 4.83008 8.2713 5.18454 9.1171 5.92598L9.32339 6.11553Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                            <div>
-                                                <span class="my-post__discount"> -15% </span>
-                                                <div class="my-post__premium">
-                                                    <img src="./assets/icons/24/premium-1.svg" alt="premium">
-                                                    <span>Premium</span>
-                                                </div>
-                                            </div>
+                                        <p class="my-review__message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                                        <div class="my-review__files">
+                                            <img src="https://via.placeholder.com/100" alt="">
+                                            <img src="https://via.placeholder.com/100" alt="">
+                                            <img src="https://via.placeholder.com/100" alt="">
                                         </div>
                                     </div>
-                                    <div class="my-post__info">
-                                        <div class="my-post__price">
-                                            <span class="my-post__price-value">345,850₼</span>
-                                            <span class="my-post__price-value my-post__price-value--old">365,850₼</span>
-                                        </div>
-                                        <span class="my-post__name">Apple iPhone 15 Pro Natural Titanium 128GB/8GB</span>
-                                        <span class="my-post__date">Bakı, bugün 12:30</span>
-                                    </div>
-                                </a>
-                                <a href="post.html" class="my-post my-post--sm">
-                                    <div class="my-post__picture">
-                                        <img src="./assets/images/posts/iphone.jpg" alt="Apple iPhone 15 Pro Natural Titanium 128GB/8GB">
-                                        <div class="my-post__overlay">
-                                            <div>
-                                                <button class="my-btn my-btn--icon my-btn--small my-btn--fav">
-                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.32339 6.11553L10 6.73726L10.6766 6.11553L10.8829 5.92597C11.7287 5.18454 12.6441 4.83008 13.6288 4.83008C16.0391 4.83008 18 6.79315 18 9.22334C18 10.4788 17.7737 11.3352 17.0724 12.3011C16.3185 13.3396 15.0024 14.5235 12.6911 16.329L10.5973 17.8884C10.2429 18.1524 9.75715 18.1524 9.40269 17.8884L7.30887 16.329C4.99755 14.5235 3.68152 13.3396 2.92759 12.3011C2.22631 11.3352 2 10.4788 2 9.22334C2 6.79315 3.96092 4.83008 6.37124 4.83008C7.35591 4.83008 8.2713 5.18454 9.1171 5.92598L9.32339 6.11553Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                            <div>
-                                                <span class="my-post__discount"> -15% </span>
-                                                <div class="my-post__premium">
-                                                    <img src="./assets/icons/24/premium-1.svg" alt="premium">
-                                                    <span>Premium</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="my-post__info">
-                                        <div class="my-post__price">
-                                            <span class="my-post__price-value">345,850₼</span>
-                                            <span class="my-post__price-value my-post__price-value--old">365,850₼</span>
-                                        </div>
-                                        <span class="my-post__name">Apple iPhone 15 Pro Natural Titanium 128GB/8GB</span>
-                                        <span class="my-post__date">Bakı, bugün 12:30</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </section>
-                        <section class="section section--posts section--white">
-                            <div class="section__header">
-                                <span class="section__header__title"> Endirimlər </span>
-                                <a href="posts.html" class="my-btn my-btn--small">Hamısını gör</a>
-                            </div>
-                            <div class="section__body">
-                                <a href="post.html" class="my-post my-post--sm">
-                                    <div class="my-post__picture">
-                                        <img src="./assets/images/posts/iphone.jpg" alt="Apple iPhone 15 Pro Natural Titanium 128GB/8GB">
-                                        <div class="my-post__overlay">
-                                            <div>
-                                                <button class="my-btn my-btn--icon my-btn--small my-btn--fav">
-                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.32339 6.11553L10 6.73726L10.6766 6.11553L10.8829 5.92597C11.7287 5.18454 12.6441 4.83008 13.6288 4.83008C16.0391 4.83008 18 6.79315 18 9.22334C18 10.4788 17.7737 11.3352 17.0724 12.3011C16.3185 13.3396 15.0024 14.5235 12.6911 16.329L10.5973 17.8884C10.2429 18.1524 9.75715 18.1524 9.40269 17.8884L7.30887 16.329C4.99755 14.5235 3.68152 13.3396 2.92759 12.3011C2.22631 11.3352 2 10.4788 2 9.22334C2 6.79315 3.96092 4.83008 6.37124 4.83008C7.35591 4.83008 8.2713 5.18454 9.1171 5.92598L9.32339 6.11553Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                            <div>
-                                                <span class="my-post__discount"> -15% </span>
-                                                <div class="my-post__premium">
-                                                    <img src="./assets/icons/24/premium-1.svg" alt="premium">
-                                                    <span>Premium</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="my-post__info">
-                                        <div class="my-post__price">
-                                            <span class="my-post__price-value">345,850₼</span>
-                                            <span class="my-post__price-value my-post__price-value--old">365,850₼</span>
-                                        </div>
-                                        <span class="my-post__name">Apple iPhone 15 Pro Natural Titanium 128GB/8GB</span>
-                                        <span class="my-post__date">Bakı, bugün 12:30</span>
-                                    </div>
-                                </a>
-                                <a href="post.html" class="my-post my-post--sm">
-                                    <div class="my-post__picture">
-                                        <img src="./assets/images/posts/iphone.jpg" alt="Apple iPhone 15 Pro Natural Titanium 128GB/8GB">
-                                        <div class="my-post__overlay">
-                                            <div>
-                                                <button class="my-btn my-btn--icon my-btn--small my-btn--fav">
-                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.32339 6.11553L10 6.73726L10.6766 6.11553L10.8829 5.92597C11.7287 5.18454 12.6441 4.83008 13.6288 4.83008C16.0391 4.83008 18 6.79315 18 9.22334C18 10.4788 17.7737 11.3352 17.0724 12.3011C16.3185 13.3396 15.0024 14.5235 12.6911 16.329L10.5973 17.8884C10.2429 18.1524 9.75715 18.1524 9.40269 17.8884L7.30887 16.329C4.99755 14.5235 3.68152 13.3396 2.92759 12.3011C2.22631 11.3352 2 10.4788 2 9.22334C2 6.79315 3.96092 4.83008 6.37124 4.83008C7.35591 4.83008 8.2713 5.18454 9.1171 5.92598L9.32339 6.11553Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                            <div>
-                                                <span class="my-post__discount"> -15% </span>
-                                                <div class="my-post__premium">
-                                                    <img src="./assets/icons/24/premium-1.svg" alt="premium">
-                                                    <span>Premium</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="my-post__info">
-                                        <div class="my-post__price">
-                                            <span class="my-post__price-value">345,850₼</span>
-                                            <span class="my-post__price-value my-post__price-value--old">365,850₼</span>
-                                        </div>
-                                        <span class="my-post__name">Apple iPhone 15 Pro Natural Titanium 128GB/8GB</span>
-                                        <span class="my-post__date">Bakı, bugün 12:30</span>
-                                    </div>
-                                </a>
-                                <a href="post.html" class="my-post my-post--sm">
-                                    <div class="my-post__picture">
-                                        <img src="./assets/images/posts/iphone.jpg" alt="Apple iPhone 15 Pro Natural Titanium 128GB/8GB">
-                                        <div class="my-post__overlay">
-                                            <div>
-                                                <button class="my-btn my-btn--icon my-btn--small my-btn--fav">
-                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.32339 6.11553L10 6.73726L10.6766 6.11553L10.8829 5.92597C11.7287 5.18454 12.6441 4.83008 13.6288 4.83008C16.0391 4.83008 18 6.79315 18 9.22334C18 10.4788 17.7737 11.3352 17.0724 12.3011C16.3185 13.3396 15.0024 14.5235 12.6911 16.329L10.5973 17.8884C10.2429 18.1524 9.75715 18.1524 9.40269 17.8884L7.30887 16.329C4.99755 14.5235 3.68152 13.3396 2.92759 12.3011C2.22631 11.3352 2 10.4788 2 9.22334C2 6.79315 3.96092 4.83008 6.37124 4.83008C7.35591 4.83008 8.2713 5.18454 9.1171 5.92598L9.32339 6.11553Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                            <div>
-                                                <span class="my-post__discount"> -15% </span>
-                                                <div class="my-post__premium">
-                                                    <img src="./assets/icons/24/premium-1.svg" alt="premium">
-                                                    <span>Premium</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="my-post__info">
-                                        <div class="my-post__price">
-                                            <span class="my-post__price-value">345,850₼</span>
-                                            <span class="my-post__price-value my-post__price-value--old">365,850₼</span>
-                                        </div>
-                                        <span class="my-post__name">Apple iPhone 15 Pro Natural Titanium 128GB/8GB</span>
-                                        <span class="my-post__date">Bakı, bugün 12:30</span>
-                                    </div>
-                                </a>
-                                <a href="post.html" class="my-post my-post--sm">
-                                    <div class="my-post__picture">
-                                        <img src="./assets/images/posts/iphone.jpg" alt="Apple iPhone 15 Pro Natural Titanium 128GB/8GB">
-                                        <div class="my-post__overlay">
-                                            <div>
-                                                <button class="my-btn my-btn--icon my-btn--small my-btn--fav">
-                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.32339 6.11553L10 6.73726L10.6766 6.11553L10.8829 5.92597C11.7287 5.18454 12.6441 4.83008 13.6288 4.83008C16.0391 4.83008 18 6.79315 18 9.22334C18 10.4788 17.7737 11.3352 17.0724 12.3011C16.3185 13.3396 15.0024 14.5235 12.6911 16.329L10.5973 17.8884C10.2429 18.1524 9.75715 18.1524 9.40269 17.8884L7.30887 16.329C4.99755 14.5235 3.68152 13.3396 2.92759 12.3011C2.22631 11.3352 2 10.4788 2 9.22334C2 6.79315 3.96092 4.83008 6.37124 4.83008C7.35591 4.83008 8.2713 5.18454 9.1171 5.92598L9.32339 6.11553Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                            <div>
-                                                <span class="my-post__discount"> -15% </span>
-                                                <div class="my-post__premium">
-                                                    <img src="./assets/icons/24/premium-1.svg" alt="premium">
-                                                    <span>Premium</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="my-post__info">
-                                        <div class="my-post__price">
-                                            <span class="my-post__price-value">345,850₼</span>
-                                            <span class="my-post__price-value my-post__price-value--old">365,850₼</span>
-                                        </div>
-                                        <span class="my-post__name">Apple iPhone 15 Pro Natural Titanium 128GB/8GB</span>
-                                        <span class="my-post__date">Bakı, bugün 12:30</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </section>
-                        <section class="section section--posts section--white">
-                            <div class="section__header">
-                                <span class="section__header__title"> Bütün elanlar </span>
-                                <a href="posts.html" class="my-btn my-btn--small">Hamısını gör</a>
-                            </div>
-                            <div class="section__body">
-                                <a href="post.html" class="my-post my-post--sm">
-                                    <div class="my-post__picture">
-                                        <img src="./assets/images/posts/iphone.jpg" alt="Apple iPhone 15 Pro Natural Titanium 128GB/8GB">
-                                        <div class="my-post__overlay">
-                                            <div>
-                                                <button class="my-btn my-btn--icon my-btn--small my-btn--fav">
-                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.32339 6.11553L10 6.73726L10.6766 6.11553L10.8829 5.92597C11.7287 5.18454 12.6441 4.83008 13.6288 4.83008C16.0391 4.83008 18 6.79315 18 9.22334C18 10.4788 17.7737 11.3352 17.0724 12.3011C16.3185 13.3396 15.0024 14.5235 12.6911 16.329L10.5973 17.8884C10.2429 18.1524 9.75715 18.1524 9.40269 17.8884L7.30887 16.329C4.99755 14.5235 3.68152 13.3396 2.92759 12.3011C2.22631 11.3352 2 10.4788 2 9.22334C2 6.79315 3.96092 4.83008 6.37124 4.83008C7.35591 4.83008 8.2713 5.18454 9.1171 5.92598L9.32339 6.11553Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="my-post__info">
-                                        <div class="my-post__price">
-                                            <span class="my-post__price-value">345,850₼</span>
-                                            <span class="my-post__price-value my-post__price-value--old">365,850₼</span>
-                                        </div>
-                                        <span class="my-post__name">Apple iPhone 15 Pro Natural Titanium 128GB/8GB</span>
-                                        <span class="my-post__date">Bakı, bugün 12:30</span>
-                                    </div>
-                                </a>
-                                <a href="post.html" class="my-post my-post--sm">
-                                    <div class="my-post__picture">
-                                        <img src="./assets/images/posts/iphone.jpg" alt="Apple iPhone 15 Pro Natural Titanium 128GB/8GB">
-                                        <div class="my-post__overlay">
-                                            <div>
-                                                <button class="my-btn my-btn--icon my-btn--small my-btn--fav">
-                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.32339 6.11553L10 6.73726L10.6766 6.11553L10.8829 5.92597C11.7287 5.18454 12.6441 4.83008 13.6288 4.83008C16.0391 4.83008 18 6.79315 18 9.22334C18 10.4788 17.7737 11.3352 17.0724 12.3011C16.3185 13.3396 15.0024 14.5235 12.6911 16.329L10.5973 17.8884C10.2429 18.1524 9.75715 18.1524 9.40269 17.8884L7.30887 16.329C4.99755 14.5235 3.68152 13.3396 2.92759 12.3011C2.22631 11.3352 2 10.4788 2 9.22334C2 6.79315 3.96092 4.83008 6.37124 4.83008C7.35591 4.83008 8.2713 5.18454 9.1171 5.92598L9.32339 6.11553Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="my-post__info">
-                                        <div class="my-post__price">
-                                            <span class="my-post__price-value">345,850₼</span>
-                                            <span class="my-post__price-value my-post__price-value--old">365,850₼</span>
-                                        </div>
-                                        <span class="my-post__name">Apple iPhone 15 Pro Natural Titanium 128GB/8GB</span>
-                                        <span class="my-post__date">Bakı, bugün 12:30</span>
-                                    </div>
-                                </a>
-                                <a href="post.html" class="my-post my-post--sm">
-                                    <div class="my-post__picture">
-                                        <img src="./assets/images/posts/iphone.jpg" alt="Apple iPhone 15 Pro Natural Titanium 128GB/8GB">
-                                        <div class="my-post__overlay">
-                                            <div>
-                                                <button class="my-btn my-btn--icon my-btn--small my-btn--fav">
-                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.32339 6.11553L10 6.73726L10.6766 6.11553L10.8829 5.92597C11.7287 5.18454 12.6441 4.83008 13.6288 4.83008C16.0391 4.83008 18 6.79315 18 9.22334C18 10.4788 17.7737 11.3352 17.0724 12.3011C16.3185 13.3396 15.0024 14.5235 12.6911 16.329L10.5973 17.8884C10.2429 18.1524 9.75715 18.1524 9.40269 17.8884L7.30887 16.329C4.99755 14.5235 3.68152 13.3396 2.92759 12.3011C2.22631 11.3352 2 10.4788 2 9.22334C2 6.79315 3.96092 4.83008 6.37124 4.83008C7.35591 4.83008 8.2713 5.18454 9.1171 5.92598L9.32339 6.11553Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="my-post__info">
-                                        <div class="my-post__price">
-                                            <span class="my-post__price-value">345,850₼</span>
-                                            <span class="my-post__price-value my-post__price-value--old">365,850₼</span>
-                                        </div>
-                                        <span class="my-post__name">Apple iPhone 15 Pro Natural Titanium 128GB/8GB</span>
-                                        <span class="my-post__date">Bakı, bugün 12:30</span>
-                                    </div>
-                                </a>
-                                <a href="post.html" class="my-post my-post--sm">
-                                    <div class="my-post__picture">
-                                        <img src="./assets/images/posts/iphone.jpg" alt="Apple iPhone 15 Pro Natural Titanium 128GB/8GB">
-                                        <div class="my-post__overlay">
-                                            <div>
-                                                <button class="my-btn my-btn--icon my-btn--small my-btn--fav">
-                                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.32339 6.11553L10 6.73726L10.6766 6.11553L10.8829 5.92597C11.7287 5.18454 12.6441 4.83008 13.6288 4.83008C16.0391 4.83008 18 6.79315 18 9.22334C18 10.4788 17.7737 11.3352 17.0724 12.3011C16.3185 13.3396 15.0024 14.5235 12.6911 16.329L10.5973 17.8884C10.2429 18.1524 9.75715 18.1524 9.40269 17.8884L7.30887 16.329C4.99755 14.5235 3.68152 13.3396 2.92759 12.3011C2.22631 11.3352 2 10.4788 2 9.22334C2 6.79315 3.96092 4.83008 6.37124 4.83008C7.35591 4.83008 8.2713 5.18454 9.1171 5.92598L9.32339 6.11553Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="my-post__info">
-                                        <div class="my-post__price">
-                                            <span class="my-post__price-value">345,850₼</span>
-                                            <span class="my-post__price-value my-post__price-value--old">365,850₼</span>
-                                        </div>
-                                        <span class="my-post__name">Apple iPhone 15 Pro Natural Titanium 128GB/8GB</span>
-                                        <span class="my-post__date">Bakı, bugün 12:30</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="section__footer">
-                                <button class="my-btn my-btn--more"> Daha çox gör</button>
+                                    <div class="my-review__date">17 Sentyabr 2023</div>
+                                </div>
                             </div>
                         </section>
                     </div>
