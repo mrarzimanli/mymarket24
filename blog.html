@@ -14,102 +14,6 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
-    <!-- Modals -->
-    <div class="my-modal my-modal--fade my-modal--md my-modal--review" id="modalReview">
-        <div class="my-modal__dialog">
-            <div class="my-modal__content">
-                <div class="my-modal__header">
-                    <span class="my-modal__header__title">Yeni rəy</span>
-                    <p class="my-modal__header__description">Zəhmət olmasa Yeni rəy əlavə edin</p>
-                </div>
-                <div class="my-modal__body">
-                    <div id="formReview" class="my-form">
-                        <div class="my-form__item">
-                            <div class="my-form__item__header">
-                                <label class="my-form__label" for="reviewStars">Mağazanın ümumi qiymətləndirilməsi</label>
-                            </div>
-                            <div class="my-form__item__body">
-                                <div class="my-stars">
-                                    <span class="star" data-value="1">
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
-                                        </svg>
-                                    </span>
-                                    <span class="star" data-value="2">
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
-                                        </svg>
-                                    </span>
-                                    <span class="star" data-value="3">
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
-                                        </svg>
-                                    </span>
-                                    <span class="star" data-value="4">
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
-                                        </svg>
-                                    </span>
-                                    <span class="star" data-value="5">
-                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
-                                        </svg>
-                                    </span>
-                                    <input type="hidden" id="reviewStars" name="reviewStars" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="my-form__item">
-                            <div class="my-form__item__header">
-                                <label class="my-form__label" for="reviewMessage">Rəy</label>
-                                <div class="my-form__char-count">
-                                    <span class="my-form__char-count__current">0</span>
-                                    <span class="my-form__char-count__max">/200</span>
-                                </div>
-                            </div>
-                            <div class="my-form__item__body">
-                                <textarea id="reviewMessage" class="my-form__control my-form__control--textarea" name="reviewMessage" maxlength="200" placeholder="Şikayətin səbəbini təsvir edin" required></textarea>
-                            </div>
-                            <!-- <div class="my-form__item__footer">
-                                    <span class="my-form__control__message">Form control message</span>
-                                </div> -->
-                        </div>
-                        <div class="my-form__item my-form__item my-form__item--file">
-                            <div class="my-form__item__header">
-                                <span class="my-form__label">Şəkil</span>
-                            </div>
-                            <div class="my-form__item__body">
-                                <div class="my-form__control my-form__control--file">
-                                    <label class="my-form__control__header" for="postPicture">
-                                        <span class="my-btn my-btn--secondary my-btn--small">Şəkil yüklə</span>
-                                        <div class="my-form__control__placeholder">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M2.6003 19.7008C2.14232 18.8444 2 18.0021 2 16.2385V15.2572C1.99986 15.2501 1.99978 15.243 1.99978 15.2359C1.99978 14.6774 2.45253 14.2247 3.01102 14.2247C3.56951 14.2247 4.02225 14.6774 4.02225 15.2359L4.02247 16.2385C4.02247 17.9089 4.16622 18.3403 4.38374 18.747C4.58555 19.1243 4.87566 19.4144 5.25302 19.6163C5.65974 19.8338 6.09113 19.9775 7.76154 19.9775L16.2385 19.9775C17.9089 19.9775 18.3403 19.8338 18.747 19.6163C19.1243 19.4144 19.4144 19.1243 19.6163 18.747C19.8338 18.3403 19.9775 17.9089 19.9775 16.2385V15.2572C19.9774 15.2501 19.9773 15.243 19.9773 15.2359C19.9773 14.6774 20.4301 14.2247 20.9885 14.2247C21.547 14.2247 21.9998 14.6774 21.9998 15.2359L22 16.2385C22 18.0021 21.8577 18.8444 21.3997 19.7008C21.0094 20.4306 20.4306 21.0094 19.7008 21.3997C18.8444 21.8577 18.0021 22 16.2385 22H7.76154C5.99789 22 5.15557 21.8577 4.29922 21.3997C3.56941 21.0094 2.99061 20.4306 2.6003 19.7008Z" fill="#222222" />
-                                                <path d="M8.22055 11.1501L10.9885 13.9181L10.9885 3.01124C10.9885 2.45275 11.4413 2 11.9998 2C12.5583 2 13.011 2.45275 13.011 3.01124L13.011 13.9183L15.7792 11.1501C16.1741 10.7552 16.8144 10.7552 17.2093 11.1501C17.6042 11.545 17.6042 12.1853 17.2093 12.5802L12.7149 17.0746C12.32 17.4695 11.6797 17.4695 11.2848 17.0746L6.79044 12.5802C6.39553 12.1853 6.39553 11.545 6.79044 11.1501C7.18536 10.7552 7.82563 10.7552 8.22055 11.1501Z" fill="#222222" />
-                                            </svg>
-                                            <span>Şəkil əlavə edin</span>
-                                        </div>
-                                    </label>
-                                    <div class="my-form__control__body">
-                                        <div class="file-list">
-                                        </div>
-                                        <input type="file" id="postPicture" name="postPicture" accept="image/png, image/jpeg, image/jpg, image/webp" multiple required />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="my-form__item__footer">
-                                <span class="my-form__control__message">Maksimum 5 şəkil əlavə edin</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="my-modal__footer">
-                    <button class="my-btn my-btn--small" data-close="modal">Bağla</button>
-                    <button class="my-btn my-btn--secondary my-btn--small" id="btnSendReview">Əlavə et</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Header -->
     <header class="header">
         <div class="header__top d-mobile-none">
@@ -785,217 +689,164 @@
         </div>
     </section>
     <!-- Mobile Nav end-->
+    <!-- Mobile Nav -->
+    <section class="my-bar d-mobile-block">
+        <div class="container">
+            <ul class="my-bar__list">
+                <li class="my-bar__list__item">
+                    <a class="my-bar__list__item__link active" href="index.html">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.0595 2.23209C12.4304 1.92264 12.9696 1.92264 13.3406 2.23209L21.3406 8.90526C21.5683 9.09525 21.7 9.37656 21.7 9.67317V21C21.7 21.5523 21.2523 22 20.7 22H4.70001C4.14773 22 3.70001 21.5523 3.70001 21V9.67317C3.70001 9.37656 3.83169 9.09525 4.05946 8.90526L12.0595 2.23209Z" stroke="#7A7A7A" stroke-width="2" />
+                            <path d="M9.70001 17C9.70001 15.3431 11.0432 14 12.7 14C14.3569 14 15.7 15.3431 15.7 17V22H9.70001V17Z" stroke="#7A7A7A" stroke-width="2" />
+                        </svg>
+                        <span>Əsas</span>
+                    </a>
+                </li>
+                <li class="my-bar__list__item">
+                    <button class="my-bar__list__item__link my-btn--catalog">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3.1001" y="3" width="7.09091" height="7.09091" rx="1.72727" stroke="#7A7A7A" stroke-width="2" />
+                            <rect x="3.1001" y="13.9092" width="7.09091" height="7.09091" rx="1.72727" stroke="#7A7A7A" stroke-width="2" />
+                            <rect x="14.0093" y="3" width="7.09091" height="7.09091" rx="1.72727" stroke="#7A7A7A" stroke-width="2" />
+                            <path d="M13.9185 15.1816H21.1912" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
+                            <path d="M13.9185 19.7271H21.1912" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <span>Kateqoriyalar</span>
+                    </button>
+                </li>
+                <li class="my-bar__list__item">
+                    <a class="my-bar__list__item__link" href="new-post.html">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1527_2501)">
+                                <circle cx="12.5" cy="12" r="12" fill="#358C6C" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 7C13.5 6.44772 13.0523 6 12.5 6C11.9477 6 11.5 6.44772 11.5 7V11H7.5C6.94772 11 6.5 11.4477 6.5 12C6.5 12.5523 6.94772 13 7.5 13H11.5V17C11.5 17.5523 11.9477 18 12.5 18C13.0523 18 13.5 17.5523 13.5 17V13H17.5C18.0523 13 18.5 12.5523 18.5 12C18.5 11.4477 18.0523 11 17.5 11H13.5V7Z" fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1527_2501">
+                                    <rect width="24" height="24" fill="white" transform="translate(0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span>Yeni elan </span>
+                    </a>
+                </li>
+                <li class="my-bar__list__item">
+                    <a class="my-bar__list__item__link" href="wishlist.html">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.2099 4.69044L12.9004 5.34968L13.5909 4.69044L13.8451 4.44778C14.9178 3.47003 16.0837 3 17.3355 3C20.3695 3 22.9004 5.5782 22.9004 8.84858C22.9004 10.4961 22.61 11.6475 21.7138 12.9301C20.7687 14.2827 19.1335 15.8059 16.3097 18.0976L13.6347 20.1674C13.2023 20.502 12.5984 20.502 12.166 20.1674L9.49111 18.0976C6.66726 15.8059 5.03211 14.2827 4.08698 12.9301C3.19078 11.6475 2.90039 10.4961 2.90039 8.84858C2.90039 5.5782 5.43131 3 8.46524 3C9.7171 3 10.883 3.47003 11.9557 4.44779L12.2099 4.69044Z" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <span>Seçilmişlər</span>
+                    </a>
+                </li>
+                <li class="my-bar__list__item">
+                    <a class="my-bar__list__item__link" href="cabinet-posts.html">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.8002 6.49992C16.8002 8.98516 14.7855 10.9998 12.3003 10.9998C9.81499 10.9998 7.80029 8.98516 7.80029 6.49992C7.80029 4.01469 9.81499 2 12.3003 2C14.7855 2 16.8002 4.01469 16.8002 6.49992Z" stroke="#7A7A7A" stroke-width="2" />
+                            <path d="M4.50049 19.2052C4.50049 16.3857 6.78613 14.1001 9.60562 14.1001H14.9953C17.8148 14.1001 20.1004 16.3857 20.1004 19.2052C20.1004 20.2404 19.3296 21.1135 18.3024 21.2419L18.1272 21.2638C14.2577 21.7475 10.3432 21.7475 6.47375 21.2638L6.29846 21.2419C5.2713 21.1135 4.50049 20.2404 4.50049 19.2052Z" stroke="#7A7A7A" stroke-width="2" />
+                        </svg>
+                        <span>Kabinetim</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Mobile Nav end-->
     <!-- Main -->
-    <main class="main main--store">
-        <div class="main__content main__content--white">
-            <div class="container">
-                <div class="main__layout main__layout--fluid">
+    <main class="main main--blog">
+        <div class="container">
+            <div class="main__content">
+                <div class="main__layout">
                     <div class="main__breadcrumbs">
                         <a href="index.html">Əsas səhifə</a>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 2L10.2929 7.29289C10.6834 7.68342 10.6834 8.31658 10.2929 8.70711L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
-                        <a href="stors.html">Mağazalar</a>
+                        <a href="blogs.html">Bloqlar</a>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 2L10.2929 7.29289C10.6834 7.68342 10.6834 8.31658 10.2929 8.70711L5 14" stroke="#222222" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
-                        <span>TechStore</span>
+                        <span>Bloq başlığı</span>
                     </div>
                     <div class="main__sections">
-                        <section class="section section--store-details">
-                            <div class="section__body">
-                                <div class="my-store my-store--detailed">
-                                    <div class="my-store__picture">
-                                        <img src="./assets/images/stores/tech-store.png" alt="TechStore">
-                                    </div>
-                                    <div class="my-store__info">
-                                        <span class="my-store__name">TechStore</span>
-                                        <div class="my-store__desc">
-                                            <div class="my-store__rating">
-                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M7.56577 3.1605C7.70245 2.71994 8.29756 2.71994 8.43424 3.1605L9.64014 7.04754H13.5425C13.9848 7.04754 14.1687 7.64031 13.8109 7.91259L10.6538 10.3149L11.8597 14.202C11.9964 14.6425 11.5149 15.0089 11.1571 14.7366L8 12.3343L4.84289 14.7366C4.48506 15.0089 4.00361 14.6425 4.14029 14.202L5.34619 10.3149L2.18908 7.91259C1.83126 7.64031 2.01516 7.04754 2.45746 7.04754H6.35986L7.56577 3.1605Z" fill="#FFC90A"></path>
-                                                </svg>
-                                                <span class="my-store__rating__value">4.5</span>
-                                                <span class="my-store__rating__total">(32)</span>
-                                            </div>
-                                            <span class="my-store__separator"></span>
-                                            <span class="my-store__post-count">155 elan</span>
-                                        </div>
-                                        <span class="my-store__description d-mobile-none">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</span>
-                                        <div class="my-store__contact d-mobile-none">
-                                            <a href="to: (055) 123 45 67" class="my-btn my-btn--secondary">
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_1130_24388)">
-                                                        <path d="M17.7665 16.2854L17.7421 16.3098L17.7195 16.3359L17.0535 17.1027C15.8429 18.2373 14.1538 18.4424 12.158 17.8272C10.1362 17.2041 7.96222 15.7718 6.11333 13.9278C4.26462 12.0839 2.82321 9.9104 2.18749 7.8857C1.55976 5.88644 1.75173 4.19432 2.86405 2.98236L3.70382 2.25213L3.72415 2.23445L3.7435 2.2157C3.99977 1.96739 4.34356 1.83005 4.70038 1.83344C5.04149 1.83667 5.36825 1.96825 5.6161 2.20096L5.63939 2.23066C5.67916 2.28166 5.73548 2.35425 5.80334 2.44194C5.93881 2.617 6.11757 2.84872 6.29599 3.08024C6.47432 3.31164 6.65195 3.54238 6.78502 3.7153L6.94566 3.92408L6.9906 3.98251L7.00243 3.99789L7.00545 4.00183L7.00622 4.00282L7.00641 4.00307L7.00645 4.00313L7.79918 3.39355L7.00647 4.00315L7.03864 4.04498L7.07503 4.08319C7.31835 4.33869 7.45389 4.67811 7.45347 5.03094C7.45306 5.38376 7.31673 5.72287 7.07281 5.9778L7.04194 6.01007L7.01407 6.04496L6.1265 7.15595L5.75894 7.61603L5.98301 8.16062C6.52347 9.47418 7.31819 10.668 8.32148 11.6735C9.32477 12.6789 10.5169 13.4762 11.8293 14.0195L12.3735 14.2448L12.8344 13.8781L13.9546 12.9867L13.9906 12.958L14.0238 12.9262C14.2786 12.6821 14.6177 12.5455 14.9707 12.5449C15.3236 12.5443 15.6632 12.6798 15.9188 12.9231L15.9568 12.9593L15.9983 12.9912L16.6083 12.1988L15.9983 12.9912L15.9983 12.9913L15.9986 12.9915L15.9996 12.9922L16.0035 12.9953L16.0189 13.0071L16.0773 13.0521L16.2862 13.2129L16.9213 13.7025C17.1529 13.8811 17.3848 14.0601 17.56 14.1958C17.6478 14.2638 17.7206 14.3202 17.7718 14.3602L17.8004 14.3826C18.0357 14.6358 18.1672 14.9692 18.1673 15.3161C18.1673 15.6795 18.0232 16.0281 17.7665 16.2854ZM5.58905 2.16657L5.58902 2.16653L5.58905 2.16657Z" stroke="white" stroke-width="2" />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath id="clip0_1130_24388">
-                                                            <rect width="20" height="20" fill="white" />
-                                                        </clipPath>
-                                                    </defs>
-                                                </svg>
-                                                <span>(055) 123 45 67</span>
-                                            </a>
-                                            <a href="to: (055) 123 45 67" class="my-btn">
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2381 3.6641C14.5616 1.94698 12.3318 1.00087 9.956 1C5.06046 1 1.07623 5.075 1.07452 10.0839C1.07367 11.6851 1.48291 13.2481 2.26009 14.6254L1 19.3333L5.70818 18.0701C7.0053 18.7941 8.46596 19.1752 9.95218 19.1757H9.956C14.8507 19.1757 18.8354 15.1002 18.8371 10.0913C18.8379 7.66376 17.9151 5.38166 16.2381 3.66454V3.6641ZM9.956 17.6415H9.95303C8.62862 17.6411 7.32939 17.2769 6.19579 16.5891L5.92622 16.4253L3.13223 17.175L3.87788 14.3884L3.70243 14.1027C2.96359 12.9005 2.57308 11.5109 2.57393 10.0844C2.57564 5.92136 5.88703 2.53417 9.95902 2.53417C11.9307 2.53504 13.784 3.32129 15.1778 4.74874C16.5716 6.17575 17.3385 8.07322 17.3377 10.0904C17.3359 14.2539 14.0246 17.6411 9.956 17.6411V17.6415ZM14.005 11.9866C13.7831 11.8729 12.6921 11.324 12.4885 11.2483C12.285 11.1724 12.1372 11.1346 11.9894 11.3619C11.8417 11.5893 11.4163 12.1007 11.2868 12.2519C11.1573 12.4034 11.0279 12.4222 10.806 12.3085C10.5842 12.1948 9.86914 11.9552 9.02129 11.182C8.36166 10.58 7.91618 9.83693 7.78676 9.60952C7.6573 9.38217 7.77314 9.25932 7.88383 9.1465C7.98347 9.04458 8.1057 8.88123 8.21683 8.7488C8.32802 8.61637 8.36463 8.52144 8.43871 8.37026C8.51283 8.21867 8.47577 8.08629 8.42043 7.97256C8.36503 7.85888 7.92133 6.74156 7.73608 6.28725C7.55592 5.84469 7.37284 5.90481 7.23698 5.8974C7.10752 5.89086 6.95977 5.88956 6.81157 5.88956C6.66337 5.88956 6.42317 5.94619 6.21963 6.17357C6.01609 6.40093 5.44288 6.95021 5.44288 8.06708C5.44288 9.18395 6.23796 10.2638 6.34909 10.4154C6.46023 10.567 7.91405 12.8595 10.14 13.8431C10.6693 14.077 11.0828 14.2168 11.4052 14.3214C11.9367 14.4943 12.4204 14.4699 12.8028 14.4115C13.2291 14.3462 14.1157 13.8623 14.3005 13.3321C14.4853 12.802 14.4853 12.3472 14.43 12.2527C14.3746 12.1582 14.2264 12.1011 14.0046 11.9875L14.005 11.9866Z" fill="#358C6C" />
-                                                </svg>
-                                                <span>(055) 123 45 67</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="my-store__info my-store__info--mobile d-mobile-block">
-                                        <span class="my-store__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</span>
-                                        <div class="my-store__contact">
-                                            <a href="to: (055) 123 45 67" class="my-btn my-btn--secondary">
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_1130_24388)">
-                                                        <path d="M17.7665 16.2854L17.7421 16.3098L17.7195 16.3359L17.0535 17.1027C15.8429 18.2373 14.1538 18.4424 12.158 17.8272C10.1362 17.2041 7.96222 15.7718 6.11333 13.9278C4.26462 12.0839 2.82321 9.9104 2.18749 7.8857C1.55976 5.88644 1.75173 4.19432 2.86405 2.98236L3.70382 2.25213L3.72415 2.23445L3.7435 2.2157C3.99977 1.96739 4.34356 1.83005 4.70038 1.83344C5.04149 1.83667 5.36825 1.96825 5.6161 2.20096L5.63939 2.23066C5.67916 2.28166 5.73548 2.35425 5.80334 2.44194C5.93881 2.617 6.11757 2.84872 6.29599 3.08024C6.47432 3.31164 6.65195 3.54238 6.78502 3.7153L6.94566 3.92408L6.9906 3.98251L7.00243 3.99789L7.00545 4.00183L7.00622 4.00282L7.00641 4.00307L7.00645 4.00313L7.79918 3.39355L7.00647 4.00315L7.03864 4.04498L7.07503 4.08319C7.31835 4.33869 7.45389 4.67811 7.45347 5.03094C7.45306 5.38376 7.31673 5.72287 7.07281 5.9778L7.04194 6.01007L7.01407 6.04496L6.1265 7.15595L5.75894 7.61603L5.98301 8.16062C6.52347 9.47418 7.31819 10.668 8.32148 11.6735C9.32477 12.6789 10.5169 13.4762 11.8293 14.0195L12.3735 14.2448L12.8344 13.8781L13.9546 12.9867L13.9906 12.958L14.0238 12.9262C14.2786 12.6821 14.6177 12.5455 14.9707 12.5449C15.3236 12.5443 15.6632 12.6798 15.9188 12.9231L15.9568 12.9593L15.9983 12.9912L16.6083 12.1988L15.9983 12.9912L15.9983 12.9913L15.9986 12.9915L15.9996 12.9922L16.0035 12.9953L16.0189 13.0071L16.0773 13.0521L16.2862 13.2129L16.9213 13.7025C17.1529 13.8811 17.3848 14.0601 17.56 14.1958C17.6478 14.2638 17.7206 14.3202 17.7718 14.3602L17.8004 14.3826C18.0357 14.6358 18.1672 14.9692 18.1673 15.3161C18.1673 15.6795 18.0232 16.0281 17.7665 16.2854ZM5.58905 2.16657L5.58902 2.16653L5.58905 2.16657Z" stroke="white" stroke-width="2" />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath id="clip0_1130_24388">
-                                                            <rect width="20" height="20" fill="white" />
-                                                        </clipPath>
-                                                    </defs>
-                                                </svg>
-                                                <span>(055) 123 45 67</span>
-                                            </a>
-                                            <a href="to: (055) 123 45 67" class="my-btn">
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2381 3.6641C14.5616 1.94698 12.3318 1.00087 9.956 1C5.06046 1 1.07623 5.075 1.07452 10.0839C1.07367 11.6851 1.48291 13.2481 2.26009 14.6254L1 19.3333L5.70818 18.0701C7.0053 18.7941 8.46596 19.1752 9.95218 19.1757H9.956C14.8507 19.1757 18.8354 15.1002 18.8371 10.0913C18.8379 7.66376 17.9151 5.38166 16.2381 3.66454V3.6641ZM9.956 17.6415H9.95303C8.62862 17.6411 7.32939 17.2769 6.19579 16.5891L5.92622 16.4253L3.13223 17.175L3.87788 14.3884L3.70243 14.1027C2.96359 12.9005 2.57308 11.5109 2.57393 10.0844C2.57564 5.92136 5.88703 2.53417 9.95902 2.53417C11.9307 2.53504 13.784 3.32129 15.1778 4.74874C16.5716 6.17575 17.3385 8.07322 17.3377 10.0904C17.3359 14.2539 14.0246 17.6411 9.956 17.6411V17.6415ZM14.005 11.9866C13.7831 11.8729 12.6921 11.324 12.4885 11.2483C12.285 11.1724 12.1372 11.1346 11.9894 11.3619C11.8417 11.5893 11.4163 12.1007 11.2868 12.2519C11.1573 12.4034 11.0279 12.4222 10.806 12.3085C10.5842 12.1948 9.86914 11.9552 9.02129 11.182C8.36166 10.58 7.91618 9.83693 7.78676 9.60952C7.6573 9.38217 7.77314 9.25932 7.88383 9.1465C7.98347 9.04458 8.1057 8.88123 8.21683 8.7488C8.32802 8.61637 8.36463 8.52144 8.43871 8.37026C8.51283 8.21867 8.47577 8.08629 8.42043 7.97256C8.36503 7.85888 7.92133 6.74156 7.73608 6.28725C7.55592 5.84469 7.37284 5.90481 7.23698 5.8974C7.10752 5.89086 6.95977 5.88956 6.81157 5.88956C6.66337 5.88956 6.42317 5.94619 6.21963 6.17357C6.01609 6.40093 5.44288 6.95021 5.44288 8.06708C5.44288 9.18395 6.23796 10.2638 6.34909 10.4154C6.46023 10.567 7.91405 12.8595 10.14 13.8431C10.6693 14.077 11.0828 14.2168 11.4052 14.3214C11.9367 14.4943 12.4204 14.4699 12.8028 14.4115C13.2291 14.3462 14.1157 13.8623 14.3005 13.3321C14.4853 12.802 14.4853 12.3472 14.43 12.2527C14.3746 12.1582 14.2264 12.1011 14.0046 11.9875L14.005 11.9866Z" fill="#358C6C" />
-                                                </svg>
-                                                <span>(055) 123 45 67</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="my-store__divider"></div>
-                                <ul class="my-store__business-info">
-                                    <li class="my-store__business-info__item">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="2" y="6" width="20" height="15" rx="2" stroke="#358C6C" stroke-width="2" />
-                                            <path d="M8 4C8 3.44772 8.44772 3 9 3H15C15.5523 3 16 3.44772 16 4V6H8V4Z" stroke="#358C6C" stroke-width="2" />
-                                            <line x1="1" y1="16" x2="23" y2="16" stroke="#358C6C" stroke-width="2" />
-                                            <path d="M10 12H14" stroke="#358C6C" stroke-width="2" stroke-linecap="square" />
-                                        </svg>
-                                        <span>Biznes hesab</span>
-                                    </li>
-                                    <li class="my-store__business-info__item my-store__business-info__item--contact">
-                                        <a href="https://techstore.com" target="_blank">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6506 3.43253C15.5607 1.52249 18.6574 1.52249 20.5675 3.43253C22.4775 5.34256 22.4775 8.43935 20.5675 10.3494L19.3769 11.54C18.9862 11.9307 18.3528 11.9307 17.9621 11.54C17.5714 11.1493 17.5714 10.5159 17.9621 10.1252L19.1527 8.93457C20.2813 7.80591 20.2813 5.976 19.1527 4.84734C18.024 3.71868 16.1941 3.71868 15.0654 4.84734L11.1354 8.77737C10.0067 9.90603 10.0067 11.7359 11.1354 12.8646C11.5261 13.2553 11.5261 13.8887 11.1354 14.2794C10.7447 14.6701 10.1113 14.6701 9.72059 14.2794C7.81055 12.3694 7.81055 9.2726 9.72059 7.36256L13.6506 3.43253ZM12.8646 9.72059C13.2553 9.3299 13.8887 9.3299 14.2794 9.72059C16.1895 11.6306 16.1895 14.7274 14.2794 16.6374L10.3494 20.5675C8.43935 22.4775 5.34256 22.4775 3.43253 20.5675C1.52249 18.6574 1.52249 15.5607 3.43253 13.6506L4.67898 12.4042C5.06967 12.0135 5.7031 12.0135 6.09379 12.4042C6.48448 12.7949 6.48448 13.4283 6.09379 13.819L4.84734 15.0654C3.71868 16.1941 3.71868 18.024 4.84734 19.1527C5.976 20.2813 7.80592 20.2813 8.93457 19.1527L12.8646 15.2226C13.9933 14.094 13.9933 12.2641 12.8646 11.1354C12.4739 10.7447 12.4739 10.1113 12.8646 9.72059Z" fill="#358C6C" />
-                                            </svg>
-                                            <span>techstore.com</span>
-                                        </a>
-                                    </li>
-                                    <li class="my-store__business-info__item">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="12" cy="12" r="10" stroke="#358C6C" stroke-width="2" />
-                                            <path d="M12 6V12H18" stroke="#358C6C" stroke-width="2" />
-                                        </svg>
-                                        <span>Hər gün: 10:00-21:00</span>
-                                    </li>
-                                    <li class="my-store__business-info__item my-store__business-info__item--contact">
-                                        <a href="#" target="_blank">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M15.66 2.88519C13.36 0.655186 9.94 -0.0148137 6.94 1.19519C5.44 1.80519 4.2 2.80519 3.34 4.05519C2.48 5.30519 2 6.80519 2 8.38519C2 9.74519 2.44 11.2452 3.31 12.8652C3.98 14.1052 4.88 15.3852 6 16.6852C6.49 17.2552 7.02 17.8252 7.56 18.3652C8.21 19.0252 9.08 19.3952 10 19.3952C10.92 19.3952 11.79 19.0252 12.45 18.3652C12.99 17.8152 13.51 17.2552 14 16.6852C15.12 15.3852 16.02 14.1052 16.69 12.8652C17.56 11.2452 18 9.73519 18 8.38519V8.34519C18 6.31519 17.14 4.32519 15.66 2.88519ZM14.92 11.9152C14.33 13.0252 13.51 14.1952 12.48 15.3752C12.02 15.9152 11.53 16.4452 11.02 16.9552C10.75 17.2352 10.38 17.3952 10 17.3952C9.62 17.3952 9.25 17.2352 8.98 16.9552C8.47 16.4452 7.98 15.9152 7.52 15.3752C6.49 14.1952 5.67 13.0252 5.08 11.9152C4.36 10.5952 4 9.40519 4 8.38519C4 6.04519 5.45 3.95519 7.69 3.05519C9.95 2.13519 12.54 2.63519 14.26 4.31519C15.38 5.40519 16 6.84519 16 8.38519C16 9.40519 15.64 10.5952 14.92 11.9152Z" fill="#358C6C"></path>
-                                                <path d="M10 5.60522C8.35 5.60522 7 6.95522 7 8.60522C7 10.2552 8.35 11.6052 10 11.6052C11.65 11.6052 13 10.2552 13 8.60522C13 6.95522 11.65 5.60522 10 5.60522ZM10 9.60522C9.45 9.60522 9 9.15522 9 8.60522C9 8.05522 9.45 7.60522 10 7.60522C10.55 7.60522 11 8.05522 11 8.60522C11 9.15522 10.55 9.60522 10 9.60522Z" fill="#358C6C"></path>
-                                            </svg>
-                                            <span>Bakı ş., B. Səfəroğlu küç. 219 ("Nizami" kino mərkəzi, Qara Qarayevin heykəlinin yanı)</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section class="section">
-                            <div class="my-tab-list">
-                                <ul>
-                                    <li>
-                                        <a href="store.html">Elanlar</a>
-                                    </li>
-                                    <li>
-                                        <a class="active" href="reviews.html">Müştəri rəyləri </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="main__content">
-                <div class="main__layout main__layout--fluid">
-                    <div class="main__sections">
-                        <section class="section section--reviews section--white">
+                        <section class="section section--blog section--white">
                             <div class="section__header">
-                                <span class="section__header__title"> Satıcı haqqında rəylər və reytinq </span>
-                                <button class="my-btn my-btn--small" data-toggle="modal" data-target="#modalReview">Yeni rəy əlavə et</button>
+                                <span class="section__header__title"> Bloq başlığı </span>
                             </div>
                             <div class="section__body">
-                                <div class="my-review">
-                                    <div class="my-review__picture">
-                                        <img src="./assets/images/avatar.svg" alt="user">
-                                    </div>
-                                    <div class="my-review__details">
-                                        <span class="my-review__author">Emil Məmmədov</span>
-                                        <div class="my-review__stars">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.56577 2.33042C7.70245 1.88986 8.29756 1.88986 8.43424 2.33042L9.64014 6.21746H13.5425C13.9848 6.21746 14.1687 6.81023 13.8109 7.08251L10.6538 9.48484L11.8597 13.3719C11.9964 13.8124 11.5149 14.1788 11.1571 13.9065L8 11.5042L4.84289 13.9065C4.48506 14.1788 4.00361 13.8124 4.14029 13.3719L5.34619 9.48484L2.18908 7.08251C1.83126 6.81023 2.01516 6.21746 2.45746 6.21746H6.35986L7.56577 2.33042Z" fill="#FFC90A" />
-                                            </svg>
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.56577 2.33042C7.70245 1.88986 8.29756 1.88986 8.43424 2.33042L9.64014 6.21746H13.5425C13.9848 6.21746 14.1687 6.81023 13.8109 7.08251L10.6538 9.48484L11.8597 13.3719C11.9964 13.8124 11.5149 14.1788 11.1571 13.9065L8 11.5042L4.84289 13.9065C4.48506 14.1788 4.00361 13.8124 4.14029 13.3719L5.34619 9.48484L2.18908 7.08251C1.83126 6.81023 2.01516 6.21746 2.45746 6.21746H6.35986L7.56577 2.33042Z" fill="#FFC90A" />
-                                            </svg>
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.56577 2.33042C7.70245 1.88986 8.29756 1.88986 8.43424 2.33042L9.64014 6.21746H13.5425C13.9848 6.21746 14.1687 6.81023 13.8109 7.08251L10.6538 9.48484L11.8597 13.3719C11.9964 13.8124 11.5149 14.1788 11.1571 13.9065L8 11.5042L4.84289 13.9065C4.48506 14.1788 4.00361 13.8124 4.14029 13.3719L5.34619 9.48484L2.18908 7.08251C1.83126 6.81023 2.01516 6.21746 2.45746 6.21746H6.35986L7.56577 2.33042Z" fill="#FFC90A" />
-                                            </svg>
-                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
-                                            </svg>
-                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
-                                            </svg>
-                                        </div>
-                                        <p class="my-review__message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
-                                        <div class="my-review__files">
-                                            <img src="https://via.placeholder.com/100" alt="">
-                                            <img src="https://via.placeholder.com/100" alt="">
-                                            <img src="https://via.placeholder.com/100" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="my-review__date">17 Sentyabr 2023</div>
+                                <div class="my-blog__picture-inner">
+                                    <img src="assets/images/stores/borcelle.png" alt="">
                                 </div>
-                                <div class="my-review">
-                                    <div class="my-review__picture">
-                                        <img src="./assets/images/avatar.svg" alt="user">
+                                <div class="my-content">
+                                    <h1>H1 Title</h1>
+                                    <h2>H2 Title</h2>
+                                    <h3>H3 Title</h3>
+                                    <h4>H4 Title</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dicta, ut omnis deleniti voluptatem error distinctio molestiae sapiente esse quam consequuntur doloribus officia non praesentium ipsum dolor? Nobis, libero hic.</p>
+                                    <ul>
+                                        <li>Unordered list item</li>
+                                        <li>Unordered list item</li>
+                                        <li>Unordered list item</li>
+                                        <li>Unordered list item</li>
+                                    </ul>
+                                    <p>Lorem ipsum dolor sit amet <a href="#">consectetur adipisicing</a> elit. Consectetur dicta, ut omnis deleniti voluptatem error distinctio molestiae sapiente esse quam consequuntur doloribus officia non praesentium ipsum dolor? <a href="#">Nobis, libero hic.</a></p>
+                                    <ol>
+                                        <li>Ordered list item</li>
+                                        <li>Ordered list item</li>
+                                        <li>Ordered list item</li>
+                                        <li>Ordered list item</li>
+                                    </ol>
+                                    <img src="https://via.placeholder.com/900x300" alt="">
+                                    <div class="my-table-container">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Name</th>
+                                                    <th>Age</th>
+                                                    <th>Email</th>
+                                                    <th>Country</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>John Doe</td>
+                                                    <td>30</td>
+                                                    <td>john.doe@example.com</td>
+                                                    <td>USA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Jane Smith</td>
+                                                    <td>25</td>
+                                                    <td>jane.smith@example.com</td>
+                                                    <td>Canada</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Michael Johnson</td>
+                                                    <td>35</td>
+                                                    <td>michael.johnson@example.com</td>
+                                                    <td>UK</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Emily Davis</td>
+                                                    <td>28</td>
+                                                    <td>emily.davis@example.com</td>
+                                                    <td>Australia</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>David Wilson</td>
+                                                    <td>40</td>
+                                                    <td>david.wilson@example.com</td>
+                                                    <td>New Zealand</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div class="my-review__details">
-                                        <span class="my-review__author">Emil Məmmədov</span>
-                                        <div class="my-review__stars">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.56577 2.33042C7.70245 1.88986 8.29756 1.88986 8.43424 2.33042L9.64014 6.21746H13.5425C13.9848 6.21746 14.1687 6.81023 13.8109 7.08251L10.6538 9.48484L11.8597 13.3719C11.9964 13.8124 11.5149 14.1788 11.1571 13.9065L8 11.5042L4.84289 13.9065C4.48506 14.1788 4.00361 13.8124 4.14029 13.3719L5.34619 9.48484L2.18908 7.08251C1.83126 6.81023 2.01516 6.21746 2.45746 6.21746H6.35986L7.56577 2.33042Z" fill="#FFC90A" />
-                                            </svg>
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.56577 2.33042C7.70245 1.88986 8.29756 1.88986 8.43424 2.33042L9.64014 6.21746H13.5425C13.9848 6.21746 14.1687 6.81023 13.8109 7.08251L10.6538 9.48484L11.8597 13.3719C11.9964 13.8124 11.5149 14.1788 11.1571 13.9065L8 11.5042L4.84289 13.9065C4.48506 14.1788 4.00361 13.8124 4.14029 13.3719L5.34619 9.48484L2.18908 7.08251C1.83126 6.81023 2.01516 6.21746 2.45746 6.21746H6.35986L7.56577 2.33042Z" fill="#FFC90A" />
-                                            </svg>
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7.56577 2.33042C7.70245 1.88986 8.29756 1.88986 8.43424 2.33042L9.64014 6.21746H13.5425C13.9848 6.21746 14.1687 6.81023 13.8109 7.08251L10.6538 9.48484L11.8597 13.3719C11.9964 13.8124 11.5149 14.1788 11.1571 13.9065L8 11.5042L4.84289 13.9065C4.48506 14.1788 4.00361 13.8124 4.14029 13.3719L5.34619 9.48484L2.18908 7.08251C1.83126 6.81023 2.01516 6.21746 2.45746 6.21746H6.35986L7.56577 2.33042Z" fill="#FFC90A" />
-                                            </svg>
-                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
-                                            </svg>
-                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12.3486 4.49563C12.5537 3.83479 13.4463 3.83479 13.6514 4.49563L15.4602 10.3262H21.3138C21.9773 10.3262 22.2531 11.2153 21.7164 11.6238L16.9807 15.2273L18.7896 21.0578C18.9946 21.7186 18.2724 22.2682 17.7357 21.8598L13 18.2563L8.26434 21.8598C7.72759 22.2682 7.00541 21.7187 7.21043 21.0578L9.01929 15.2273L4.28363 11.6238C3.74688 11.2153 4.02273 10.3262 4.68619 10.3262H10.5398L12.3486 4.49563Z" fill="#E6E6E6" />
-                                            </svg>
-                                        </div>
-                                        <p class="my-review__message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
-                                        <div class="my-review__files">
-                                            <img src="https://via.placeholder.com/100" alt="">
-                                            <img src="https://via.placeholder.com/100" alt="">
-                                            <img src="https://via.placeholder.com/100" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="my-review__date">17 Sentyabr 2023</div>
+                                    <iframe title="mymarket" loading="lazy" decoding="async" rel="external nofollow noopener noreferrer" frameborder="0" allow="autoplay" allowfullscreen="" fullscreencheck="" src="https://mymarket.az/ads" width="900" height="420" style="max-width: 100%;"></iframe>
                                 </div>
                             </div>
                         </section>
