@@ -3227,6 +3227,117 @@ img {
   }
 }
 
+.my-campaign {
+  $root: &;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 280px;
+
+  &__picture {
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-inner {
+      border-radius: 12px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2px;
+  }
+
+  &__name {
+    font-size: var(--fs-h3);
+    line-height: var(--lh-h3);
+    font-weight: var(--fw-semi-bold);
+    color: var(--gray-900);
+    margin-bottom: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  &__desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  &__views {
+    display: flex;
+    gap: 4px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+    }
+
+    &__count {
+      color: var(--gray-700);
+      font-size: var(--fs-b4);
+      line-height: var(--lh-b4);
+      font-weight: var(--fw-medium);
+    }
+  }
+
+  &__separator {
+    width: 2px;
+    height: 2px;
+    background: var(--green-500);
+    border-radius: 2px;
+    margin: 0 4px;
+  }
+
+  &__date {
+    font-size: var(--fs-b4);
+    line-height: var(--lh-b4);
+    font-weight: var(--fw-medium);
+    color: var(--green-500);
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    gap: 4px;
+    border: 1px solid var(--gray-400);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: var(--fs-b2);
+    line-height: var(--lh-b3);
+    font-weight: var(--fw-medium);
+    color: var(--gray-900);
+
+    svg {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+    }
+  }
+}
+
 .my-table-container {
   width: 100%;
   overflow-x: auto;
@@ -4187,6 +4298,28 @@ img {
       display: flex;
       flex-direction: column;
       gap: 16px;
+    }
+  }
+
+  &--campaigns {
+    #{$root}__body {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+  }
+
+  &--campaign {
+    gap: 16px;
+
+    #{$root}__body {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    #{$root}__footer {
+      align-self: center;
     }
   }
 
