@@ -4799,13 +4799,6 @@ img {
   gap: 24px;
 }
 
-.footer__branding__row:last-child {
-  margin-top: 8px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
 .footer__branding__col {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4826,7 +4819,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 24px 0;
-  gap: 8px;
+  gap: 12px;
 }
 
 .footer__branding .footer__logo {

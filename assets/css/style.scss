@@ -3964,11 +3964,6 @@ img {
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-
-      &:last-child {
-        margin-top: 8px;
-        align-items: flex-end;
-      }
     }
 
     &__col {
@@ -3982,7 +3977,7 @@ img {
       display: flex;
       flex-direction: column;
       padding: 24px 0;
-      gap: 8px;
+      gap: 12px;
     }
 
     #{$root}__logo {

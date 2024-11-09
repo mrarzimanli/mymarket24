@@ -329,7 +329,9 @@
         });
 
         $catalogListItems.find('> a').each(function () {
-            $(this).removeAttr('href');
+            if ($(this).next(".my-catalog__subded").length) {
+                $(this).removeAttr('href');
+            }
         })
 
         $catalogListItems.click(function (e) {
