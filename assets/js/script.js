@@ -329,7 +329,7 @@
         });
 
         $catalogListItems.find('> a').each(function () {
-            if ($(this).next(".my-catalog__subded").length) {
+            if ($(this).next(".my-catalog__sub").length) {
                 $(this).removeAttr('href');
             }
         })
@@ -387,6 +387,41 @@
         navigation: {
             nextEl: ".my-btn--next",
             prevEl: ".my-btn--prev",
+        },
+    });
+
+    const swiperStories = new Swiper(".swiper--stories", {
+        slidesPerView: "auto",
+        breakpoints: {
+            792: {
+                spaceBetween: 16,
+            },
+            0: {
+                spaceBetween: 12,
+            }
+        },
+        navigation: {
+            nextEl: ".my-btn--next",
+            prevEl: ".my-btn--prev",
+        },
+    });
+
+    const swiperStoryDetails = new Swiper(".swiper--story-details", {
+        slidesPerView: 1,
+        autoplay: {
+            delay: 3000,
+            pauseOnMouseEnter: true,
+        },
+        breakpoints: {
+            spaceBetween: 0,
+        },
+        navigation: {
+            nextEl: ".my-btn--next",
+            prevEl: ".my-btn--prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
         },
     });
 
@@ -685,9 +720,9 @@
         $body.toggleClass('collapsed');
 
         if ($body.hasClass('collapsed')) {
-            $this.text('Show less tags');
+            $this.text('Daha az göstər');
         } else {
-            $this.text('Show more tags');
+            $this.text('Daha çox göstər');
         }
     });
 

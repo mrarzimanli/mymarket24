@@ -104,6 +104,10 @@
         height: 205px;
       }
     }
+
+    &--list {
+      width: 100%;
+    }
   }
 
   .my-stat {
@@ -123,6 +127,10 @@
 
     &__picture {
       height: 205px;
+    }
+
+    &--list {
+      width: 100%;
     }
   }
 
@@ -907,6 +915,10 @@
         height: 166px;
       }
     }
+
+    &--list {
+      width: 100%;
+    }
   }
 
   .my-store {
@@ -1156,6 +1168,10 @@
   .my-post {
     $root: &;
     width: calc(50% - 6px);
+
+    &--list {
+      width: 100%;
+    }
   }
 
   .my-store {
@@ -1195,6 +1211,19 @@
       .my-btn {
         flex-grow: 1;
       }
+    }
+  }
+
+  .my-profile {
+    gap: 16px;
+
+    &__thumb {
+      width: 78px;
+      height: 78px;
+    }
+
+    &__buttons {
+      gap: 8px;
     }
   }
 
@@ -1241,4 +1270,19 @@
       }
     }
   }
+}
+
+@media only screen and (max-width: 972px) {
+  #btn-whatsapp {
+    bottom: 70px;
+  }
+}
+
+.my-btn--whatsapp {
+  background: #128c7e;
+  color: #fff;
+}
+
+.my-btn--whatsapp:hover {
+  background: #075e54;
 }
